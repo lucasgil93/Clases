@@ -9,12 +9,12 @@
 
 
 body{
+
     margin: 0;
     font-family: "Gabarito", Arial, Helvetica, sans-serif;
 }
 
 header{
-
 
 padding: 2rem;
 
@@ -59,6 +59,15 @@ li{
 
     padding-inline: 2rem;
     list-style-type: none;
+}
+
+li:hover{
+
+    background-color: #79e4cc;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+
 }
 
 body{
