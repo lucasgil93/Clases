@@ -1,8 +1,67 @@
 @import url(https://fonts.googleapis.com/css?family=Yuji+Hentaigana+Akari:regular);
 @import url(https://fonts.googleapis.com/css?family=Gabarito:regular,500,600,700,800,900);
 
-body{
+*::before::after{
 
+    box-sizing: border-box;
+}
+
+
+
+body{
+    margin: 0;
     font-family: "Gabarito", Arial, Helvetica, sans-serif;
 }
 
+header{
+
+
+padding: 2rem;
+
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-direction: row;
+background-color: black;
+color: white;
+
+}
+
+footer{
+
+    background-color: black;
+    color: beige;
+
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+
+button{
+
+    border: none;
+    background-color: #2fd9dd;
+    color: beige;
+    border-radius: 7px;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+li{
+
+    padding-inline: 2rem;
+    list-style-type: none;
+}
+
+body{
+
+    background-image: radial-gradient(circle at 50% -20.71%, #ffffe0 0, #feffdc 8.33%, #f3ffd7 16.67%, #e6ffd3 25%, #d8fbcf 33.33%, #c7f7cc 41.67%, #b5f2c9 50%, #a1edc8 58.33%, #8de9c9 66.67%, #79e4cc 75%, #63e0d0 83.33%, #4bddd6 91.67%, #2fd9dd 100%);
+}
