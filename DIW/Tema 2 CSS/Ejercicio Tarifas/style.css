@@ -1,0 +1,81 @@
+*::before::after{
+
+    box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+h1{
+    font-size: 130%;
+}
+
+body{
+
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+#divTarifas {
+
+    display: flex ;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: antiquewhite;
+    border-radius: 23px;
+    gap: 2rem;
+    max-width: 150ch;
+    height: 20ch;
+    min-width: 60ch;
+    box-shadow: 3px 2px 5px 1px;
+    
+}
+
+div{
+
+    padding: 1rem;
+    height: 9ch;
+    background-color: azure;
+    border-radius: 10px;
+    height: 15ch;
+    flex-grow: 1;
+
+}
+
+div>div{
+
+    min-width: 20ch;
+    max-width: 20ch;;
+
+
+}
+
+div>h1{
+
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+#divPopular{
+
+    background-color: rgb(252, 175, 76);
+    color: whitesmoke;
+
+}
+
+
+p{
+    padding-block: none;
+    font-weight: 100;
+}
+
+p:nth-child(1){
+    font-weight: 600;
+    padding-bottom: 0%;
+}
+p:nth-child(3){
+    padding-top: 1rem;
+    font-weight: 600;
+}
+
