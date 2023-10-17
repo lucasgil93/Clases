@@ -1,0 +1,88 @@
+html{
+    --color0: #E63946;
+    --color1: #F1FAEE;
+    --color2: #A8DADC;
+    --color3: #457B9D;
+    --color4: #1D3557;
+
+}
+
+@import url(https://fonts.googleapis.com/css?family=REM:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+
+body{
+    background-color: var(--color2);
+    color: var(--color4);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0 auto;
+    max-width: 100ch;
+}
+
+header{
+
+    background-color: var(--color4);
+    height: auto;
+    color: var(--color3);
+    font-family: "REM", Arial, Helvetica, sans-serif;
+}
+
+main{
+
+    max-width: 60ch;
+    background-color: var(--color3);
+
+}
+
+.destacado{
+
+    background-color: var(--color4);
+    color: var(--color1);
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+}
+
+footer{
+
+    background-color: var(--color1);
+    height: auto;
+}
+
+footer > p:first-child{
+
+    font-size: 1.5rem;
+}
+
+form{
+
+    background-color: var(--color4);
+    border-radius: 50px;
+    margin: 0 auto;
+    max-width: 40ch;
+    
+}
+
+textarea {
+
+    margin-left: center;
+}
+
+input:hover{
+
+    background-color: #457B9D;
+    color: #A8DADC;
+    margin-left: 15ch;
+
+}
+
+button{
+
+    margin-left: 12ch;
+
+}
+
+
+
+
+
+

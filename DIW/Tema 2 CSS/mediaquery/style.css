@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=REM:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+
+*,::before::after{
+
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family:'REM','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 60ch;
+    padding: 0.5rem;
+    margin: 0 auto;
+
+}
+
+.card{
+    background-color: khaki;
+    padding: 1rem;
+    border-radius: 10px;
+    overflow: auto; /* si se pone hidden no saldria la barrita y ocultaria elr esto de texto o foto*/
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-block: 50px; /*es una manera de meter margen top y botton de una sola tacada.*/
+
+}
+
+.card img{
+
+    width: 100%;
+
+}
+
+.no-importante{
+
+    background-color: rgba(240, 230, 140, 0.2);
+    display: none;
+
+}
+
+@media screen and (min-width:900px){
+
+    .card{
+        width: 400px;
+        background-color: aquamarine;
+    }
+    .no-importante{
+
+        background-color: rgba(240, 230, 140, 0.2);
+        display: block;
+    
+    }
+
+
+}
+
+@media print {
+
+    .no-importante{
+        display: none;
+    }
+    
+}

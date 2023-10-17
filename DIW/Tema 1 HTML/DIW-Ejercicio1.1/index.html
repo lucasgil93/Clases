@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Ejercicio 1 - formulario</title>
+   <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+</head>
+
+<body>
+
+   <form action="" method="get">
+      <label for="txtNombre">Nombre:</label>
+      <input required type="text" name="txtNombre" id="txtNombre" minlength="2" maxlength="20">
+      <br>
+      <label for="txtApellido">Apellidos:</label>
+      <input required type="text" name="txtApellido" id="txtApellido" minlength="2" maxlength="20">
+
+      <fieldset>
+         <legend>Mayor de Edad:</legend>
+
+         <div>
+            <input required type="radio" id="Si" name="mayorEdad" value="Si" checked />
+            <label for="Si">Si</label>
+         </div>
+
+         <div>
+            <input required type="radio" id="No" name="mayorEdad" value="No" />
+            <label for="No">No</label>
+         </div>
+
+
+      </fieldset>
+
+      <br>
+      <label for="txtEmail">E-Mail:</label>
+      <input type="email" name="txtEmail" id="txtEmail">
+      <br>
+
+      <fieldset>
+         <legend>Opciones:</legend>
+         <div>
+            <input type="checkbox" id="ofertas" name="ofertas" checked/>
+            <label for="ofertas">"Deseo recibir información sobre novedades y ofertas"</label>
+         </div>
+         <div>
+            <input required type="checkbox" id="condiciones" name="condiciones" />
+            <label for="condiciones">"He leído y acepto las condiciones y la política de protección de datos"</label>
+         </div>
+      </fieldset>
+
+      <button type="submit">Enviar</button>
+   </form>
+
+
+</body>
+
+</html>

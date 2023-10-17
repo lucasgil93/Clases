@@ -1,0 +1,21 @@
+*,::before::after{
+    box-sizing: border-box;
+}
+
+table{
+
+    border-collapse: collapse;
+
+}
+
+td{
+    border: 1px solid brown;
+}
+
+th{
+   background-color: bisque;
+     color: brown;
+    border: 1px solid brown;
+    position: sticky;
+    top:0;
+}

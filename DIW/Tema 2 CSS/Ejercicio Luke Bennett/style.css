@@ -1,0 +1,98 @@
+*::before::after{
+    box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+body{
+
+    display: block;
+    margin: 0 auto;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    background-color:#e4e4e7;
+    color:#374151;
+
+
+}
+h1{
+
+    color: #111827;
+}
+
+img{
+
+    height: 40px;
+    width: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+
+}
+
+div>div{
+
+    display: flex;
+    flex-direction: row;
+    
+}
+
+body>svg{
+
+    display: flex;
+    align-self: self-end;
+}
+
+main{
+
+    margin-inline: 15rem;
+}
+
+body>svg{
+
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: grey;
+
+}
+
+body>img{
+
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+}
+
+p{
+
+    text-align: center;
+}
+
+#divMenu{
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 25px;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.divRedes{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-inline: 25rem;
+
+}
+
+.divFeeds{
+
+    padding-inline: 15rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+

@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=REM:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);;
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+*,::before::after{
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family:'Roboto', Arial, Helvetica, sans-serif;
+}
+
+div{
+    width:45ch;
+}
+
+div.card-body{
+
+background-color: #8a2be2;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px  ;
+color: whitesmoke;
+text-align: center;
+position: static;
+text-align: center;
+
+
+}
+
+div.card-header{
+    background-color:#00bfff;
+    color: whitesmoke;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    text-align: center;
+
+
+}
+
+.card{
+
+    background-color:#00bfff;
+    border-radius: 20px;
+}
+
+div.card-icon{
+
+z-index: 1;
+background-color: #adff2f;
+color: #98c931;
+position:relative;
+left: 25.05rem;
+top: -5.5rem;
+width: 2rem;
+height: 3rem;
+
+
+/*
+
+left: 501px;
+top: -96px;
+
+*/
+
+}

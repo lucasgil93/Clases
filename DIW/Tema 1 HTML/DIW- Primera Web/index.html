@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primera Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Diseño de Interfaces Web</h1>
+    <h2>Primera Web</h2>
+
+    <p>El agua es: H <sub>2</sub>0</p>
+
+    <p>Lorem ipsum &nbsp dolor <code> codigo preformateado </code> sit amet consectetur <strong>adipisicing
+        </strong>elit. Error fugit assumenda vel <em>eligendi maiores </em>quaerat esse commodi tenetur atque a,
+        consectetur tempore numquam nisi, <a href="http://www.google.es">id necessitatibus</a>, molestiae molestias
+        minima quis?</p>
+    <p> El resultador es : X <sup>2</sup></p>
+
+    <br>
+
+
+
+    <pre>
+function sumar (a+b){
+    return a+b;
+}
+
+</pre>
+
+    <img src="th.jfif" alt="imagen" title="Ejemplo de foto" loading="lazy">
+
+    <form action="saludo.php" method="post">
+
+        <label for="txtNombre">Nombre:</label>
+        <input required minlength="3" type="text" name="txtNombre" id="txtNombre"><br>
+
+        <label for="txtInteres">Interes:</label>
+        <input type="text" name="txtInteres" id="txtInteres" placeholder="Ej. Fotografia" list="listaInteres"><br>
+
+        <label for="txtEdad">Edad:</label>
+        <input type="number" name="txtEdad" id="txtEdad" min="18" max="90"><br>
+
+        <input type="submit" value="Enviar">
+
+        <input type="button" value="Calcular" id="btnCalcular">
+
+        <fieldset>
+            <legend>Elige tu comida:</legend>
+            <div>
+                <input type="checkbox" id="montadito" name="montadito" checked />
+                <label for="montadito">Montadito de pringá</label>
+            </div>
+            <div>
+                <input type="checkbox" id="serranito" name="serranito" />
+                <label for="serranito">Serranito</label>
+            </div>
+        </fieldset>
+
+
+        <!-- si comparten el name bebida solo se almacena y se puede checkear uno de ellos-->
+        <fieldset>
+            <legend>Elige una bebida:</legend>
+
+            <div>
+                <input type="radio" id="agua" name="bebida" value="agua" checked />
+                <label for="agua">Agua</label>
+            </div>
+
+            <div>
+                <input type="radio" id="cerveza" name="bebida" value="cerveza" />
+                <label for="cerveza">Cerveza</label>
+            </div>
+
+            <div>
+                <input type="radio" id="refresco" name="bebida" value="refresco" />
+                <label for="refresco">Refresco</label>
+            </div>
+        </fieldset>
+
+
+        <label for="editores">Elige un editor:</label>
+
+        <select name="editores" id="editores">
+            <option value="">-- Elige una opción --</option>
+            <option value="emacs">Emacs</option>
+            <option value="vim">Vim</option>
+            <option value="nano">Nano</option>
+            <option value="micro">Micro editor</option>
+            <option value="vscode">Visual Studio code</option>
+            <option value="notepadqq">Notepadqq</option>
+        </select>
+<br>
+        <button>Button</button>
+        <button type="button">type button</button>
+    </form>
+
+    <datalist id="listaInteres">
+        <option value="Escultura">Escultura</option>
+        <option value="Fotografia">Fotografia</option>
+        <option value="Videojuegos">Videojuegos</option>
+    </datalist>
+
+    <input type="date" name="txtFecha" id="txtFecha">
+    <br>
+    <input type="password" name="txtContrasena" id="txtContrasena">
+
+
+
+</body>
+
+</html>

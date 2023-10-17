@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=REM:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+
+*,
+::before::after {
+
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'REM', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    background-color: red;
+    color: white;
+    text-align: left;
+    font-size: 2rem;
+}
+
+label,
+textarea,
+button {
+
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+
+}
+
+form {
+
+    background-color: tomato;
+}
+
+
+
+@media screen and (min-width:500px) {
+
+    textarea,
+    button {
+
+        width: 25ch;
+
+    }
+
+    h1 {
+        font-size: 4rem;
+        background-color: blue;
+        color: white;
+        text-align: center;
+    }
+
+    form{
+        width: 60ch;
+        margin: 0 auto;
+    }
+
+
+
+
+}

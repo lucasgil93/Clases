@@ -1,0 +1,117 @@
+@import url(https://fonts.googleapis.com/css?family=REM:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+*,
+::before,
+::after {
+
+    box-sizing: border-box;
+
+}
+
+h1{
+
+    background-color: tomato;
+    color: whitesmoke;
+    text-align: center;
+    font-weight: 400;
+    font-size: 2,5rem; /* rem tamaño relativo al tamaño del usuario*/
+    letter-spacing: 0.2ch;
+    font-family: "REM",Arial,  Helvetica, sans-serif;
+    text-shadow: 2px 2px 7px black;
+    /* mirar el comando/ atajo de teclado. de poner comentarios*/
+    padding: 2rem;
+}
+
+h2{
+
+    
+    color: tomato;
+    text-align: center;
+    font-weight: 100;
+    text-decoration: 1px wavy underline tomato; /* text decoration forma de añadir decoraciones a partes especificas en este caso h2*/
+    font-family: "REM",Arial,  Helvetica, sans-serif;
+    margin-top: 3rem; /*espaciado por arriba de la etiqueta h2*/
+}
+
+strong{
+
+    background-color: rgba(255, 99, 71, 0.2);
+    color: red;
+}
+
+img{
+
+    max-width: 100% /* esto coge como maximo el tamaño de la pagina en caso de que la imagen sea mas grande que ella*/;
+}
+
+
+body {
+
+    background-color:rgb(255, 255, 255);
+    max-width: 60ch;
+    margin: 0 auto; /* la manera mas sencilla para centrar algo*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+em,a{
+    color: tomato;
+}
+
+pre{
+
+   background-color: rgba(255, 99, 71, 0.2);
+   margin-left: 1rem;
+   margin-right: 1rem;
+
+}
+
+a{
+    background-color:  rgba(255, 99, 71, 0.2);
+}
+
+form{
+
+background-color: #eee;
+padding: 1rem;
+
+
+}
+
+input{
+
+    border: 1px dotted tomato; 
+    padding: 0.25rem;
+    width: 20ch;
+    margin-bottom: 1rem;
+    
+}
+
+fieldset{
+
+    margin-bottom: 1rem;
+    border: 1px solid tomato;
+}
+
+input[type="checkbox"]{
+
+    width: auto;
+}
+
+input[type="submit"]{
+
+    background-color: tomato;
+    color: #eee;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+
+    background-color: red;
+}
+
+input[type="button"]{
+
+    background-color: #ffffff;
+}
+
+/* la etiqueta button y input type button se comportan igual pero en input no se puede poner nada dentro de la etiqueta, y en button si*/

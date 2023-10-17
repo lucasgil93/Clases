@@ -1,0 +1,52 @@
+p+p {
+    border-left: 6px solid #336;
+    padding-left: 2px;
+}
+p {
+    color: #336;
+}
+.destacado>a {
+    color: red;
+}
+.destacado {
+    background-color: bisque;
+}
+#resultado {
+    margin: 2rem;
+    border: 1px solid red;
+}
+header p {
+    font-size: 1.5rem;
+}
+
+p:hover{
+
+    font-weight: bolder;
+
+}
+#resultado p:nth-child(even) {
+    background-color: #eee;
+}
+#resultado p:last-child {
+    font-size: 0.75rem;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid tomato;
+}
+tr:nth-child(even){
+    background-color: white;
+}
+tr:nth-child(odd){
+    background-color: bisque;
+}
+tr :hover{
+    background-color: chocolate;
+}
+tr{
+    border: 2px solid salmon;
+}
+th {
+    border: 2px solid tomato;
+}
