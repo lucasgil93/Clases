@@ -23,25 +23,33 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 flex-direction: row;
-background-color: black;
+background-color: grey;
 color: white;
 
 }
 
 footer{
 
-    background-color: black;
+    background-color: grey;
     color: beige;
-
-
-
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 4rem;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 10rem;
 }
 
-button{
+#divRedes{
+
+    background-color: beige;
+    padding-inline: 100%;
+    display: flex;
+    padding-block: 2rem;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+#btnTwitter{
 
     border: none;
     background-color: #2fd9dd;
@@ -49,14 +57,61 @@ button{
     border-radius: 7px;
 }
 
+#btnIg1{
+
+    border: none;
+    background-color: #e7e713;
+    color: grey;
+    border-radius: 7px;
+}
+
+#btnIg2{
+
+    border: none;
+    background-color: #e56515;
+    color: beige;
+    border-radius: 7px;
+}
+#btnGithub{
+
+    border: none;
+    background-color: #384747;
+    color: beige;
+    border-radius: 7px;
+}
+
+#btnLinkedin{
+
+    border: none;
+    background-color: blue;
+    color: beige;
+    border-radius: 7px;
+}
+
+a{
+
+    text-decoration: none;
+    
+}
+
+a:visited{
+    color: beige;
+}
+a:hover{
+    color:black
+}
+
+
+
 ul{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    gap: 1rem;
 }
 
 li{
-
+    gap: 1rem;
     padding-inline: 2rem;
     list-style-type: none;
 }
@@ -68,6 +123,11 @@ li:hover{
     border-radius: 10px;
     cursor: pointer;
 
+}
+
+button:hover{
+
+    cursor: pointer;
 }
 
 body{
