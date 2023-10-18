@@ -1,34 +1,36 @@
 @import url(https://fonts.googleapis.com/css?family=Yuji+Hentaigana+Akari:regular);
 @import url(https://fonts.googleapis.com/css?family=Gabarito:regular,500,600,700,800,900);
 
-*::before::after{
+*::before::after {
 
     box-sizing: border-box;
 }
 
 /*USAR EL GAP PARA HACER HUECOS ENTRE COSAS CON EL DISPLAY FLEX*/
-
-body{
+/*USar el grid para hacer el modo phone y el modo pc para ordenar en vertical o horizonal, con un 1fr column y varias row para movil y varias column para pc y un rows*/
+/*existe un background-image en css tiene propiedades como bckground size(cover), position o repeat y blend-mode(luminosity se ve afectado por el bckrgroundcolor)*/
+/*pexels y tabler-icons*/
+body {
 
     margin: 0;
     font-family: "Gabarito", Arial, Helvetica, sans-serif;
 }
 
-header{
+header {
 
-padding: 2rem;
+    padding: 2rem;
 
 
-display: flex;
-align-items: center;
-justify-content: space-between;
-flex-direction: row;
-background-color: grey;
-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: grey;
+    color: white;
 
 }
 
-footer{
+footer {
 
     background-color: grey;
     color: beige;
@@ -39,7 +41,7 @@ footer{
     padding: 10rem;
 }
 
-#divRedes{
+#divRedes {
 
     background-color: beige;
     padding-inline: 100%;
@@ -49,7 +51,7 @@ footer{
     gap: 1rem;
 }
 
-#btnTwitter{
+#btnTwitter {
 
     border: none;
     background-color: #2fd9dd;
@@ -57,7 +59,7 @@ footer{
     border-radius: 7px;
 }
 
-#btnIg1{
+#btnIg1 {
 
     border: none;
     background-color: #e7e713;
@@ -65,14 +67,15 @@ footer{
     border-radius: 7px;
 }
 
-#btnIg2{
+#btnIg2 {
 
     border: none;
     background-color: #e56515;
     color: beige;
     border-radius: 7px;
 }
-#btnGithub{
+
+#btnGithub {
 
     border: none;
     background-color: #384747;
@@ -80,7 +83,7 @@ footer{
     border-radius: 7px;
 }
 
-#btnLinkedin{
+#btnLinkedin {
 
     border: none;
     background-color: blue;
@@ -88,35 +91,36 @@ footer{
     border-radius: 7px;
 }
 
-a{
+a {
 
     text-decoration: none;
-    
+
 }
 
-a:visited{
+a:visited {
     color: beige;
 }
-a:hover{
-    color:black
+
+a:hover {
+    color: black
 }
 
 
 
-ul{
+ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     gap: 1rem;
 }
 
-li{
+li {
     gap: 1rem;
     padding-inline: 2rem;
     list-style-type: none;
 }
 
-li:hover{
+li:hover {
 
     background-color: #79e4cc;
     color: black;
@@ -125,12 +129,12 @@ li:hover{
 
 }
 
-button:hover{
+button:hover {
 
     cursor: pointer;
 }
 
-body{
+body {
 
     background-image: radial-gradient(circle at 50% -20.71%, #ffffe0 0, #feffdc 8.33%, #f3ffd7 16.67%, #e6ffd3 25%, #d8fbcf 33.33%, #c7f7cc 41.67%, #b5f2c9 50%, #a1edc8 58.33%, #8de9c9 66.67%, #79e4cc 75%, #63e0d0 83.33%, #4bddd6 91.67%, #2fd9dd 100%);
 }
