@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Yuji+Hentaigana+Akari:regular);
+
 @import url(https://fonts.googleapis.com/css?family=Gabarito:regular,500,600,700,800,900);
 
 *::before::after {
@@ -11,15 +11,19 @@
 /*existe un background-image en css tiene propiedades como bckground size(cover), position o repeat y blend-mode(luminosity se ve afectado por el bckrgroundcolor)*/
 /*pexels y tabler-icons*/
 body {
+    
+    min-height: 100vh;
+    max-width: fit-content;
 
     margin: 0;
     font-family: "Gabarito", Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
 
-    padding: 2rem;
-
+    padding-inline: 2rem;
 
     display: flex;
     align-items: center;
@@ -38,58 +42,76 @@ footer {
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    padding: 10rem;
+    margin-top: 0;
+    
+
+
 }
 
 #divRedes {
 
+    margin-top: auto;
+    margin-bottom: 0;
     background-color: beige;
-    padding-inline: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
     padding-block: 2rem;
     flex-direction: row;
     gap: 1rem;
+
 }
 
 #btnTwitter {
 
     border: none;
-    background-color: #2fd9dd;
+    background-color: grey;
     color: beige;
     border-radius: 7px;
+    width: 3rem;
+    height: 3rem;
 }
 
 #btnIg1 {
 
     border: none;
-    background-color: #e7e713;
-    color: grey;
+    background-color: grey;
+    color: beige;
     border-radius: 7px;
+    width: 3rem;
+    height: 3rem;
 }
 
 #btnIg2 {
 
     border: none;
-    background-color: #e56515;
+    background-color: grey;
     color: beige;
     border-radius: 7px;
+    width: 3rem;
+    height: 3rem;
 }
 
 #btnGithub {
 
     border: none;
-    background-color: #384747;
+    background-color: grey;
     color: beige;
     border-radius: 7px;
+    width: 3rem;
+    height: 3rem;
 }
 
 #btnLinkedin {
 
     border: none;
-    background-color: blue;
+    background-color: grey;
     color: beige;
     border-radius: 7px;
+    width: 3rem;
+    height: 3rem;
 }
+
 
 a {
 
@@ -129,6 +151,17 @@ li:hover {
 
 }
 
+#btnMode {
+
+    background-color: none;
+    color: beige;
+    border-radius: 7px;
+    border: none;
+    background-color: grey;
+
+
+}
+
 button:hover {
 
     cursor: pointer;
@@ -137,4 +170,25 @@ button:hover {
 body {
 
     background-image: radial-gradient(circle at 50% -20.71%, #ffffe0 0, #feffdc 8.33%, #f3ffd7 16.67%, #e6ffd3 25%, #d8fbcf 33.33%, #c7f7cc 41.67%, #b5f2c9 50%, #a1edc8 58.33%, #8de9c9 66.67%, #79e4cc 75%, #63e0d0 83.33%, #4bddd6 91.67%, #2fd9dd 100%);
+}
+
+#divBody{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+
+}
+
+.work{
+
+
+}
+
+.edu{
+
+
+
 }
