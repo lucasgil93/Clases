@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio Perros</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+    <script defer src="objetos.js"></script>
+    <script defer src="code.js"></script>
+</head>
+
+<body>
+    <h1>Ejercicio de cremas</h1>
+    <p>
+        Crea un constructor de objetos de tipo Crema que tenga un nombre, precio y marca.
+    </p>
+    <ul>
+        <li>
+            Además contendrá un array de objetos de tipo Ingrediente, un método addIngrediente(nombre, cantidad) que
+            permitirá añadir un objeto al array,
+        </li>
+        <li>
+            un método removeIngrediente(i) que permite eliminar el iésimo ingrediente
+        </li>
+        <li>
+            y una función toHTMLTable() que devuelva una tabla HTML con todos los ingredientes (se usará el método
+            toHTMLRow() de los ingredientes).</li>
+        <li>
+            Los objetos de tipo Ingrediente tendrán un nombre y una cantidad en gramos además de un método toHTMLRow()
+            que devuelva una fila de una tabla HTML con todos los atributos. </li>
+        <li>
+            Nota: en el ejercicio se pide que se devuelva una fila HTML o una tabla HTML, aunque eso es algo que aún no
+            hemos visto. Puedes buscar información sobre cómo hacerlo o bien, de momento, puedes hacer que se devuelva
+            el código HTML que generaría esa fila/tabla. </li>
+    </ul>
+
+    <form action="">
+        <fieldset>
+            <legend>Añadir Crema</legend>
+            <label for="txtNombre">Nombre</label>
+            <input type="text" name="txtNombre" id="txtNombre">
+            <label for="txtPrecio">Precio</label>
+            <input type="number" name="txtPrecio" step="1" id="txtPrecio">
+            <label for="txtMarca">Marca</label>
+            <input type="text" name="txtMarca" id="txtMarca">
+            
+            <label for="txtRemove">Nº Ing a Remover</label>
+            <input type="number" name="txtRemove" id="txtRemove">
+
+            <div class="botonera">
+                <button id="btnAnadirCrema" type="button">Add Cream</button>
+                <button id="btnRemoveIng" type="button">Remove Ingredient</button>
+                <button id="btnMostrarDatos" type="button">Mostrar Datos</button>
+            </div>
+        </fieldset>
+        <fieldset>
+
+            <label for="txtNombreIng">Nombre Ingrediente</label>
+            <input type="text" name="txtNombreIng" id="txtNombreIng">
+            
+            <label for="txtCantidad">Cantidad (Gr.)</label>
+            <input type="number" name="txtCantidad" step="1" id="txtCantidad">
+
+
+            <div class="botonera">
+                <button id="btnAnadirIng" type="button">Add Ingrediente</button>
+            </div>
+        </fieldset>
+    </form>
+
+    <div id="divResultado" class="notice"></div>
+</body>
+
+</html>

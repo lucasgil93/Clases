@@ -1,47 +1,104 @@
-"use strict"
-
-let divResultado = document.querySelector("#divResultado");
-
-divResultado.innerHTML = `<p>Ejercicio Perros</p>`;
+"use strict";
 
 
-let inputNombre = document.querySelector("#inputNombre");
-let inputEdad = document.querySelector("#inputEdad");
-let inputRaza = document.querySelector("#inputRaza");
+
+
+let arrayPerro = [];
+
+
+
+const anadirPerro = () => {
+
+        const nombre = document.querySelector("#txtNombre").value;
+        const edad = document.querySelector("#txtEdad").value;
+        const raza = document.querySelector("#txtRaza").value;
+
+
+        const p = new Perro(nombre, edad, raza);
+
+        //console.log(p);
+        arrayPerro.push(p);
+
+
+}
+
+
+const ordInsercion = () => {
+
+        let divResultado = document.querySelector("#divResultado");
+
+
+        let sol = "<ul>";
+
+       for (const perro of arrayPerro) {
+        
+        sol+=  "<li>" + perro.mostrarDatos() + "</li>";
+
+       }
+
+        sol+= "</ul>"
+
+        divResultado.innerHTML=sol;
+}
+
+const ordEdad = () => {
+
+        let divResultado = document.querySelector("#divResultado");
+
+
+        let sol = "<ol>";
+
+       for (const perro of arrayPerro.toSorted((a,b)=>a.edad-b.edad)) {
+        
+        sol+=  "<li>" + perro.mostrarDatos() + "</li>";
+
+       }
+
+        sol+= "</ol>"
+
+        divResultado.innerHTML=sol;
+
+
+}
+
+const ordRaza = () => {
+
+        let divResultado = document.querySelector("#divResultado");
+
+
+        let sol = "<ol>";
+
+       for (const perro of arrayPerro.toSorted((a,b)=>a.raza.localeCompare(b.raza))) {
+        
+        sol+=  "<li>" + perro.mostrarDatos() + "</li>";
+
+       }
+
+        sol+= "</ol>"
+
+        divResultado.innerHTML=sol;
+
+
+}
+
 
 let btnAnadir = document.querySelector("#btnAnadir");
-btnanadir.addEventListener("click", anadirPerro());
-let btnRaza = document.querySelector("#btnRaza");
-btnRaza.addEventListener("click", ordenaRaza());
-let btnInsercion = document.querySelector("#btnInsercion");
-btnInsercion.addEventListener("click", ordenaInsercion());
-let btnEdad = document.querySelector("#btnEdad");
-btnEdad.addEventListener("click", ordenaEdad());
+btnAnadir.addEventListener("click", anadirPerro);
 
-function Perros (no, ed, ra){
+let btnOrdIns = document.querySelector("#btnOrdIns");
+btnOrdIns.addEventListener("click", ordInsercion);
 
-this.nombre = no,
-this.edad = ed,
-this.raza = ra,
-this.ordenaRaza = (o, o1 ) => (o.raza>o1.raza);
-this.ordenaEdad = (o, o1 ) => (o.edad>o1.edad);
+let btnOrdEdad = document.querySelector("#btnOrdEdad");
+btnOrdEdad.addEventListener("click", ordEdad);
 
-}
+let btnOrdRaza = document.querySelector("#btnOrdRaza");
+btnOrdRaza.addEventListener("click", ordRaza);
 
 
-function anadirPerro(){
 
-let p = new Perros(inputNombre, inputEdad, inputRaza);
-arrayPerro.push(p);
 
-}
 
-let arrayPerro =[];
 
-for (let index = 0; index < arrayPerro.length; index++) {
 
-        divResultado.innerHTML+= arrayPerro[i].nombre;
-    
-}
 
 
