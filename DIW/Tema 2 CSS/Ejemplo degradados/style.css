@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=Gabarito:regular,500,600,700,800,900);
+
+*,
+::before,
+::after {
+
+    box-sizing: border-box;
+}
+
+
+body {
+
+    max-width: 80ch;
+    margin: 0 auto;
+    min-height: 100vh;
+    font-family: "Gabarito", Arial, Helvetica, sans-serif;
+    /*background-image: linear-gradient(90deg, red 10%, tomato, beige, whitesmoke, beige
+    ,  tomato, red);*/
+}
+
+h1 {
+    font-weight: 100;
+    font-size: 4rem;
+    /*Implementar esto en el proyecto*/
+    background-clip: text;
+    color: transparent;
+    background-image: radial-gradient(red, tomato);
+}
+
+pre{
+
+    font-size: 1rem;
+}

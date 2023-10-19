@@ -9,7 +9,11 @@
 /*USAR EL GAP PARA HACER HUECOS ENTRE COSAS CON EL DISPLAY FLEX*/
 /*USar el grid para hacer el modo phone y el modo pc para ordenar en vertical o horizonal, con un 1fr column y varias row para movil y varias column para pc y un rows*/
 /*existe un background-image en css tiene propiedades como bckground size(cover), position o repeat y blend-mode(luminosity se ve afectado por el bckrgroundcolor)*/
-/*pexels y tabler-icons*/
+/*pexels y tabler-icons
+ /*Implementar esto en el proyecto*/
+ /*background-clip: text;
+ color: transparent;
+ background-image: radial-gradient(red, tomato);*/
 body {
     
     min-height: 100vh;
