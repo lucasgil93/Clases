@@ -1,0 +1,45 @@
+*::after::before{
+    box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Gabarito:regular,500,600,700,800,900);
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Gabarito";
+}
+
+
+button {
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 4rem;
+    border: 2px solid #383835;
+    background-color: #335577;
+    min-width:15ch;
+    z-index:0;
+    position: relative;
+    cursor:pointer;
+    overflow: hidden;
+  }
+  
+  button::before{
+    content: "";
+    position: absolute;
+    background-color: #39c;
+    z-index: -1;
+    transition: all 1000ms ease;
+    rotate: 180deg;
+    left: 0;
+    right: 0;
+     top: 100%;
+    bottom: -100%;
+  }
+  
+  button:hover::before{
+    top: 0%;
+    bottom: 0%;
+  }

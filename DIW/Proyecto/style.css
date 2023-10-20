@@ -28,6 +28,7 @@
 /*background-clip: text;
  color: transparent;
  background-image: radial-gradient(red, tomato);*/
+ /*mirar htmx-retos css y posible erradicacion de js SIUU*/
 body {
 
     min-height: 100vh;
@@ -132,6 +133,7 @@ li:hover {
     color: #003535;
     border-radius: 5px;
     cursor: pointer;
+    transition: 400ms ease;
 
 }
 
@@ -227,6 +229,18 @@ p {
 
 }
 
+.card:nth-child(2)::before {
+    clip-path: circle(0% at 0% 0%);
+
+
+}
+
+.card:nth-child(3)::before {
+    clip-path: circle(0% at 100% 100%);
+
+
+}
+
 .card:hover::before {
     clip-path: circle(100%);
     background-color: #003535;
@@ -287,6 +301,7 @@ input {
     background-color: #003535;
     color: beige;
     text-align: center;
+    background-image: linear-gradient(90deg, #003535, #005555 80%);
 
 }
 
@@ -304,6 +319,9 @@ hr{
     color: #003535;
     font-size: 72px;
     font-weight: 900;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(270deg, #003535, #005555 80%);
 
 }
 
