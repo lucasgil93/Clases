@@ -173,7 +173,7 @@ button:hover {
 
 body {
 
-    background-image: radial-gradient(circle at 50% -20.71%, #ffffe0 0, #feffdc 8.33%, #f3ffd7 16.67%, #e6ffd3 25%, #d8fbcf 33.33%, #c7f7cc 41.67%, #b5f2c9 50%, #a1edc8 58.33%, #8de9c9 66.67%, #79e4cc 75%, #63e0d0 83.33%, #4bddd6 91.67%, #2fd9dd 100%);
+    background-image: linear-gradient(violet, purple, blue, aqua)
 }
 
 #divBody{
@@ -186,13 +186,26 @@ body {
 
 }
 
-.work{
-
-
+.card {
+    padding-inline: 2rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px green;
 }
 
-.edu{
-
-
-
-}
+/* Container for skill bars */
+.container {
+    width: 100%; /* Full width */
+    background-color: #ddd; /* Grey background */
+  }
+  
+  .skills {
+    text-align: right; /* Right-align text */
+    padding-top: 10px; /* Add top padding */
+    padding-bottom: 10px; /* Add bottom padding */
+    color: white; /* White text color */
+  }
+  
+  .html {width: 90%; background-color: #04AA6D;} /* Green */
+  .css {width: 80%; background-color: #2196F3;} /* Blue */
+  .js {width: 65%; background-color: #f44336;} /* Red */
+  .php {width: 60%; background-color: #808080;} /* Dark Grey */
