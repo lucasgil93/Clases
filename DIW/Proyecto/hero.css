@@ -118,8 +118,16 @@ a:hover {
 
 .divBox{
 
-
+    background-color:rgba(173, 178, 211);
     background-clip: transparent;
+    border-radius: 5px;
+
+}
+
+.divBox:hover{
+
+    background-color: transparent;
+    transition: 0.5s ease;
 }
 
 #div1{
