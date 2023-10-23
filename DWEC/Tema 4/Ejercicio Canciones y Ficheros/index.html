@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canciones y Ficheros</title>
+    <script defer src="code.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/simpledotcss/simple.min.css">
+</head>
+<body>
+    <h1>Canciones y Ficheros</h1>
+
+    <div class="textboxes">
+
+        <label for="txtNombre">Nombre:</label>
+        <input type="text" id="txtNombre">
+
+        <label for="txtTamano">Tamaño</label>
+        <input type="number" id="txtTamano">
+
+        <label for="txtCancion">Nombre de la Cancion:</label>
+        <input type="text" id="txtCancion">
+
+        <label for="txtDuracion">Duracion: </label>
+        <input type="number" id="txtDuracion">
+        <br>
+
+        <label for="btncancion">Cancion</label>
+        <input type="radio" name="tipo" id="tipo" value="Cancion">
+        <label for="btnfichero">Fichero</label>
+        <input type="radio" name="tipo" id="tipo" value="Fichero">
+
+        <button type="button" id="btnAgregar">Agregar</button>
+        <button type="button" id="btnMostrar">Mostrar</button>
+
+    </div>
+
+
+    <div id="divResultado"></div>
+    
+</body>
+</html>
