@@ -144,6 +144,18 @@ h1,p{
     color: #ADB2D3;
 }
 
+p{
+    text-align: end;
+    font-size: 26px;
+}
+
+h1{
+
+    font-weight: 700;
+    font-size: 56px;
+
+}
+
 #div1{
 
 grid-column: 1/1;
