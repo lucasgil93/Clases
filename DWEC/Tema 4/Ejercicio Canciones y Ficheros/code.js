@@ -3,22 +3,22 @@
 
 class Fichero {
 
-    constructor(nombre, tamaño){
-        this.nombreFichero= nombre;
+    constructor(nombre, tamaño) {
+        this.nombre = nombre;
         this.tamano = tamaño;
     }
-  
 
-extension() {
-    
-    return "Extension: " + this.tamano;
 
-}
+    extension() {
 
-getDatos(){
+        return this.nombre.split(".").pop();
 
-    return "Nombre: " + this.nombre + " tamaño: " + this.tamano;
-}
+    }
+
+    getDatos() {
+
+        return "Nombre: " + this.nombre + " tamaño: " + this.tamano;
+    }
 
 
 }
@@ -26,33 +26,54 @@ getDatos(){
 
 class Cancion extends Fichero {
 
-    constructor(nombreCancion, tamano, duracion){
-        super(nombreCancion, tamano);
+    constructor(nombre, tamano, nombreCancion, duracion) {
+        super(nombre, tamano);
+        this.nombreCancion =nombreCancion;
         this.duracion = duracion;
     }
 
-    getDatos(){
+    getDatos() {
 
-        return "Nombre: " + this.nombre + " tamaño: " + this.tamano + " duracion: " + this.duracion;
-        
+        return "Nombre: " + this.nombre + " Cancion: " + this.nombreCancion + " tamaño: " + this.tamano + " duracion: " + this.duracion;
+
     }
 
 }
 
 let arrayFicheros = [];
 
-function muestraArray () {
+function muestraArray() {
 
- for (const i of arrayFicheros) {
-    divResultado.innerHTML+= i;
- }
-    
-    };
+divResultado.innerHTML="<ul>"
 
-function agregafichero(){
+    for (const i of arrayFicheros) {
+        divResultado.innerHTML += "<li>" + i.getDatos() + "</li>";
+    }
 
-alert("agrega cosas");
-    };
+    divResultado.innerHTML+="<ul>"
+
+};
+
+function agregafichero() {
+
+    let nombre = document.querySelector("#txtNombre").value;
+    let tamano = document.querySelector("#txtTamano").value;
+    let nombreCancion = document.querySelector("#txtCancion").value;
+    let duracion = document.querySelector("#txtDuracion").value;
+
+    let esCancion = ( document.querySelector("[name=tipo]:checked").value ==="1" ) ;
+
+    if(esCancion){
+
+        let can = new Cancion (nombre, tamano, nombreCancion, duracion);
+        arrayFicheros.push(can);
+    } else {
+        let fich = new Fichero (nombre, tamano);
+        arrayFicheros.push(fich);
+    }
+
+
+};
 
 let btnAgregar = document.querySelector("#btnAgregar");
 let btnMostrar = document.querySelector("#btnMostrar");
