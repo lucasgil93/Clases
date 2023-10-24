@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canciones y Ficheros</title>
+    <script defer src="objetos.js"></script>
     <script defer src="code.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/simpledotcss/simple.min.css">
 </head>
@@ -23,20 +24,24 @@
 
         <label for="txtDuracion">Duracion: </label>
         <input type="number" id="txtDuracion">
-        <br>
 
-        <label for="btncancion">Cancion</label>
-        <input type="radio" name="tipo" id="tipo" value="Cancion">
-        <label for="btnfichero">Fichero</label>
-        <input type="radio" name="tipo" id="tipo" value="Fichero">
-
+        <div>
+            <label for="tipo1">Cancion</label>
+            <input type="radio" name="tipo" id="tipo1" value="1">
+        </div>
+        <div>
+            <label for="tipo2">Fichero</label>
+            <input type="radio" name="tipo" id="tipo2" value="2">
+    
+        </div>
+       
         <button type="button" id="btnAgregar">Agregar</button>
         <button type="button" id="btnMostrar">Mostrar</button>
 
     </div>
 
 
-    <div id="divResultado"></div>
+    <div id="divResultado" class="notice"></div>
     
 </body>
 </html>
