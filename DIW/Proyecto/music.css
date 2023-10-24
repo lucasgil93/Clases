@@ -24,6 +24,7 @@ img{
     max-width: 400px;
     border-radius: 5px;
 
+
 }
 
 audio{
@@ -31,3 +32,35 @@ audio{
     background-color: var(--darkestgreen);
     color: #CCCFE4;
 }
+
+#divBody p{
+    
+    padding: 2rem;
+    border-radius: 5px;
+    background-color:var(--darkestgreen);
+    color: beige;
+    text-align: center;
+    background-image: linear-gradient(90deg, #003535, #005555 80%);
+
+}
+
+div>div{
+
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+
+    margin: 10px;
+    text-align: center;
+    color: var(--darkestgreen);
+    font-size: 26px;
+
+}
+
+audio{
+
+    border-radius: 5px;
+}
+
