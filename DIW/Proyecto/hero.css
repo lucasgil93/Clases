@@ -26,12 +26,12 @@ html {
 }
 
 
-body{
+body {
 
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
 
 
 }
@@ -54,9 +54,9 @@ gap: 1rem;
     grid-column: 1/6;
 
     display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
 }
 
 /* Place text in the middle of the image */
@@ -76,7 +76,7 @@ button {
 
 
     align-items: center;
-    background-color:#ADB2D3(240, 240, 240, 0.76);
+    background-color: #ADB2D3(240, 240, 240, 0.76);
     border: 1px solid #ADB2D3;
     border-radius: 5px;
     box-sizing: border-box;
@@ -100,7 +100,7 @@ button:hover {
 }
 
 button:hover {
-    background-color:#ADB2D3;
+    background-color: #ADB2D3;
     border-color: rgba(0, 0, 0, 0.19);
 }
 
@@ -111,82 +111,86 @@ a {
 }
 
 a:visited {
-    color:rgb(0, 53, 53);
+    color: rgb(0, 53, 53);
 }
 
 a:hover {
     color: #003535;
 }
 
-.divBox{
+.divBox {
 
-    background-color:rgba(173, 178, 211);
+    background-color: rgba(173, 178, 211);
     background-clip: transparent;
     border-radius: 5px;
 
 }
 
-.divBox:hover{
+.divBox:hover {
 
     background-color: transparent;
     transition: 0.5s ease;
 }
 
-#div9, #div12, #div18{
+#div9,
+#div12,
+#div18 {
 
-background-color: transparent;
+    background-color: transparent;
 
 }
 
 
-h1,p{
+h1,
+p {
 
     color: #ADB2D3;
 }
 
-p{
+p {
     text-align: end;
     font-size: 26px;
 }
 
-h1{
+h1 {
 
     font-weight: 700;
     font-size: 56px;
 
 }
 
-#div1{
+#div1 {
 
-grid-column: 1/1;
-grid-row: 1/4;
-background-color: #ADB2D3;
+    grid-column: 1/1;
+    grid-row: 1/4;
+    background-color: #ADB2D3;
 
 }
-#div1:hover{
 
-    background-color:transparent;
+#div1:hover {
+
+    background-color: transparent;
 }
 
-#div4{
+#div4 {
     background-color: #003535;
-
     grid-column: 2/4;
     grid-row: 2/3;
 
 }
-#div4:hover{
 
-    background-color:transparent;
+#div4:hover {
+
+    background-color: transparent;
 }
 
-#div2{
+#div2 {
 
     background-color: transparent;
 
 }
 
-#div5{
+#div5 {
     background-color: #2C6D75;
 
     grid-column: 4/5;
@@ -194,19 +198,21 @@ background-color: #ADB2D3;
 
 }
 
-#div6{
+#div6 {
 
     background-color: #CCCFE4;
     grid-column: 5/6;
     grid-row: 1/4;
 
 }
-#div6:hover{
 
-    background-color:transparent;
+#div6:hover {
+
+    background-color: transparent;
 }
 
-#div18{ /*button link*/
+#div18 {
+    /*button link*/
 
     display: flex;
     align-items: center;
@@ -215,60 +221,64 @@ background-color: #ADB2D3;
     grid-row: 5/6;
 }
 
-#div9{ /*lucas*/
+#div9 {
+    /*lucas*/
 
     grid-column: 2/3;
     grid-row: 3/4;
 }
 
-#div12{ /*i am sth*/
+#div12 {
+    /*i am sth*/
 
     background-color: #005555;
     grid-column: 4/5;
     grid-row: 4/5;
 }
 
-p{
+p {
 
     padding: 1rem;
 }
 
-#div7{
+#div7 {
 
     background-color: #2C6D75;
     grid-column: 2/3;
     grid-row: 4/6;
 }
 
-#div7:hover{
-
-    background-color:transparent;
-}
-
-#div8{
-    background-color: transparent;
-}
-#div13{
+#div7:hover {
 
     background-color: transparent;
 }
 
-#div11{
+#div8 {
+    background-color: transparent;
+}
+
+#div13 {
+
+    background-color: transparent;
+}
+
+#div11 {
 
     background-color: #003535;
 }
-#div11:hover{
 
-    background-color:transparent;
+#div11:hover {
+
+    background-color: transparent;
 }
 
 
-#div17{
+#div17 {
 
     background-color: #2C6D75;
 }
-#div17:hover{
 
-    background-color:transparent;
+#div17:hover {
+
+    background-color: transparent;
 }
-
