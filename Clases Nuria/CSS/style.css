@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css?family=Gabarito:regular,500,600,700,800,900);
+
+*,::after::before{
+
+    box-sizing: border-box;
+}
+
+
+body{
+
+    margin: 0;
+
+}
+header{
+    background-image: linear-gradient(90deg, aqua, grey);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+ul{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+li{
+
+    list-style: none;
+    margin: 20px;
+}
+
+footer{
+
+    background-image: linear-gradient(90deg, aqua, grey);
+}
+
+div{
+
+ font-family: 'Gabarito', Arial, Helvetica, sans-serif;
+    
+
+}
+
