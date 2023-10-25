@@ -280,7 +280,7 @@ p {
     background-color: transparent;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 650px) {
 
     /* Mobile styles */
     body {
