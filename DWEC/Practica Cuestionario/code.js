@@ -60,23 +60,26 @@ function añadirPregunta() {
 
     }
 
+    let section = document.createElement("section");
 
     //boton descartar (no preguntes como esta hecho el boton jaja);
-      
-      const btnDescartar = document.createElement('button');
-      btnDescartar.textContent = 'Descartar Pregunta';
-      document.body.appendChild(btnDescartar);
-      
-      btnDescartar.addEventListener('click', descartar);
+
+    const btnDescartar = document.createElement('button');
+    btnDescartar.textContent = 'Descartar Pregunta';
+    document.body.appendChild(btnDescartar);
+
+
+    section.appendChild(btnDescartar);
 
 
 
-      // boton recuperar (funciona de momento)
-      const btnRecuperar = document.createElement('button');
-      btnRecuperar.textContent = 'Recuperar Pregunta';
-      document.body.appendChild(btnRecuperar);
-      
-      btnRecuperar.addEventListener('click', recuperar);
+    // boton recuperar (funciona de momento)
+    const btnRecuperar = document.createElement('button');
+    btnRecuperar.textContent = 'Recuperar Pregunta';
+    document.body.appendChild(btnRecuperar);
+
+
+    section.appendChild(btnRecuperar);
 
 
     sol += `</section>`
@@ -84,13 +87,17 @@ function añadirPregunta() {
 
     divPreguntas.innerHTML += sol;
 
+    divPreguntas.appendChild(section);
+    btnRecuperar.addEventListener('click', recuperar);
+    btnDescartar.addEventListener('click', descartar);
+
 
 
 }
 
-function guardarPreguntas(){
+function guardarPreguntas() {
 
-    const cuestionario1 = new Cuestionario (arrayPreguntas);
+    const cuestionario1 = new Cuestionario(arrayPreguntas);
 
     let stringcuestiones = JSON.stringify(cuestionario1);
 
@@ -101,14 +108,14 @@ function guardarPreguntas(){
 
 
 
-function descartar(){
+function descartar() {
 
     alert("descarta");
 }
 
 
 
-function recuperar(){
+function recuperar() {
 
     alert("recupera");
 }
