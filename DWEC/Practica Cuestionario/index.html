@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionarios Moodle</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="objetos.js"></script>
+    <script defer src="code.js"></script>
+</head>
+<body>
+
+    <h1>Cuestionarios para la Moodle</h1>
+    <p>Realizado por Maria Reyes, Nuria Morales, Lucas Gil</p>
+
+    <fieldset>
+        <label for="txtPregunta">Pregunta:</label>
+        <input type="text" name="txtPregunta" id="txtPregunta">
+        <label for="txtCorrecta">Respuesta Correcta:</label>
+        <input type="text" name="txtCorrecta" id="txtCorrecta">
+        <label for="txtIncorrecta1">Respuesta Incorrecta 1:</label>
+        <input type="text" name="txtIncorrecta1" id="txtIncorrecta1">
+        <label for="txtIncorrecta2">Respuesta Incorrecta 2:</label>
+        <input type="text" name="txtIncorrecta2" id="txtIncorrecta2">
+        <label for="txtIncorrecta3">Respuesta Incorrecta 3:</label>
+        <input type="text" name="txtIncorrecta3" id="txtIncorrecta3">
+
+        <div id="divBotonera">
+            <button type="button" id="btnCrear"> Crear Pregunta </button>
+            <button type="button" id="btnGenerarArchivo"> Generar Archivo</button>
+            <button type="button" id="btnBorrar">Borrar todas las preguntas</button>
+            <button type="button" id="btnGuardar">Guardar todas las preguntas</button>
+        </div>
+
+    </fieldset>
+
+    <div id="divPreguntas">
+
+
+    </div>
+
+    <div id="divErrores">
+
+    </div>
+    
+</body>
+</html>

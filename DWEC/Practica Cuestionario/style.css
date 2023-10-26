@@ -1,0 +1,20 @@
+*,::after::before{
+
+    box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Gabarito:regular,500,600,700,800,900);
+
+body{
+
+    font-family: 'Gabarito', Arial, Helvetica, sans-serif;
+}
+
+fieldset{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: burlywood;
+}
+
