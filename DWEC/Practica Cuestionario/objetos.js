@@ -11,6 +11,14 @@ class Pregunta {
         this.rI3 = rI3;
     }
 
-    
+
+
+}
+
+class Cuestionario {
+
+    constructor(arrayPreguntas){
+        this.preguntas = arrayPreguntas;
+    }
 
 }

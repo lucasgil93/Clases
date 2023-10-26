@@ -19,7 +19,9 @@ function añadirPregunta() {
 
     divErrores.innerHTML = "";
 
-    let sol = `<section>` 
+    let arrayTextos = [];
+
+    let sol = `<section>`;
 
     let txtPregunta = document.querySelector("#txtPregunta").value;
     let txtCorrecta = document.querySelector("#txtCorrecta").value;
@@ -27,55 +29,86 @@ function añadirPregunta() {
     let txtIncorrecta2 = document.querySelector("#txtIncorrecta2").value;
     let txtIncorrecta3 = document.querySelector("#txtIncorrecta3").value;
 
-    if (txtPregunta==""||txtCorrecta==""||txtIncorrecta1==""||txtIncorrecta2==""||txtIncorrecta3==""){
-        divErrores.innerHTML="Hay campos vacios."
-    } else{
+    if (txtPregunta == "" || txtCorrecta == "" || txtIncorrecta1 == "" || txtIncorrecta2 == "" || txtIncorrecta3 == "") {
+        divErrores.innerHTML = "Hay campos vacios."
+    } else {
 
-        //   txtPregunta = txtPregunta.replaceAll("[~#={}:]","\\$0");
-        txtPregunta = txtPregunta.replaceAll("#", "\\#");
+        arrayTextos.push(txtPregunta);
+        arrayTextos.push(txtCorrecta);
+        arrayTextos.push(txtIncorrecta1);
+        arrayTextos.push(txtIncorrecta2);
+        arrayTextos.push(txtIncorrecta3);
 
-        sol += `<h3>${txtPregunta}</h3>`;
-        sol+=`<p>${txtCorrecta}</p><br>`;
-        sol+=`<p>${txtIncorrecta1}</p><br>`;
-        sol+=`<p>${txtIncorrecta2}</p><br>`;
-        sol+=`<p>${txtIncorrecta3}</p><br>`;
+        for (let index = 0; index < arrayTextos.length; index++) {
+            arrayTextos[index] = arrayTextos[index].replaceAll("#", "\\#");
+            arrayTextos[index] = arrayTextos[index].replaceAll("~", "\\~");
+            arrayTextos[index] = arrayTextos[index].replaceAll("=", "\\=");
+            arrayTextos[index] = arrayTextos[index].replaceAll("{", "\\{");
+            arrayTextos[index] = arrayTextos[index].replaceAll("}", "\\}");
+            arrayTextos[index] = arrayTextos[index].replaceAll(":", "\\:");
+
+        }
+
+        sol += `<h3>${arrayTextos[0]}</h3>`;
+        sol += `<p>${arrayTextos[1]}</p><br>`;
+        sol += `<p>${arrayTextos[2]}</p><br>`;
+        sol += `<p>${arrayTextos[3]}</p><br>`;
+        sol += `<p>${arrayTextos[4]}</p><br>`;
+
+        const pregunta1 = new Pregunta(arrayTextos[0], arrayTextos[1], arrayTextos[2], arrayTextos[3], arrayTextos[4]);
+        arrayPreguntas.push(pregunta1);
 
     }
 
-const pregunta1 = new Pregunta (txtPregunta, txtCorrecta, txtIncorrecta1, txtIncorrecta2, txtIncorrecta3);
 
-sol+=`</section>`
+    //boton descartar (no preguntes como esta hecho el boton jaja);
+      
+      const btnDescartar = document.createElement('button');
+      btnDescartar.textContent = 'Descartar Pregunta';
+      document.body.appendChild(btnDescartar);
+      
+      btnDescartar.addEventListener('click', descartar);
 
-divPreguntas.innerHTML+= sol;
 
+
+      // boton recuperar (funciona de momento)
+      const btnRecuperar = document.createElement('button');
+      btnRecuperar.textContent = 'Recuperar Pregunta';
+      document.body.appendChild(btnRecuperar);
+      
+      btnRecuperar.addEventListener('click', recuperar);
+
+
+    sol += `</section>`
+
+
+    divPreguntas.innerHTML += sol;
+
+
+
+}
+
+function guardarPreguntas(){
+
+    const cuestionario1 = new Cuestionario (arrayPreguntas);
+
+    let stringcuestiones = JSON.stringify(cuestionario1);
+
+    localStorage.setItem(stringcuestiones);
 
 
 }
 
 
 
-if (txtPregunta == "") {
-    divErrores.innerHTML += "No esta rellena la pregunta";
-} else {
-    sol += `<h3>${txtPregunta}</h3>`;
+function descartar(){
+
+    alert("descarta");
 }
-if (txtCorrecta == "") {
-    divErrores.innerHTML += "No esta rellena la respuesta 1";
-} else {
-    sol+=`<p>${txtCorrecta}</p><br>`;
-}
-if (txtIncorrecta1 == "") {
-    divErrores.innerHTML += "No esta rellena la respuesta 2";
-}else{
-    sol+=`<p>${txtIncorrecta1}</p><br>`;
-}
-if (txtIncorrecta2 == "") {
-    divErrores.innerHTML += "No esta rellena la respuesta 3";
-}else{
-    sol+=`<p>${txtIncorrecta2}</p><br>`;
-}
-if (txtIncorrecta3 == "") {
-    divErrores.innerHTML += "No esta rellena la respuesta 4";
-}else{
-    sol+=`<p>${txtIncorrecta3}</p><br>`;
+
+
+
+function recuperar(){
+
+    alert("recupera");
 }
