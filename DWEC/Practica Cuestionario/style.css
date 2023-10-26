@@ -21,8 +21,9 @@ fieldset{
 section{
 
 display: flex;
-align-items: center;
+align-items: flex-start;
 flex-direction: column;
+justify-content: flex-start;
 background-color: cadetblue;
 
 }
@@ -32,3 +33,11 @@ background-color: cadetblue;
     background-color: tomato;
 
 }
+
+section:nth-child(even){
+
+    background-color: blue;
+    color: beiges;
+}
+
+
