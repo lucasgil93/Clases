@@ -18,3 +18,17 @@ fieldset{
     background-color: burlywood;
 }
 
+section{
+
+display: flex;
+align-items: center;
+flex-direction: column;
+background-color: cadetblue;
+
+}
+
+#divErrores{
+
+    background-color: tomato;
+
+}
