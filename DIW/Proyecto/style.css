@@ -412,7 +412,7 @@ fieldset>button {
     }
 
     .card {
-        background-image: linear-gradient(90deg, #003535, #005555 80%);
+        background-image: linear-gradient(90deg, var(--darkestgreen),var(--green-logo) 80%);
         color: var(--beige);
         opacity: 1;
         margin-block: 1rem;
