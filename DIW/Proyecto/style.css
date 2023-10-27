@@ -321,22 +321,15 @@ hr {
 
 #divIntro>h1 {
 
-    color: var(--darkestgreen);
     font-size: 72px;
     font-weight: 900;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(90deg, var(--darkestgreen), var(--green-logo) 80%);
 
 }
 
-
-#divIntro>h1 {
-
-    font-size: 72px;
-    font-weight: 900;
-    color: var(--darkestgreen);
-
-
-
-}
 
 fieldset {
 
