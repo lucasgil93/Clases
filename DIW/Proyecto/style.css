@@ -15,8 +15,6 @@
     --greyblue: #829BB4;
     --periwinkle: #ADB2D3;
     --lightperi: #B4B9D7;
-    --lighterperi: #BBBFDB;
-    --lightestperi: #C1C5DE;
     --lavender: #C7CAE1;
     --lightlavender: #CCCFE4;
     --beige: #f5f5dc;
@@ -253,7 +251,7 @@ p {
 .skills {
 
     padding-block: 10px;
-    color: var(--lightestperi);
+    color: var(--lightperi);
 }
 
 .html {
@@ -355,6 +353,8 @@ fieldset>button {
     border: 0;
     outline: 0;
     border-radius: 5px;
+    position: relative;
+    top: -8px;
 }
 
 
@@ -482,7 +482,7 @@ fieldset>button {
         height: 4px;
         width: 100%;
         border-radius: 5px;
-        background: var(--lightlavender);
+        background: var(--lightperi);
     }
 
     .navbar .menu-items {
@@ -499,7 +499,7 @@ fieldset>button {
         margin: 1rem;
         padding: 1rem;
         transition: transform 0.5s ease-in-out;
-        box-shadow: 0px 0px 5px 0px var(--lightlavender);
+        box-shadow: 0px 0px 5px 0px var(--lightperi);
     }
 
 
@@ -516,6 +516,12 @@ fieldset>button {
         max-width: 350px;
 
     }
+    fieldset>button {
+
+        position: block;
+        
+    }
+    
 
 
 

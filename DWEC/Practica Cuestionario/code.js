@@ -12,7 +12,7 @@ let arrayPreguntas = [];
 let divPreguntas = document.querySelector("#divPreguntas");
 let divErrores = document.querySelector("#divErrores");
 
-let cont = -1;
+let cont = -1; //Este contador habria que meterlo en el array de textos o en el propio objeto pregunta para que los metodos recuperar y descartar puedan acceder a el y saber cual es la pregunta a modificar o borrar!!
 
 btnCrear.addEventListener("click", añadirPregunta);
 
@@ -21,7 +21,7 @@ function añadirPregunta() {
 
     // añadir contador en -1 para que cuando se cree el primer obejto sea la posicion 0 del array y se pueda llamar desde los metodos descartar y recueprar
 
- 
+
 
     divErrores.innerHTML = "";
 
@@ -63,7 +63,7 @@ function añadirPregunta() {
 
 
         const pregunta1 = new Pregunta(arrayTextos[0], arrayTextos[1], arrayTextos[2], arrayTextos[3], arrayTextos[4]);
-        cont ++;
+        cont++;
         arrayPreguntas.push(pregunta1);
 
     }
@@ -73,7 +73,7 @@ function añadirPregunta() {
     //boton descartar (no preguntes como esta hecho el boton jaja);
 
     const btnDescartar = document.createElement('button');
-    btnDescartar.textContent = 'Descartar Pregunta'+cont;
+    btnDescartar.textContent = 'Descartar Pregunta' + cont;
     document.body.appendChild(btnDescartar);
     section.appendChild(btnDescartar);
 
@@ -81,7 +81,7 @@ function añadirPregunta() {
 
     // boton recuperar (funciona de momento)
     const btnRecuperar = document.createElement('button');
-    btnRecuperar.textContent = 'Recuperar Pregunta'+cont;
+    btnRecuperar.textContent = 'Recuperar Pregunta' + cont;
     document.body.appendChild(btnRecuperar);
     section.appendChild(btnRecuperar);
 
@@ -92,8 +92,8 @@ function añadirPregunta() {
     divPreguntas.innerHTML += sol;
 
     divPreguntas.appendChild(section);
-    btnRecuperar.addEventListener('click', function (){recuperar(cont)});
-    btnDescartar.addEventListener('click', function (){descartar(cont)});
+    btnRecuperar.addEventListener('click', function () { recuperar(cont) });
+    btnDescartar.addEventListener('click', function () { descartar(cont) });
 
 
 
