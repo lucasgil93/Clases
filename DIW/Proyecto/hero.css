@@ -195,6 +195,10 @@ h1 {
 
 }
 
+#div5:hover{
+    background-color: transparent;
+}
+
 #div6 {
 
     background-color: #CCCFE4;
