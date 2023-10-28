@@ -67,3 +67,9 @@ audio{
     border-radius: 5px;
 }
 
+#divIntro{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+
+}

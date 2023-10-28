@@ -82,7 +82,15 @@ hr {
     background-color: #578494;
 
 }
+#divIntro{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
 
+.intro2{
+    border-top: 1rem solid var(--darkestgreen);
+}
 
 
 
