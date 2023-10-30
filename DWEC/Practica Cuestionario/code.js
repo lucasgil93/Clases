@@ -20,9 +20,6 @@ function añadirPregunta() {
 
 
     // añadir contador en -1 para que cuando se cree el primer obejto sea la posicion 0 del array y se pueda llamar desde los metodos descartar y recueprar
-
-
-
     divErrores.innerHTML = "";
 
     let arrayTextos = [];
@@ -67,8 +64,8 @@ function añadirPregunta() {
         arrayPreguntas.push(pregunta1);
 
         
-        sol+= `<button type="button" onclick="descartar(cont)">Descartar Pregunta</button>`
-        sol+= `<button type="button" onclick="recuperar(cont)">Recuperar Pregunta</button>`
+        sol+= `<button type="button" onclick="descartar(this.id)" id=btnD${cont}>Descartar Pregunta</button>`
+        sol+= `<button type="button" onclick="recuperar(this.id)" id=btnR${cont}>Recuperar Pregunta</button>`
 
     
         sol += `</section>`
@@ -86,6 +83,9 @@ function añadirPregunta() {
 
 }
 
+
+btnBorrar.addEventListener("click", borrarPreguntas);
+
 function guardarPreguntas() {
 
     const cuestionario1 = new Cuestionario(arrayPreguntas);
@@ -97,11 +97,19 @@ function guardarPreguntas() {
 
 }
 
+function borrarPreguntas(){
+
+    arrayPreguntas = [];
+    divPreguntas.innerHTML = ""
+    divPreguntas.innerHTML = "Se han borrado las preguntas."
+    divErrores.innerHTML = "";
+}
 
 
-function descartar(cont) {
 
-    alert(cont);
+function descartar(x) {
+
+    alert(x);
 }
 
 
