@@ -7,17 +7,13 @@
     document.documentElement.classList.add("dark-mode");
 
 
-    document.documentElement.style.setProperty("--darkestgreen", "#562C2C");
-    document.documentElement.style.setProperty("--darkergreen", "#A4402D");
-    document.documentElement.style.setProperty("--green-logo", "#AE432D");
-    document.documentElement.style.setProperty("--caribbean", "#F2542D");
-    document.documentElement.style.setProperty("--airblue", "#F37751");
-    document.documentElement.style.setProperty("--greyblue", "#F49A74");
-    document.documentElement.style.setProperty("--periwinkle", "#F5BD98");
-    document.documentElement.style.setProperty("--lightperi", "#F5DFBB");
-    document.documentElement.style.setProperty("--lavander", "#84AA98");
-    document.documentElement.style.setProperty("--lightlavander", "#127475");
-    document.documentElement.style.setProperty("--beige", "#f5f5dc");
+    document.documentElement.style.setProperty("--darkest", "#EBFFFF");
+    document.documentElement.style.setProperty("--dark", "#ADFFFF");
+    document.documentElement.style.setProperty("--medium", "#00CCCC"); //wine
+    document.documentElement.style.setProperty("--light", "#6D3B47"); //cinnabar
+    document.documentElement.style.setProperty("--lighter", "#005555"); //cinabar
+    document.documentElement.style.setProperty("--lightest", "#003535"); //lightorange
+    document.documentElement.style.setProperty("--accent", "#F9DBBD"); 
 
 
     localStorage.setItem("darkMode", "true");
@@ -27,17 +23,13 @@
     document.documentElement.classList.remove("dark-mode");
 
 
-    document.documentElement.style.setProperty("--darkestgreen", "#003535");
-    document.documentElement.style.setProperty("--darkergreen", "#004D4D");
-    document.documentElement.style.setProperty("--green-logo", "#005555");
-    document.documentElement.style.setProperty("--caribbean", "#2C6D75");
-    document.documentElement.style.setProperty("--airblue", "#578494");
-    document.documentElement.style.setProperty("--greyblue", "#829BB4");
-    document.documentElement.style.setProperty("--periwinkle", "#ADB2D3");
-    document.documentElement.style.setProperty("--lightperi", "#B4B9D7");
-    document.documentElement.style.setProperty("--lavander", "#C7CAE1");
-    document.documentElement.style.setProperty("--lightlavender", "#CCCFE4");
-    document.documentElement.style.setProperty("--beige", "#f5f5dc");
+    document.documentElement.style.setProperty("--darkest", "#003535");
+    document.documentElement.style.setProperty("--dark", "#005555");
+    document.documentElement.style.setProperty("--medium", "#409CA9"); 
+    document.documentElement.style.setProperty("--light", "#D1CCBB"); 
+    document.documentElement.style.setProperty("--lighter", "#F69875"); 
+    document.documentElement.style.setProperty("--lightest", "#FAE2CB"); 
+    document.documentElement.style.setProperty("--accent", "#F47656"); 
 
     localStorage.setItem("darkMode", "false");
   };

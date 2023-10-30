@@ -1,18 +1,12 @@
-root{
 
-    --darkestgreen: #003535;
-    --darkergreen: #004D4D;
-    --green-logo: #005555;
-    --caribbean: #2C6D75;
-    --airblue: #578494;
-    --greyblue: #829BB4;
-    --periwinkle: #ADB2D3;
-    --lightperi: #B4B9D7;
-    --lighterperi: #BBBFDB;
-    --lightestperi: #C1C5DE;
-    --lavender: #C7CAE1;
-    --lightlavender: #CCCFE4;
-    --beige: beige;
+:root {
+    --darkest: #003535;
+    --dark: #005555;
+    --medium: #2C6D75;
+    --light: #93A499;
+    --lighter: #F69875;
+    --lightest: #F9DBBD;
+    --accent: #f2542d;
 }
 #divBody{
 
@@ -29,7 +23,7 @@ img{
 
 audio{
 
-    background-color: var(--darkestgreen);
+    background-color: var(--darkest);
     color: #CCCFE4;
 }
 
@@ -37,10 +31,10 @@ audio{
     
     padding: 2rem;
     border-radius: 5px;
-    background-color:var(--darkestgreen);
-    color: beige;
+    background-color:var(--darkest);
+    color: var(--lightest);
     text-align: center;
-    background-image: linear-gradient(90deg, var(--darkestgreen) , var(--green-logo) 80%);
+    background-image: linear-gradient(90deg, var(--darkest) , var(--dark) 80%);
 
 }
 
@@ -54,7 +48,7 @@ label{
 
     margin: 10px;
     text-align: center;
-    color: var(--darkestgreen);
+    color: var(--darkest);
     font-size: 26px;
 
 }
@@ -62,8 +56,14 @@ label{
 audio{
 
     width: 100%;
-    color: var(--periwinkle);
-    background-color: var(--darkestgreen);
+    color: var(--light);
+    background-color: var(--darkest);
     border-radius: 5px;
 }
 
+#divIntro{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+
+}

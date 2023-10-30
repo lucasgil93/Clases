@@ -7,17 +7,13 @@
 }
 
 :root {
-    --darkestgreen: #003535;
-    --darkergreen: #004D4D;
-    --green-logo: #005555;
-    --caribbean: #2C6D75;
-    --airblue: #578494;
-    --greyblue: #829BB4;
-    --periwinkle: #ADB2D3;
-    --lightperi: #B4B9D7;
-    --lavender: #C7CAE1;
-    --lightlavender: #CCCFE4;
-    --beige: #f5f5dc;
+    --darkest: #003535;
+    --dark: #005555;
+    --medium: #2C6D75;
+    --light: #93A499;
+    --lighter: #F69875;
+    --lightest: #F9DBBD;
+    --accent: #f2542d;
 }
 
 /* youtube - midulive*/
@@ -32,25 +28,88 @@
  background-image: radial-gradient(red, tomato);*/
 /*mirar htmx-retos css y posible erradicacion de js SIUU*/
 body {
-
+    height: 100%;
     min-height: 100vh;
     max-width: 100%;
     margin: 0;
     font-family: "Gabarito", Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(90deg, var(--airblue),var(--greyblue), var(--lightperi), var(--airblue));
+    background-color: var(--lightest);
+    position: relative;
+   
+}
+
+#divIntro{
+
+    height: 20rem;
+    background: radial-gradient(circle, var(--lighter) 0%, var(--lightest) 50%);
+    border-bottom: 1rem solid var(--darkest);
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 33% 33% 33%;
+    position: relative;
+    gap: 10px;
+}
+
+#divIntro>img{
+
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+    z-index: 0;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    border: 2px solid var(--dark);
+ 
+}
+
+#divIntro>p {
+
+    font-size: 20px;
+    border: 1px solid var(--darkest);
+    border-radius: 5px;
+    font-weight: 500;
+    padding: 2rem;
+    text-align: center;
+    color: var(--darkest);
+    grid-column: 2/3;
+    grid-row: 2/4;
+    padding-top: 1rem;
+
+}
+
+#divIntro>h1 {
+
+    font-size: 72px;
+    font-weight: 900;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(90deg, var(--darkest), var(--dark) 80%);
+    grid-column: 2/3;
+    grid-row: 1/4;
+
 }
 
 header {
-    padding-block: 0.1rem;
+    padding-block: 0.5rem;
     padding-inline: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
-    background-color: var(--darkestgreen);
-    color: var(--beige);
+    background-color: var(--darkest);
+    color: var(--lightest);
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+    z-index: 1;
 
 }
 
@@ -61,8 +120,8 @@ header {
 
 footer {
 
-    background-color: var(--darkestgreen);
-    color: var(--beige);
+    background-color: var(--darkest);
+    color: var(--lightest);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -77,7 +136,7 @@ footer {
 
     margin-top: auto;
     margin-bottom: 0;
-    background-color: var(--green-logo);
+    background-color: var(--dark);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,8 +148,8 @@ footer {
 
 button {
 
-    background-color: var(--airblue);
-    color: beige;
+    background-color: var(--darkest);
+    color: var(--lightest);
     border: none;
     border-radius: 5px;
     width: 5rem;
@@ -99,24 +158,24 @@ button {
 }
 
 button:hover {
-    background-color: var(--darkestgreen);
+    background-color: var(--accent);
     cursor: pointer;
 }
 
 
 
 a {
-    color: var(--beige);
+    color: var(--lightest);
     text-decoration: none;
 
 }
 
 a:visited {
-    color: var(--beige);
+    color: var(--lightest);
 }
 
 a:hover {
-    color: var(--darkestgreen);
+    color: var(--darkest);
 }
 
 
@@ -136,8 +195,8 @@ li {
 
 li:hover {
 
-    background-color: var(--lightperi);
-    color: var(--darkestgreen);
+    background-color: var(--lighter);
+    color: var(--darkest);
     border-radius: 5px;
     cursor: pointer;
     transition: 400ms ease;
@@ -151,8 +210,8 @@ li:hover {
     justify-content: center;
     width: 2rem;
     height: 2rem;
-    background-color: var(--darkestgreen);
-    color: var(--beige);
+    background-color: var(--darkest);
+    color: var(--lightest);
     border-radius: 5px;
     border: none;
 
@@ -161,8 +220,8 @@ li:hover {
 
 #btnMode:hover {
 
-    background-color: var(--lightperi);
-    color: var(--darkestgreen);
+    background-color: var(--lighter);
+    color: var(--darkest);
     border-radius: 50%;
     cursor: pointer;
 
@@ -180,6 +239,7 @@ li:hover {
 
 
     /* si quitas el display flex se ve ahora mismo es columna*/
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -191,25 +251,32 @@ li:hover {
 
     border-radius: 5px;
     height: 60ch;
-    box-shadow: 0 0 10px 1px var(--darkergreen);
+    box-shadow: 0 0 10px 1px var(--darkest);
     min-height: 100px;
     width: 40ch;
     padding-inline: 2rem;
     padding: 0.5rem;
     margin: auto;
-    background-color: var(--green-logo);
+    background-color: var(--medium);
     opacity: 0.5;
     transition: opacity 1350ms ease, transform 1250ms ease-in;
     position: relative;
 }
 
 .card:hover {
-    color: var(--beige);
+    color: var(--lightest);
     opacity: 1;
     transform: translateY(-10px);
     transition: opacity 450ms ease, transform 450ms ease-in;
 }
 
+
+hr {
+
+    color: var(--medium);
+    background-color: var(--medium);
+
+}
 
 h1,
 h3,
@@ -239,52 +306,52 @@ p {
 
 .card:hover::before {
     clip-path: circle(100%);
-    background-color: var(--darkestgreen);
+    background-color: var(--darkest);
 
 }
 
 .container {
     width: 100%;
-    background-color: var(--darkestgreen);
+    background-color: var(--darkest);
 }
 
 .skills {
 
     padding-block: 10px;
-    color: var(--lightperi);
+    color: var(--lighter);
 }
 
 .html {
     width: 90%;
-    background-color: var(--airblue);
+    background-color: var(--medium);
 }
 
 .js {
     width: 30%;
-    background-color: var(--airblue);
+    background-color: var(--medium);
 }
 
 .java {
     width: 80%;
-    background-color: var(--airblue);
+    background-color: var(--medium);
 }
 
 .pt {
     width: 65%;
-    background-color: var(--airblue);
+    background-color: var(--medium);
 }
 
 .edius {
     width: 50%;
-    background-color: var(--airblue);
+    background-color: var(--medium);
 }
 
 
 input {
-    background-color: var(--darkestgreen);
+    background-color: var(--darkest);
     width: 20ch;
     height: 1.2rem;
-    color: var(--beige);
+    color: var(--lightest);
     font-family: "Gabarito", Arial, Helvetica, sans-serif;
     border: 0;
     outline: 0;
@@ -295,60 +362,29 @@ input:focus {
     outline: none !important;
 }
 
-#divIntro>p {
 
-    padding: 2rem;
-    border-radius: 5px;
-    background-color: var(--darkestgreen);
-    color: beige;
-    text-align: center;
-    background-image: linear-gradient(90deg, var(--darkestgreen), var(--green-logo) 80%);
-
-}
-
-hr {
-
-    color: var(--airblue);
-    background-color: var(--airblue);
-
-}
-
-
-
-
-
-#divIntro>h1 {
-
-    font-size: 72px;
-    font-weight: 900;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(90deg, var(--darkestgreen), var(--green-logo) 80%);
-
-}
 
 
 fieldset {
 
-    color: var(--darkestgreen);
+    color: var(--darkest);
 
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-    border: 1px solid var(--darkestgreen);
+    border: 1px solid var(--darkest);
     margin: 1rem;
 }
 
 fieldset>button {
 
     margin-top: 1rem;
-    background-color: var(--caribbean);
+    background-color: var(--medium);
     width: 150px;
     height: 2rem;
-    color: var(--beige);
+    color: var(--lightest);
     font-family: "Gabarito", Arial, Helvetica, sans-serif;
     border: 0;
     outline: 0;
@@ -388,7 +424,7 @@ fieldset>button {
         justify-content: center;
         width: 2rem;
         height: 2rem;
-        background-color: var(--darkestgreen);
+        background-color: var(--darkest);
         color: var(--beige);
         border-radius: 5px;
         border: none;
@@ -405,7 +441,7 @@ fieldset>button {
     }
 
     .card {
-        background-image: linear-gradient(90deg, var(--darkestgreen),var(--green-logo) 80%);
+        background-image: linear-gradient(90deg, var(--darkest),var(--dark) 80%);
         color: var(--beige);
         opacity: 1;
         margin-block: 1rem;
@@ -482,7 +518,7 @@ fieldset>button {
         height: 4px;
         width: 100%;
         border-radius: 5px;
-        background: var(--lightperi);
+        background: var(--lighter);
     }
 
     .navbar .menu-items {
@@ -490,7 +526,7 @@ fieldset>button {
         top: 65px;
         border-radius: 5px;
         padding-top: 1rem;
-        background: var(--darkestgreen);
+        background: var(--darkest);
         height: 30vh;
         max-width: 150px;
         transform: translateX(-175%);
@@ -499,7 +535,8 @@ fieldset>button {
         margin: 1rem;
         padding: 1rem;
         transition: transform 0.5s ease-in-out;
-        box-shadow: 0px 0px 5px 0px var(--lightperi);
+        box-shadow: 0px 0px 5px 0px var(--lighter);
+        z-index: 2;
     }
 
 
@@ -523,6 +560,40 @@ fieldset>button {
     }
     
 
+    #divIntro{
+
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+    }
+
+    #divIntro>h1{
+        margin-top: 1rem;
+        margin-bottom: 0;
+        z-index: 0;
+    }
+
+    #divIntro>p{
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+    
+    #divIntro>img{
+
+        height: 100px;
+        position: relative;
+        z-index: 0;
+        margin: 1rem;
+        left: 0px;
+        top: 0px;
+        border: 5px solid var(--medium);
+     
+    }
+    
 
 
 
