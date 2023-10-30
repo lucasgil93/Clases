@@ -12,17 +12,14 @@ let arrayPreguntas = [];
 let divPreguntas = document.querySelector("#divPreguntas");
 let divErrores = document.querySelector("#divErrores");
 
-let cont = -1; //Este contador habria que meterlo en el array de textos o en el propio objeto pregunta para que los metodos recuperar y descartar puedan acceder a el y saber cual es la pregunta a modificar o borrar!!
+let cont = -1; //Este contador habria que meterlo en el array de textos o en el propio objeto pregunta para que los metodos getPregunta y descartarPregunta puedan acceder a el y saber cual es la pregunta a modificar o borrar!!
 
 btnCrear.addEventListener("click", añadirPregunta);
 
 function añadirPregunta() {
 
 
-    // añadir contador en -1 para que cuando se cree el primer obejto sea la posicion 0 del array y se pueda llamar desde los metodos descartar y recueprar
-
-
-
+    // añadir contador en -1 para que cuando se cree el primer obejto sea la posicion 0 del array y se pueda llamar desde los metodos descartarPregunta y recueprar
     divErrores.innerHTML = "";
 
     let arrayTextos = [];
@@ -34,6 +31,13 @@ function añadirPregunta() {
     let txtIncorrecta1 = document.querySelector("#txtIncorrecta1").value;
     let txtIncorrecta2 = document.querySelector("#txtIncorrecta2").value;
     let txtIncorrecta3 = document.querySelector("#txtIncorrecta3").value;
+
+    
+    document.getElementById("txtPregunta").value = "";
+    document.getElementById("txtCorrecta").value = "";
+    document.getElementById("txtIncorrecta1").value = "";
+    document.getElementById("txtIncorrecta2").value = "";
+    document.getElementById("txtIncorrecta3").value = "";
 
     if (txtPregunta == "" || txtCorrecta == "" || txtIncorrecta1 == "" || txtIncorrecta2 == "" || txtIncorrecta3 == "") {
         divErrores.innerHTML = "Hay campos vacios."
@@ -66,38 +70,24 @@ function añadirPregunta() {
         cont++;
         arrayPreguntas.push(pregunta1);
 
+        
+        sol+= `<button type="button" onclick="descartarPregunta(this.id)" id=${cont}>Descartar Pregunta</button>`
+        sol+= `<button type="button" onclick="getPregunta(this.id)" id=${cont}>Recuperar Pregunta</button>`
+
+    
+        sol += `</section>`
+    
+    
+        divPreguntas.innerHTML += sol;
+    
+        divPreguntas.appendChild(section);
+
     }
-
-    let section = document.createElement("section");
-
-    //boton descartar (no preguntes como esta hecho el boton jaja);
-
-    const btnDescartar = document.createElement('button');
-    btnDescartar.textContent = 'Descartar Pregunta' + cont;
-    document.body.appendChild(btnDescartar);
-    section.appendChild(btnDescartar);
-
-
-
-    // boton recuperar (funciona de momento)
-    const btnRecuperar = document.createElement('button');
-    btnRecuperar.textContent = 'Recuperar Pregunta' + cont;
-    document.body.appendChild(btnRecuperar);
-    section.appendChild(btnRecuperar);
-
-
-    sol += `</section>`
-
-
-    divPreguntas.innerHTML += sol;
-
-    divPreguntas.appendChild(section);
-    btnRecuperar.addEventListener('click', function () { recuperar(cont) });
-    btnDescartar.addEventListener('click', function () { descartar(cont) });
-
-
-
+  
 }
+
+
+btnBorrar.addEventListener("click", borrarPreguntas);
 
 function guardarPreguntas() {
 
@@ -110,16 +100,58 @@ function guardarPreguntas() {
 
 }
 
+function borrarPreguntas(){
 
-
-function descartar(cont) {
-
-    alert(cont);
+    arrayPreguntas = [];
+    divPreguntas.innerHTML = ""
+    divPreguntas.innerHTML = "Se han borrado las preguntas."
+    divErrores.innerHTML = "";
 }
 
 
 
-function recuperar(cont) {
+function descartarPregunta(x) {
 
-    alert(cont);
+    arrayPreguntas.splice(x,1);
+    divPreguntas.innerHTML="";
+
+    alert(x);
 }
+
+
+
+function getPregunta(x) {
+
+    let pregunta1 = arrayPreguntas[x];
+
+    let txtPregunta = pregunta1.pregunta;
+    let txtCorrecta = pregunta1.rCorrecta;
+    let txtIncorrecta1 = pregunta1.rI1;
+    let txtIncorrecta2 = pregunta1.rI2;
+    let txtIncorrecta3 = pregunta1.rI3;
+
+    let arrayTextos = [];
+
+    arrayTextos.push(txtPregunta);
+    arrayTextos.push(txtCorrecta);
+    arrayTextos.push(txtIncorrecta1);
+    arrayTextos.push(txtIncorrecta2);
+    arrayTextos.push(txtIncorrecta3);
+
+    for (let index = 0; index < arrayTextos.length; index++) {
+        arrayTextos[index] = arrayTextos[index].replaceAll("\\", "");
+
+
+    }
+
+    document.getElementById("txtPregunta").value = arrayTextos[0];
+    document.getElementById("txtCorrecta").value = arrayTextos[1];
+    document.getElementById("txtIncorrecta1").value = arrayTextos[2];
+    document.getElementById("txtIncorrecta2").value = arrayTextos[3];
+    document.getElementById("txtIncorrecta3").value = arrayTextos[4];
+
+
+
+}
+
+
