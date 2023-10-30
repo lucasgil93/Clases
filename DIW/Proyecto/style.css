@@ -63,7 +63,7 @@ body {
     position: absolute;
     top: 50px;
     left: 100px;
-    border: 2px solid var(--lightest);
+    border: 2px solid var(--dark);
  
 }
 
@@ -148,7 +148,7 @@ footer {
 
 button {
 
-    background-color: var(--medium);
+    background-color: var(--darkest);
     color: var(--lightest);
     border: none;
     border-radius: 5px;
@@ -158,7 +158,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--darkest);
+    background-color: var(--accent);
     cursor: pointer;
 }
 

@@ -7,7 +7,7 @@
     document.documentElement.classList.add("dark-mode");
 
 
-    document.documentElement.style.setProperty("--darkest", "#FFEBEB");
+    document.documentElement.style.setProperty("--darkest", "#EBFFFF");
     document.documentElement.style.setProperty("--dark", "#ADFFFF");
     document.documentElement.style.setProperty("--medium", "#00CCCC"); //wine
     document.documentElement.style.setProperty("--light", "#6D3B47"); //cinnabar
