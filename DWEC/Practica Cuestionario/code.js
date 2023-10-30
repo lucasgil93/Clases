@@ -32,6 +32,13 @@ function añadirPregunta() {
     let txtIncorrecta2 = document.querySelector("#txtIncorrecta2").value;
     let txtIncorrecta3 = document.querySelector("#txtIncorrecta3").value;
 
+    
+    document.getElementById("txtPregunta").value = "";
+    document.getElementById("txtCorrecta").value = "";
+    document.getElementById("txtIncorrecta1").value = "";
+    document.getElementById("txtIncorrecta2").value = "";
+    document.getElementById("txtIncorrecta3").value = "";
+
     if (txtPregunta == "" || txtCorrecta == "" || txtIncorrecta1 == "" || txtIncorrecta2 == "" || txtIncorrecta3 == "") {
         divErrores.innerHTML = "Hay campos vacios."
     } else {
@@ -64,8 +71,8 @@ function añadirPregunta() {
         arrayPreguntas.push(pregunta1);
 
         
-        sol+= `<button type="button" onclick="descartar(this.id)" id=btnD${cont}>Descartar Pregunta</button>`
-        sol+= `<button type="button" onclick="recuperar(this.id)" id=btnR${cont}>Recuperar Pregunta</button>`
+        sol+= `<button type="button" onclick="descartar(this.id)" id=${cont}>Descartar Pregunta</button>`
+        sol+= `<button type="button" onclick="recuperar(this.id)" id=${cont}>Recuperar Pregunta</button>`
 
     
         sol += `</section>`
@@ -74,13 +81,9 @@ function añadirPregunta() {
         divPreguntas.innerHTML += sol;
     
         divPreguntas.appendChild(section);
-      
+
     }
-
-    
-
-
-
+  
 }
 
 
@@ -109,12 +112,31 @@ function borrarPreguntas(){
 
 function descartar(x) {
 
+
+
     alert(x);
 }
 
 
 
-function recuperar(cont) {
+function recuperar(x) {
 
-    alert(cont);
+    let pregunta1 = arrayPreguntas[x];
+
+    let txtPregunta = pregunta1[0];
+    let txtCorrecta = pregunta1[1];
+    let txtIncorrecta1 = pregunta1[2];
+    let txtIncorrecta2 = pregunta1[3];
+    let txtIncorrecta3 = pregunta1[4];
+
+    document.getElementById("txtPregunta").value = txtPregunta;
+    document.getElementById("txtCorrecta").value = txtCorrecta;
+    document.getElementById("txtIncorrecta1").value = txtIncorrecta1;
+    document.getElementById("txtIncorrecta2").value = txtIncorrecta2;
+    document.getElementById("txtIncorrecta3").value = txtIncorrecta3;
+
+
+    alert(x);
 }
+
+
