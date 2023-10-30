@@ -65,35 +65,35 @@ function añadirPregunta() {
         const pregunta1 = new Pregunta(arrayTextos[0], arrayTextos[1], arrayTextos[2], arrayTextos[3], arrayTextos[4]);
         cont++;
         arrayPreguntas.push(pregunta1);
+        let section = document.createElement("section");
 
+        //boton descartar (no preguntes como esta hecho el boton jaja);
+    
+        const btnDescartar = document.createElement('button');
+        btnDescartar.textContent = 'Descartar Pregunta';
+        document.body.appendChild(btnDescartar);
+        section.appendChild(btnDescartar);
+    
+    
+    
+        // boton recuperar (funciona de momento)
+        const btnRecuperar = document.createElement('button');
+        btnRecuperar.textContent = 'Recuperar Pregunta';
+        document.body.appendChild(btnRecuperar);
+        section.appendChild(btnRecuperar);
+    
+    
+        sol += `</section>`
+    
+    
+        divPreguntas.innerHTML += sol;
+    
+        divPreguntas.appendChild(section);
+        btnRecuperar.addEventListener('click', function () { recuperar(cont) });
+        btnDescartar.addEventListener('click', function () { descartar(cont) });
     }
 
-    let section = document.createElement("section");
-
-    //boton descartar (no preguntes como esta hecho el boton jaja);
-
-    const btnDescartar = document.createElement('button');
-    btnDescartar.textContent = 'Descartar Pregunta' + cont;
-    document.body.appendChild(btnDescartar);
-    section.appendChild(btnDescartar);
-
-
-
-    // boton recuperar (funciona de momento)
-    const btnRecuperar = document.createElement('button');
-    btnRecuperar.textContent = 'Recuperar Pregunta' + cont;
-    document.body.appendChild(btnRecuperar);
-    section.appendChild(btnRecuperar);
-
-
-    sol += `</section>`
-
-
-    divPreguntas.innerHTML += sol;
-
-    divPreguntas.appendChild(section);
-    btnRecuperar.addEventListener('click', function () { recuperar(cont) });
-    btnDescartar.addEventListener('click', function () { descartar(cont) });
+    
 
 
 
