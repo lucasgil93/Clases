@@ -3,19 +3,15 @@
 *::before::after {
 
     box-sizing: border-box;
-    --darkestgreen: #003535;
-    --darkergreen: #004D4D;
-    --green-logo: #005555;
-    --caribbean: #2C6D75;
-    --airblue: #578494;
-    --greyblue: #829BB4;
-    --periwinkle: #ADB2D3;
-    --lightperi: #B4B9D7;
-    --lighterperi: #BBBFDB;
-    --lightestperi: #C1C5DE;
-    --lavender: #C7CAE1;
-    --lightlavender: #CCCFE4;
-    --beige: beige;
+}
+:root {
+    --darkest: #003535;
+    --dark: #005555;
+    --medium: #2C6D75;
+    --light: #93A499;
+    --lighter: #F69875;
+    --lightest: #F9DBBD;
+    --accent: #f2542d;
 }
 
 .gallery {
@@ -30,7 +26,7 @@
     width: calc(50% - 10px);
     margin-bottom: 20px;
     margin: 1rem;
-    box-shadow: 0 0 10px var(--darkestgreen);
+    box-shadow: 0 0 10px var(--darkest);
     overflow: hidden;
 }
 
@@ -55,8 +51,9 @@
 .photo:hover{
 
     transform: scale(1.5);
-    transition:1350ms ease;
-
+    transition: 1350ms ease;
+    backdrop-filter: blur(10px);
+    z-index: 1;
 }
 
 
@@ -78,9 +75,8 @@ p {
 
 hr {
 
-    color: #578494;
-    background-color: #578494;
-
+    color:var(--light);
+    background-color: var(--light)
 }
 #divIntro{
     display: flex;
@@ -89,7 +85,7 @@ hr {
 }
 
 .intro2{
-    border-top: 1rem solid var(--darkestgreen);
+    border-top: 1rem solid var(--darkest);
 }
 
 
