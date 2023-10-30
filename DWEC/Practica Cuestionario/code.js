@@ -65,23 +65,11 @@ function añadirPregunta() {
         const pregunta1 = new Pregunta(arrayTextos[0], arrayTextos[1], arrayTextos[2], arrayTextos[3], arrayTextos[4]);
         cont++;
         arrayPreguntas.push(pregunta1);
-        let section = document.createElement("section");
 
-        //boton descartar (no preguntes como esta hecho el boton jaja);
-    
-        const btnDescartar = document.createElement('button');
-        btnDescartar.textContent = 'Descartar Pregunta';
-        document.body.appendChild(btnDescartar);
-        section.appendChild(btnDescartar);
-    
-    
-    
-        // boton recuperar (funciona de momento)
-        const btnRecuperar = document.createElement('button');
-        btnRecuperar.textContent = 'Recuperar Pregunta';
-        document.body.appendChild(btnRecuperar);
-        section.appendChild(btnRecuperar);
-    
+        
+        sol+= `<button type="button" onclick="descartar(cont)">Descartar Pregunta</button>`
+        sol+= `<button type="button" onclick="recuperar(cont)">Recuperar Pregunta</button>`
+
     
         sol += `</section>`
     
@@ -89,8 +77,7 @@ function añadirPregunta() {
         divPreguntas.innerHTML += sol;
     
         divPreguntas.appendChild(section);
-        btnRecuperar.addEventListener('click', function () { recuperar(cont) });
-        btnDescartar.addEventListener('click', function () { descartar(cont) });
+      
     }
 
     
