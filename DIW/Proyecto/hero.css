@@ -31,7 +31,7 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(45deg, rgba(0, 85, 85, 0.6), rgb(242, 84, 45, 0.6)), url("photo.jpeg");
+    background-image: linear-gradient(45deg, rgba(0, 85, 85, 0.6), rgba(0, 250, 250, 0.6)), url("photo.jpeg");
     position: fixed;
     background-position: center;
     display: flex;
@@ -51,7 +51,7 @@ h1{
 }
 
 h1>a {
-    color: #F9DBBD;
+    color: #EBFFFF;
     font-style: italic;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
@@ -71,7 +71,7 @@ p{
     padding: 1rem;
 }
 p>a{
-    color: #F9DBBD;
+    color: #EBFFFF;
     text-transform: uppercase;
     padding-inline: 3rem;
     padding-block: 3rem;
@@ -83,7 +83,7 @@ p>a{
 }
 a:visited{
 
-    color: #F9DBBD;
+    color: #EBFFFF;
     text-transform: uppercase;
     padding-inline: 3rem;
     padding-block: 3rem;
@@ -99,7 +99,7 @@ p>a:hover{
 
 .boxy{
 
-    border: 2px solid var(--LightOrange);
+    border: 2px solid #EBFFFF;
     padding-inline: 7rem;
     display: flex;
     flex-direction: row;

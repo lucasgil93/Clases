@@ -6,7 +6,7 @@
   const setDarkMode = () => {
     document.documentElement.classList.add("dark-mode");
 
-
+    document.documentElement.style.setProperty("--darkheader", "#579A9A");
     document.documentElement.style.setProperty("--darkest", "#EBFFFF"); //lighterblue
     document.documentElement.style.setProperty("--dark", "#ADFFFF"); //lightblue
     document.documentElement.style.setProperty("--medium", "#00CCCC"); 
@@ -22,7 +22,7 @@
   const setLightMode = () => {
     document.documentElement.classList.remove("dark-mode");
 
-
+    document.documentElement.style.setProperty("--darkheader", "#003535");
     document.documentElement.style.setProperty("--darkest", "#003535");
     document.documentElement.style.setProperty("--dark", "#005555");
     document.documentElement.style.setProperty("--medium", "#409CA9"); 

@@ -67,3 +67,8 @@ audio{
     height: fit-content;
 
 }
+
+.container{
+    background-color: var(--darkheader);
+}
+
