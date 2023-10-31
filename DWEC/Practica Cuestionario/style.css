@@ -6,7 +6,9 @@
 @import url(https://fonts.googleapis.com/css?family=Gabarito:regular,500,600,700,800,900);
 
 body{
-
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     font-family: 'Gabarito', Arial, Helvetica, sans-serif;
 }
 
@@ -16,10 +18,16 @@ fieldset{
     justify-content: flex-start;
     flex-direction: column;
     background-color: burlywood;
+    border-radius: 10px;
+    box-shadow: 21px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+    width: 50%;
+}
+input{
+    width: 75%;
 }
 
 section{
-
+width: 40rem;
 display: flex;
 align-items: flex-start;
 flex-direction: column;
@@ -27,6 +35,8 @@ justify-content: flex-start;
 background-color: cadetblue;
 padding-left: 1rem;
 margin-block: 10px;
+border-radius: 10px;
+box-shadow: 21px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
 
 }
 
@@ -45,8 +55,18 @@ section:nth-child(even){
 h3{
 
     background-color: blue;
-    width: 100%;
-    padding-right: 1rem;
+    width: max-content;
+    padding-inline: 1rem;
+    color: beige;
+    border-radius: 10px;
+}
+
+button{
+
+    background-color: beige;
+    border-radius: 10px;
+    margin: 0.5rem;
+
 }
 
 
