@@ -90,7 +90,7 @@ btnBorrar.addEventListener("click", borrarPreguntas);
 
 function guardarPreguntas() {
 
-    const cuestionario1 = new Cuestionario(arrayPreguntas);
+    const cuestionario1 = new Cuestionario(arPreguntas);
 
     let stringcuestiones = JSON.stringify(cuestionario1);
 
@@ -103,48 +103,38 @@ function borrarPreguntas() {
 
     arrayPreguntas = [];
     divPreguntas.innerHTML = ""
-    divPreguntas.innerHTML = "Se han borrado las preguntas."
+    divPreguntas.innerHTML += "Se han borrado las preguntas."
     divErrores.innerHTML = "";
 }
 
 
-
 function descartarPregunta(x) {
-
     arrayPreguntas.splice(x, 1);
+
     divPreguntas.innerHTML = "";
-    let cont = -1;
-    let sol = "";
 
+    if(arrayPreguntas.length==0){
+        divPreguntas.innerHTML="Todavia no hay preguntas creadas."
+    } else{
+    arrayPreguntas.forEach((pregunta, index) => {
 
-    for (let i= 0; i< arrayPreguntas.length; i++) {
-         let temp = arrayPreguntas[i];
- 
-             sol += `<section>`;
-     
-             sol += `<h3>${temp.pregunta}</h3>`;
-             sol += `<p>${temp.rCorrecta}</p><br>`;
-             sol += `<p>${temp.rI1}</p><br>`;
-             sol += `<p>${temp.rI2}</p><br>`;
-             sol += `<p>${temp.rI3}</p><br>`;
-             
-             cont++;
-             
-             sol+= `<button type="button" onclick="descartarPregunta(this.id)" id=${cont}>Descartar Pregunta</button>`
-             sol+= `<button type="button" onclick="getPregunta(this.id)" id=${cont}>Recuperar Pregunta</button>`
-             
-             
-             sol += `</section>`
-         
-             divPreguntas.innerHTML += sol;
-    }
-    
+        if (index != cont) { 
+            let sol = `<section>`;
+            sol += `<h3>${pregunta.pregunta}</h3>`;
+            sol += `<p>${pregunta.rCorrecta}</p><br>`;
+            sol += `<p>${pregunta.rI1}</p><br>`;
+            sol += `<p>${pregunta.rI2}</p><br>`;
+            sol += `<p>${pregunta.rI3}</p><br>`;
+            sol += `<button type="button" onclick="descartarPregunta(${index})" id=${index}>Descartar Pregunta</button>`;
+            sol += `<button type="button" onclick="getPregunta(${index})" id=${index}>Recuperar Pregunta</button>`;
+            sol += `</section>`;
+            divPreguntas.innerHTML += sol;
+        }
 
-
-
+        
+    });
 }
-
-
+}
 
 function getPregunta(x) {
 
