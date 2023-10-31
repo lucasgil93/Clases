@@ -21,6 +21,7 @@ table{
     flex-direction: column;
     color: var(--darkest);
     justify-content: space-between;
+    font-size: 24px;
 
 }
 th{
@@ -33,25 +34,49 @@ td{
 #divBody{
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 33% 33% 33%;
     grid-template-rows: 80% 20%;
-}
+    padding: 0;
+    gap: 1rem;
 
-.project:nth-child(1){
+}
+.project{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 1rem;
+}
+#p1{
 
     grid-column: 1/2;
-    grid-row: 1/2;
+    grid-row: 0/1;
 }
 
-.project:nth-child(2){
+#p2{
 
     grid-column: 2/3;
-    grid-row: 1/2;
+    grid-row: 0/1;
 }
 
-.project:nth-child(3){
-
+#p3{
     grid-column: 3/4;
-    grid-row: 1/2;
+    grid-row: 0/1;
+}
+
+#divBody img{
+    padding-top: 1rem;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    
+}
+
+#divBody img:hover{
+    padding-top: 1rem;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    scale: 1.5;
+    
 }
 
