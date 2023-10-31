@@ -32,7 +32,7 @@ function añadirPregunta() {
     let txtIncorrecta2 = document.querySelector("#txtIncorrecta2").value;
     let txtIncorrecta3 = document.querySelector("#txtIncorrecta3").value;
 
-    
+
     document.getElementById("txtPregunta").value = "";
     document.getElementById("txtCorrecta").value = "";
     document.getElementById("txtIncorrecta1").value = "";
@@ -70,20 +70,19 @@ function añadirPregunta() {
         cont++;
         arrayPreguntas.push(pregunta1);
 
-        
-        sol+= `<button type="button" onclick="descartarPregunta(this.id)" id=${cont}>Descartar Pregunta</button>`
-        sol+= `<button type="button" onclick="getPregunta(this.id)" id=${cont}>Recuperar Pregunta</button>`
 
-    
+        sol += `<button type="button" onclick="descartarPregunta(this.id)" id=${cont}>Descartar Pregunta</button>`
+        sol += `<button type="button" onclick="getPregunta(this.id)" id=${cont}>Recuperar Pregunta</button>`
+
+
         sol += `</section>`
-    
-    
+
+
         divPreguntas.innerHTML += sol;
-    
-        divPreguntas.appendChild(section);
+
 
     }
-  
+
 }
 
 
@@ -100,7 +99,7 @@ function guardarPreguntas() {
 
 }
 
-function borrarPreguntas(){
+function borrarPreguntas() {
 
     arrayPreguntas = [];
     divPreguntas.innerHTML = ""
@@ -112,10 +111,37 @@ function borrarPreguntas(){
 
 function descartarPregunta(x) {
 
-    arrayPreguntas.splice(x,1);
-    divPreguntas.innerHTML="";
+    arrayPreguntas.splice(x, 1);
+    divPreguntas.innerHTML = "";
+    let cont = -1;
+    let sol = "";
 
-    alert(x);
+
+    for (let i= 0; i< arrayPreguntas.length; i++) {
+         let temp = arrayPreguntas[i];
+ 
+             sol += `<section>`;
+     
+             sol += `<h3>${temp.pregunta}</h3>`;
+             sol += `<p>${temp.rCorrecta}</p><br>`;
+             sol += `<p>${temp.rI1}</p><br>`;
+             sol += `<p>${temp.rI2}</p><br>`;
+             sol += `<p>${temp.rI3}</p><br>`;
+             
+             cont++;
+             
+             sol+= `<button type="button" onclick="descartarPregunta(this.id)" id=${cont}>Descartar Pregunta</button>`
+             sol+= `<button type="button" onclick="getPregunta(this.id)" id=${cont}>Recuperar Pregunta</button>`
+             
+             
+             sol += `</section>`
+         
+             divPreguntas.innerHTML += sol;
+    }
+    
+
+
+
 }
 
 
