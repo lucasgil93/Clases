@@ -179,10 +179,41 @@ function getPregunta(x) {
 
 };
 
-function generaArchivo(){
+function generaArchivo() {
+    const cuestionarioString = localStorage.getItem("cuestionario");
 
-    
+    if (cuestionarioString) {
+        const cuestionario = JSON.parse(cuestionarioString);
 
-};
+        // Crear el contenido del archivo
+        const contenidoArchivo = generarContenidoCuestionario(cuestionario);
+
+        // Crear un enlace para descargar el archivo
+        const enlaceDescarga = document.createElement('a');
+        const archivoBlob = new Blob([contenidoArchivo], { type: 'text/plain' });
+
+        enlaceDescarga.href = URL.createObjectURL(archivoBlob);
+        enlaceDescarga.download = 'cuestionario.txt';
+        enlaceDescarga.click();
+    }
+}
+
+function generarContenidoCuestionario(cuestionario) {
+    let contenido = '';
+
+    cuestionario.preguntas.forEach((pregunta, index) => {
+        contenido += `${index + 1}:\n`;
+        contenido += `${pregunta.pregunta}\n`;
+        contenido += `{\n`;
+        contenido += `=${pregunta.rCorrecta}\n`;
+        contenido += `~%-25%${pregunta.rI1}\n`;
+        contenido += `~%-25%${pregunta.rI2}\n`;
+        contenido += `~%-25%${pregunta.rI3}\n`;
+        contenido += `}\n`;
+    });
+
+    return contenido;
+}
+
 
 
