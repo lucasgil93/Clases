@@ -1,0 +1,57 @@
+.doscol{
+
+    display: flex;
+    flex-direction: row;
+    padding-inline: 4rem;
+
+}
+
+.col{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 10rem;
+
+}
+
+table{
+
+    display: flex;
+    flex-direction: column;
+    color: var(--darkest);
+    justify-content: space-between;
+
+}
+th{
+    padding-left: 1rem;
+}
+td{
+    padding-inline: 1rem;
+}
+
+#divBody{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80% 20%;
+}
+
+.project:nth-child(1){
+
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.project:nth-child(2){
+
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.project:nth-child(3){
+
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+

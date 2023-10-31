@@ -410,6 +410,10 @@ transform: scale(1.5rem);
 
 }
 
+.container{
+    background-color: var(--darkheader);
+}
+
 
 
 @media screen and (max-width: 750px) {
@@ -435,21 +439,6 @@ transform: scale(1.5rem);
     }
 
 
-    #btnMode {
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 2rem;
-        height: 2rem;
-        background-color: var(--darkest);
-        color: var(--beige);
-        border-radius: 5px;
-        border: none;
-
-
-    }
-
 
 
     #divBody {
@@ -460,7 +449,7 @@ transform: scale(1.5rem);
 
     .card {
         background-image: linear-gradient(90deg, var(--darkest),var(--dark) 80%);
-        color: var(--beige);
+        color: var(--lightest);
         opacity: 1;
         margin-block: 1rem;
 
@@ -536,7 +525,7 @@ transform: scale(1.5rem);
         height: 4px;
         width: 100%;
         border-radius: 5px;
-        background: var(--lighter);
+        background: var(--lightest);
     }
 
     .navbar .menu-items {
@@ -544,7 +533,8 @@ transform: scale(1.5rem);
         top: 65px;
         border-radius: 5px;
         padding-top: 1rem;
-        background: var(--darkest);
+        background-color: var(--darkheader);
+        color: var(--lightest);
         height: 30vh;
         max-width: 150px;
         transform: translateX(-175%);
