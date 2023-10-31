@@ -604,6 +604,7 @@ transform: scale(1.5rem);
     #divIntro>img{
 
         height: 100px;
+        width: 100px;
         position: relative;
         z-index: 0;
         margin: 1rem;
