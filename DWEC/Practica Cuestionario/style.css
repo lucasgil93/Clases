@@ -25,6 +25,8 @@ align-items: flex-start;
 flex-direction: column;
 justify-content: flex-start;
 background-color: cadetblue;
+padding-left: 1rem;
+margin-block: 10px;
 
 }
 
@@ -36,8 +38,15 @@ background-color: cadetblue;
 
 section:nth-child(even){
 
-    background-color: blue;
+    background-color: royalblue;
     color: beiges;
+}
+
+h3{
+
+    background-color: blue;
+    width: 100%;
+    padding-right: 1rem;
 }
 
 
