@@ -87,14 +87,23 @@ function añadirPregunta() {
 
 
 btnBorrar.addEventListener("click", borrarPreguntas);
+btnGuardar.addEventListener("click", guardarPreguntas);
+btnGenerarArchivo.addEventListener("click", generaArchivo);
 
 function guardarPreguntas() {
 
-    const cuestionario1 = new Cuestionario(arPreguntas);
+const cuestiones = arrayPreguntas.map((pregunta)=>({
+    pregunta: pregunta.pregunta,
+    rCorrecta: pregunta.rCorrecta,
+    rI1: pregunta.rI1,
+    rI2: pregunta.rI2,
+    rI3: pregunta.rI3,
+}));
 
-    let stringcuestiones = JSON.stringify(cuestionario1);
+const cuestionario1 = new Cuestionario(cuestiones);
+const jsonString = JSON.stringify(cuestionario1);
+localStorage.setItem("cuestionario", jsonString);
 
-    localStorage.setItem(stringcuestiones);
 
 
 }
@@ -102,24 +111,26 @@ function guardarPreguntas() {
 function borrarPreguntas() {
 
     arrayPreguntas = [];
-    divPreguntas.innerHTML = ""
-    divErrores.innerHTML += "Se han borrado las preguntas."
-
+    divErrores.innerHTML += "Se han borrado las preguntas.";
+    divPreguntas.innerHTML = "";
+    cont = -1;
+    if (arrayPreguntas.length>0){
+        divPreguntas.innerHTML+=`<button type="button" onclick="descartarPregunta(0)" id=0>Descartar Pregunta</button>`;
+           
+    };
+    localStorage.removeItem("cuestionario");
 }
 
 
 function descartarPregunta(x) {
     arrayPreguntas.splice(x, 1);
-
+    cont--;
     divPreguntas.innerHTML = "";
 
-    if(arrayPreguntas.length==0){
-        divPreguntas.innerHTML = "Todavia no hay preguntas creadas. (CLICK DESCARTAR PREGUNTA PARA BORRAR ESTE MENSAJE Y QUE FUNCIONE EL RECUPERAR PREGUNTA)" 
-        
-    } else{
-    arrayPreguntas.forEach((pregunta, index) => {
-
-        if (index != cont) { 
+    if (arrayPreguntas.length === 0) {
+        divErrores.innerHTML = "Todavia no hay preguntas creadas.";
+    } else {
+        arrayPreguntas.forEach((pregunta, index) => {
             let sol = `<section>`;
             sol += `<h3>${pregunta.pregunta}</h3>`;
             sol += `<p>${pregunta.rCorrecta}</p><br>`;
@@ -127,14 +138,11 @@ function descartarPregunta(x) {
             sol += `<p>${pregunta.rI2}</p><br>`;
             sol += `<p>${pregunta.rI3}</p><br>`;
             sol += `<button type="button" onclick="descartarPregunta(${index})" id=${index}>Descartar Pregunta</button>`;
-            sol += `<button type="button" onclick="getPregunta(this.id)" id=${index}>Recuperar Pregunta</button>`;
+            sol += `<button type="button" onclick="getPregunta(${index})" id=${index}>Recuperar Pregunta</button>`;
             sol += `</section>`;
             divPreguntas.innerHTML += sol;
-        }
-
-        
-    });
-}
+        });
+    }
 }
 
 function getPregunta(x) {
@@ -169,6 +177,12 @@ function getPregunta(x) {
 
 
 
-}
+};
+
+function generaArchivo(){
+
+    
+
+};
 
 
