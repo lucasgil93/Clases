@@ -103,8 +103,8 @@ function borrarPreguntas() {
 
     arrayPreguntas = [];
     divPreguntas.innerHTML = ""
-    divPreguntas.innerHTML += "Se han borrado las preguntas."
-    divErrores.innerHTML = "";
+    divErrores.innerHTML += "Se han borrado las preguntas."
+
 }
 
 
@@ -114,7 +114,8 @@ function descartarPregunta(x) {
     divPreguntas.innerHTML = "";
 
     if(arrayPreguntas.length==0){
-        divPreguntas.innerHTML="Todavia no hay preguntas creadas."
+        divPreguntas.innerHTML = "Todavia no hay preguntas creadas. (CLICK DESCARTAR PREGUNTA PARA BORRAR ESTE MENSAJE Y QUE FUNCIONE EL RECUPERAR PREGUNTA)" 
+        
     } else{
     arrayPreguntas.forEach((pregunta, index) => {
 
@@ -126,7 +127,7 @@ function descartarPregunta(x) {
             sol += `<p>${pregunta.rI2}</p><br>`;
             sol += `<p>${pregunta.rI3}</p><br>`;
             sol += `<button type="button" onclick="descartarPregunta(${index})" id=${index}>Descartar Pregunta</button>`;
-            sol += `<button type="button" onclick="getPregunta(${index})" id=${index}>Recuperar Pregunta</button>`;
+            sol += `<button type="button" onclick="getPregunta(this.id)" id=${index}>Recuperar Pregunta</button>`;
             sol += `</section>`;
             divPreguntas.innerHTML += sol;
         }
