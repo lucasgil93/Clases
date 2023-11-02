@@ -18,7 +18,7 @@ btnCrear.addEventListener("click", añadirPregunta);
 
 function añadirPregunta() {
 
-
+    divEnlace.innerHTML="";
     // añadir contador en -1 para que cuando se cree el primer obejto sea la posicion 0 del array y se pueda llamar desde los metodos descartarPregunta y recueprar
     divErrores.innerHTML = "";
 
@@ -194,7 +194,12 @@ function generaArchivo() {
 
         enlaceDescarga.href = URL.createObjectURL(archivoBlob);
         enlaceDescarga.download = 'cuestionario.txt';
-        enlaceDescarga.click();
+        enlaceDescarga.textContent='Enlace descarga';
+
+        const divEnlace = document.getElementById('divEnlace');
+        divEnlace.innerHTML="";
+        divEnlace.appendChild(enlaceDescarga)
+
     }
 }
 
