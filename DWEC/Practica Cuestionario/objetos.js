@@ -9,10 +9,10 @@ class Pregunta {
 
     toHTMLUl() {
         return `<ul>
-                    <li>Respuesta Correcta: ${this.rCorrecta}</li>
-                    <li>Respuesta Incorrecta 1: ${this.rI1}</li>
-                    <li>Respuesta Incorrecta 2: ${this.rI2}</li>
-                    <li>Respuesta Incorrecta 3: ${this.rI3}</li>
+                    <li>${this.rCorrecta}</li>
+                    <li>${this.rI1}</li>
+                    <li>${this.rI2}</li>
+                    <li>${this.rI3}</li>
                 </ul>`;
     }
 }

@@ -5,7 +5,7 @@ let btnGenerarArchivo = document.querySelector("#btnGenerarArchivo");
 let btnBorrar = document.querySelector("#btnBorrar");
 let btnGuardar = document.querySelector("#btnGuardar");
 
-let cuestionario = new Cuestionario(); // Objeto cuestionario para almacenar las preguntas
+let cuestionario = new Cuestionario();
 
 let divPreguntas = document.querySelector("#divPreguntas");
 let divErrores = document.querySelector("#divErrores");
@@ -13,6 +13,7 @@ let divErrores = document.querySelector("#divErrores");
 btnCrear.addEventListener("click", añadirPregunta);
 
 function añadirPregunta() {
+    divEnlace.innerHTML = "";
     divErrores.innerHTML = "";
     const txtPregunta = document.querySelector("#txtPregunta").value;
     const txtCorrecta = document.querySelector("#txtCorrecta").value;
@@ -29,7 +30,6 @@ function añadirPregunta() {
         actualizarDivPreguntas();
     }
 
-    // Limpiar campos de entrada
     document.getElementById("txtPregunta").value = "";
     document.getElementById("txtCorrecta").value = "";
     document.getElementById("txtIncorrecta1").value = "";
@@ -89,10 +89,8 @@ function generaArchivo() {
     if (cuestionarioString) {
         const cuestionario = Cuestionario.deserializar(cuestionarioString);
 
-        // Crear el contenido del archivo
         const contenidoArchivo = cuestionario.generarContenidoArchivo();
 
-        // Crear un enlace para descargar el archivo
         const enlaceDescarga = document.createElement('a');
         const archivoBlob = new Blob([contenidoArchivo], { type: 'text/plain' });
 
