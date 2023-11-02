@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Antonio:100,200,300,regular,500,600,700);
 @import url(https://fonts.googleapis.com/css?family=Gabarito:regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,900);
+@import url(https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Gabarito:regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Gabarito:regular,500,600,700,800,900);
 
 *,
 ::before::after {
@@ -9,12 +14,8 @@
 
 :root {
 
-    --EnglishViolet: #453A49;
-    --Wine: #6D3B47;
-    --DarkSlateGray: #005555;
-    --Cinnabar: #f2542d;
-    --LightOrange: #F9DBBD;
-    font-family: 'Gabarito', Arial, Helvetica, sans-serif;
+
+    font-family: 'Quicksand', Arial, Helvetica, sans-serif;
 }
 
 body {
