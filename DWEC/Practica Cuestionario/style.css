@@ -8,10 +8,13 @@
 @import url(https://fonts.googleapis.com/css?family=Gabarito:regular,500,600,700,800,900);
 
 body{
+    background: radial-gradient(circle, rgba(218,247,166,1) 49%, rgba(0,212,255,1) 100%);
+    margin:0;
     display: flex;
     align-items: center;
     flex-direction: column;
     font-family: 'Gabarito', Arial, Helvetica, sans-serif;
+
 }
 
 fieldset{
@@ -19,10 +22,11 @@ fieldset{
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    background-color: burlywood;
+    background-color:#C6E197;
     border-radius: 10px;
     box-shadow: 21px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
-    width: 50%;
+    width: 60%;
+    border: 1px solid black;
 }
 input{
     width: 75%;
@@ -34,7 +38,7 @@ display: flex;
 align-items: flex-start;
 flex-direction: column;
 justify-content: flex-start;
-background-color: cadetblue;
+background-color: #95A972;
 padding-left: 1rem;
 margin-block: 10px;
 border-radius: 10px;
@@ -44,31 +48,43 @@ box-shadow: 21px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.
 
 #divErrores{
 
-    background-color: tomato;
+    background-color: #00AACC;
+    color: whitesmoke;
 
 }
 
 section:nth-child(even){
 
-    background-color: royalblue;
+    background-color: #00AACC;
     color: beiges;
+}
+
+section:nth-child(even)>h3{
+
+    background-color: #70E7FF;
 }
 
 h3{
 
-    background-color: blue;
+    background-color: #BFD49B;
     width: max-content;
     padding-inline: 1rem;
-    color: beige;
+    color: black;
     border-radius: 10px;
 }
 
 button{
 
-    background-color: beige;
+    background-color: #404C2F;
     border-radius: 10px;
     margin: 0.5rem;
+    color: whitesmoke;
 
+}
+
+#divErrores{
+    margin: 1rem;
+    border-radius: 5px;
 }
 
 
