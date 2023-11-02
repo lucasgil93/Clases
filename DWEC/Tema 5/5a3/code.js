@@ -36,9 +36,20 @@ let arrProvincias = ["Álava","Albacete","Alicante","Almería","Ávila","Badajoz
 "Tenerife","Cantabria","Segovia","Sevilla","Soria","Tarragona","Teruel","Toledo","Valencia","Valladolid",
 "Vizcaya","Zamora","Zaragoza","Ceuta","Melilla"];
 
-let txtCP = number(document.querySelector("#txtCP").value);
+let txtCP = document.querySelector("#txtCP").value;
 
-txtCP = txtCP.splice(0,2);
 
-alert(txtCP);
+function calcular (){
+
+
+
+
+}
+
+let btnCalcular = document.querySelector("#btnCalcular");
+btnCalcular.addEventListener("click", calcular);
+
+
+
+
 
