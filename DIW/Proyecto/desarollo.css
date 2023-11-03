@@ -2,17 +2,25 @@
 table{
 
     color: var(--lightest);
-    font-size: 47px;
+
 
 }
 th{
     padding-left: 1rem;
-    font-size: 47px;
+    font-size: 30px;
+    border: 1px solid var(--lightest);
+    margin:0;
+    text-align: center;
 }
 td{
     
     padding-inline: 1rem;
-    font-size: 47px;
+    font-size: 26px;
+    text-align: center;
+
+}
+tr:nth-child(even){
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 #divBody{
@@ -25,9 +33,63 @@ td{
 
 }
 
-.card{
+.card1{
 
-    font-size: 50px;
+    border-radius: 5px;
+    height: fit-content;
+    box-shadow: 0 0 10px 1px var(--darkest);
+    min-height: 100px;
+    width: 40ch;
+    padding-inline: 2rem;
+    padding: 0.5rem;
+    margin: auto;
+    background-color: var(--medium);
+    opacity: 0.5;
+    transition: opacity 1350ms ease, transform 1250ms ease-in;
+    position: relative;
+}
+
+.card1:hover {
+    color: var(--lightest);
+    opacity: 1;
+    transform: translateY(-10px);
+    transition: opacity 450ms ease, transform 450ms ease-in;
+}
+
+
+hr {
+
+    color: var(--medium);
+    background-color: var(--medium);
+
+}
+
+h1,
+h3,
+p {
+    text-align: center;
+}
+
+
+.card1::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    z-index: -1;
+    clip-path: circle(0% at 0% 0%);
+    transition: clip-path 500ms ease;
+
+}
+
+.card1:nth-child(2)::before {
+    clip-path: circle(0% at 100% 100%);
+}
+
+.card1:hover::before {
+    clip-path: circle(100%);
+    background-color: var(--darkest);
+
 }
 
 fieldset>img{
