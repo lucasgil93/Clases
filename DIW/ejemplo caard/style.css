@@ -1,0 +1,71 @@
+@import url(https://fonts.googleapis.com/css?family=Titan+One:regular);
+@import url(https://fonts.googleapis.com/css?family=Bebas+Neue:regular);
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Antonio:100,200,300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+*::after::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+header{
+    margin-top: 0;
+    background: url(pexels-los-muertos-crew-7260642.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-image: linear-gradient(45deg ,rgba(1, 19, 13, 0.5), rgba(197, 88, 24, 0.5)), url(pexels-los-muertos-crew-7260642.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 4rem;
+    padding-right: 0rem;
+}
+
+img{
+    width: 100vh;
+    z-index: -1;
+}
+
+header>h2{
+    font-family: 'Inter';
+    color: aqua;
+    font-weight: 100;
+    font-size: 18px;
+
+}
+h1{
+    font-family: 'Antonio';
+    color: whitesmoke;
+    font-weight: 300;
+    font-size: 72px;
+
+}
+span{
+    color: aqua;
+}
+
+p{
+    font-family: 'Inter';
+font-weight: 100;
+color: whitesmoke;
+padding-right:50%;
+font-size: 18px;
+
+}
+
+button{
+    font-family: 'Inter';
+    letter-spacing: 7px;
+    background-color: transparent;
+    border: 1px solid aqua;
+    border-radius: 50px;
+    color: whitesmoke;
+    font-size: 15px;
+    padding-block: 1rem;
+    padding-inline: 2rem;
+}
