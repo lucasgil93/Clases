@@ -3,6 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700);
 @import url(https://fonts.googleapis.com/css?family=Gabarito:regular,500,600,700,800,900);
 @import url(https://fonts.googleapis.com/css?family=Gabarito:regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Antonio:100,200,300,regular,500,600,700);
 
 *::before::after {
 
@@ -45,6 +46,16 @@ body {
 
 }
 
+#divUser{
+    margin-left: 0;
+    letter-spacing: 1rem;
+    background-color: var(--lightest);
+    padding-right: 0.3rem;
+    padding-left: 1rem;
+    border-radius: 10px;
+    color: var(--darkheader);
+}
+
 #divIntro {
 
     height: fit-content;
@@ -76,7 +87,7 @@ body {
 
 #divIntro>p {
 
-    background-color: rgba(0, 0, 0, 0.3);
+    background-image: linear-gradient(transparent, rgb(0, 0, 0, 0.5));
     font-size: 20px;
     border: 1px solid var(--darkest);
     border-radius: 5px;
@@ -87,6 +98,7 @@ body {
     grid-column: 2/3;
     grid-row: 2/4;
     padding-top: 1rem;
+    text-justify: left;
 
 }
 
@@ -136,7 +148,7 @@ header {
     padding-inline: 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
     background-color: var(--darkheader);
     color: var(--lightest);
@@ -446,8 +458,24 @@ fieldset>button:hover {
     background-color: var(--darkheader);
 }
 
+@media screen and (max-width: 903px) {
+
+    li{
+        white-space: nowrap;
+    }
+    #divUser{
+        display: none;
+    }
+
+}
+
+
 @media screen and (max-width: 750px) {
 
+    header{
+        justify-content: space-around;
+    }
+
 
     body {
 
@@ -511,79 +539,7 @@ fieldset>button:hover {
     }
 
 
-    /*menu burger*/
-    .navbar {
-        opacity: 0.9;
-    }
-
-    .navbar-container input[type="checkbox"],
-    .navbar-container .hamburger-lines {
-        display: block;
-    }
-
-    .navbar-container {
-        display: block;
-        position: relative;
-        height: 64px;
-    }
-
-    .navbar-container input[type="checkbox"] {
-        position: absolute;
-        display: block;
-        height: 32px;
-        width: 30px;
-        top: 20%;
-        left: 40%;
-        z-index: 5;
-        opacity: 0;
-    }
-
-    .navbar-container .hamburger-lines {
-        display: block;
-        height: 23px;
-        width: 35px;
-        position: absolute;
-        top: 20%;
-        left: 40%;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .navbar-container .hamburger-lines .line {
-        display: block;
-        height: 4px;
-        width: 100%;
-        border-radius: 5px;
-        background: var(--lightest);
-    }
-
-    .navbar .menu-items {
-        position: relative;
-        top: 65px;
-        border-radius: 5px;
-        padding-top: 1rem;
-        background-color: var(--darkheader);
-        color: var(--lightest);
-        height: 30vh;
-        max-width: 150px;
-        transform: translateX(-300%);
-        display: flex;
-        flex-direction: column;
-        margin: 1rem;
-        padding: 1rem;
-        transition: transform 0.5s ease-in-out;
-        box-shadow: 0px 0px 5px 0px var(--lighter);
-        z-index: 2;
-    }
-
-
-    .navbar-container input[type="checkbox"]:checked~.menu-items {
-
-        transform: translateX(-330px);
-    }
-
+    
     #divUser {
         display: none;
     }
@@ -638,205 +594,76 @@ fieldset>button:hover {
     }
 
 }
+@import url(https://fonts.googleapis.com/css?family=Antonio:100,200,300,regular,500,600,700);
 
-
-@media screen and (max-width: 450px) {
-
-    body {
-
-        display: flex;
-        flex-direction: column;
-
+@media (width<=50rem){
+    
+    ul{
+      background-color: transparent;
+      display: flex;
+      align-items: end;
+    }
+    li{
+      color: var(--darkest);
+      border-radius: 5px;
     }
 
-    ul {
-        display: none;
-        flex-direction: row;
-        justify-content: space-evenly;
-        gap: 1rem;
+    
+    nav{
+      background-image: linear-gradient( var(--dark), transparent);
+      backdrop-filter: blur(5px);
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 50vw;
+      justify-content: start;
     }
-
-    li {
-        gap: 1rem;
-        padding-inline: 3rem;
-        list-style-type: none;
+    nav ul{
+      flex-direction: column;  
+      margin-top: 5rem;
     }
+  }
 
-
-
-
-    #divBody {
-
-        display: flex;
-        flex-direction: column-reverse;
+  #btnToggleMenu{
+    display: none;
+  }
+  
+  @media (width<=50rem){
+  
+    li{
+      white-space: nowrap;
+      padding-right: 10px;
     }
-
-    .card {
-        background-image: linear-gradient(90deg, var(--darkest), var(--dark) 80%);
-        color: var(--lightest);
-        opacity: 1;
-        margin-block: 1rem;
-
+    #btnToggleMenu{
+      display: initial;
+      position: fixed;
+         background-color: transparent;
+         color: var(--lightest);
+         border: 0;
     }
-
-
-    fieldset {
-
-
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 1rem;
-        padding-inline: 0;
-
+    #btnToggleMenu:hover{
+      color: var(--lightest);
+      cursor: pointer;
     }
-
-    input {
-
-        width: 250px;
-
-    }
-
-    #divRedes>button {
-
-        width: 60px;
-
-
-    }
-
-
-    /*menu burger*/
-    .navbar {
-        opacity: 0.9;
-    }
-
-    .navbar-container input[type="checkbox"],
-    .navbar-container .hamburger-lines {
-        display: block;
-    }
-
-    .navbar-container {
-        display: block;
-        position: relative;
-        height: 64px;
-    }
-
-    .navbar-container input[type="checkbox"] {
-        position: absolute;
-        display: block;
-        height: 32px;
-        width: 30px;
-        top: 20%;
-        left: 40%;
-        z-index: 5;
-        opacity: 0;
-    }
-
-    .navbar-container .hamburger-lines {
-        display: block;
-        height: 23px;
-        width: 35px;
-        position: absolute;
-        top: 20%;
-        left: 40%;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .navbar-container .hamburger-lines .line {
-        display: block;
-        height: 4px;
-        width: 100%;
-        border-radius: 5px;
-        background: var(--lightest);
-    }
-
-    .navbar .menu-items {
-        position: relative;
-        top: 65px;
-        border-radius: 5px;
-        padding-top: 1rem;
-        background-color: var(--darkheader);
-        color: var(--lightest);
-        height: 30vh;
-        max-width: 150px;
-        transform: translateX(-175%);
-        display: flex;
-        flex-direction: column;
-        margin: 1rem;
-        padding: 1rem;
-        transition: transform 0.5s ease-in-out;
-        box-shadow: 0px 0px 5px 0px var(--lighter);
-        z-index: 2;
+  
+    nav{
+        transform: translateX(-400%);
+        transition: transform 0.5s ease-in;
+      }
+    
+      nav.expandido{
+        transform: translateX(-150%);
+      }
     }
 
 
-    .navbar-container input[type="checkbox"]:checked~.menu-items {
-
-        transform: translateX(-150px);
+    @media (width<400px) {
+      li{
+        white-space: nowrap;
+        padding-right: 10px;
+      }
+      nav.expandido{
+        transform: translateX(-120%);
+      }
     }
-
-    #divUser {
-        display: none;
-    }
-
-    #divBody>img {
-
-        max-width: 350px;
-
-    }
-
-    fieldset>button {
-
-        position: block;
-
-    }
-
-
-    #divIntro {
-
-        height: fit-content;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        position: relative;
-    }
-
-    #divIntro>h1 {
-        margin-top: 1rem;
-        margin-bottom: 0;
-        margin-left: 0;
-        z-index: 0;
-    }
-
-    #divIntro>p {
-        margin-top: 1rem;
-        margin-bottom: 0;
-    }
-
-    #divIntro>img {
-
-        height: 100px;
-        width: 100px;
-        position: relative;
-        z-index: 0;
-        margin: 1rem;
-        left: 0px;
-        top: 0px;
-        border: 5px solid var(--medium);
-
-    }
-
-
-
-
-
-
-
-
-
-
-}

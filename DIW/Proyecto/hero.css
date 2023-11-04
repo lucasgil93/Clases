@@ -84,6 +84,7 @@ h1>a {
     font-weight: 600;
     transition: 300ms;
     text-decoration:  line-through;
+    white-space: nowrap;
 
 
 }
@@ -104,7 +105,8 @@ p>a{
     font-size: 1.2rem;
     transition: 300ms;
     text-decoration: none;
-
+    white-space: nowrap;
+ 
 }
 a:visited{
 
@@ -120,7 +122,9 @@ a:visited{
 p>a:hover{
     text-decoration: line-through;
     cursor: pointer;
+
 }
+  
 
 .boxy{
 
@@ -142,7 +146,7 @@ p>a:hover{
 
 
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 999px) {
 
     h1>a{
 

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="desarollo.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script defer src="code.js"></script>
+    <script defer src="burger.js"></script>
 </head>
 
 <body>
@@ -18,26 +19,26 @@
         <a class="logo" href="hero.html"><img src="favicon-32x32.png" alt=""></a>
 
         <div id="divUser">
+            LUCAS GIL
         </div>
 
-        <nav class="navbar">
-            <div class="navbar-container container">
-                <input type="checkbox" name="" id="check">
-                <div class="hamburger-lines">
-                    <span class="line line1"></span>
-                    <span class="line line2"></span>
-                    <span class="line line3"></span>
-                </div>
-                <ul class="menu-items">
-                    <li><a href="index.html">Principal</a></li>
-                    <li><a href="desarollo.html">Desarollo Web</a></li>
-                    <li><a href="music.html">Audio</a></li>
-                    <li><a href="fotos.html">Visual</a></li>
-                    <li><a href="#divRedes">Sociales</a></li>
-                </ul>
-                
-            </div>
-        </nav>
+        <button id="btnToggleMenu" aria-controls="menuNav"><svg xmlns="http://www.w3.org/2000/svg" 
+            class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" 
+            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" 
+            stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M4 6l16 0"></path>
+            <path d="M4 12l16 0"></path>
+            <path d="M4 18l16 0"></path>
+          </svg></button>
+          <nav id="menuNav" aria-expanded="false">
+            <ul>
+              <li><a href="index.html"><span aria-hidden="true"></span>Inicio</a></li>
+              <li><a href="desarollo.html"><span aria-hidden="true"></span>Desarollo Web</a></li>
+              <li><a href="music.html"><span aria-hidden="true"></span>Audio</a></li>
+              <li><a href="fotos.html"><span aria-hidden="true"></span>Visual</a></li>
+            </ul>
+          </nav>
 
         <div id="divModos">
             <button type="button" id="btnMode"><svg xmlns="http://www.w3.org/2000/svg"
@@ -93,36 +94,36 @@
                 <tbody>
                     <tr>
                         <td>Python</td>
-                        <td>★★★★★</td>
+                        <td><span>★★★★★</span></td>
                     </tr>
                     <tr>
                         <td>JavaScript</td>
-                        <td>★☆☆☆☆</td>
+                        <td><span>★☆☆☆☆</span></td>
                     </tr>
                     <tr>
                         <td>HTML/CSS</td>
-                        <td>★★★★★</td>
+                        <td><span>★★★★★</span></td>
                     </tr>
                     <tr>
                         <td>Java</td>
-                        <td>★★★☆☆</td>
+                        <td><span>★★★☆☆</span></td>
                     </tr>
                     <tr>
                         <td>C++</td>
-                        <td>★★★☆☆</td>
+                        <td><span>★★★☆☆</span></td>
                     </tr>
                     <tr>
                         <td>SQL</td>
-                        <td>★★★★☆</td>
+                        <td><span>★★★★☆</span></td>
                     </tr>
                     <tr>
                         <td>PHP</td>
-                        <td>★★★☆☆</td>
+                        <td><span>★★★☆☆</span></td>
                     </tr>
 
                     <tr>
                         <td>API Integration</td>
-                        <td>★★★★★</td>
+                        <td><span>★★★★★</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -139,35 +140,35 @@
                 <tbody>
                     <tr>
                         <td>Angular</td>
-                        <td>★★★☆☆</td>
+                        <td><span>★★★☆☆<span></td>
                     </tr>
                     <tr>
                         <td>Git</td>
-                        <td>★★★★★</td>
+                        <td><span>★★★★★</span></td>
                     </tr>
                     <tr>
                         <td>Linux/Unix</td>
-                        <td>★★★☆☆</td>
+                        <td><span>★★★☆☆</span></td>
                     </tr>
                     <tr>
                         <td>Node.js</td>
-                        <td>★★★☆☆</td>
+                        <td><span>★★★☆☆</span></td>
                     </tr>
                     <tr>
                         <td>React</td>
-                        <td>★★★★☆</td>
+                        <td><span>★★★★☆</span></td>
                     </tr>
                     <tr>
                         <td>Apache</td>
-                        <td>★★★★☆</td>
+                        <td><span>★★★★☆</span></td>
                     </tr>
                     <tr>
                         <td>UI/UX Design</td>
-                        <td>★★★☆☆</td>
+                        <td><span>★★★☆☆</span></td>
                     </tr>
                     <tr>
                         <td>Tomcat</td>
-                        <td>★★★☆☆</td>
+                        <td><span>★★★☆☆</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -178,11 +179,15 @@
     <h3>Proyectos recientes</h3>
         <div class="wrapper">
             <img src="sudoku.png" alt="">
+          
             <img src="3enraya.png" alt="">
+           
             <img src="game1.jpg" alt="">
           </div>
 
-    
+          <p class="sudokus">Top. Sudoku 2023 - DWES</p>
+          <p class="raya">Right. 3 en Raya 2022 - Programacion</p>
+          <p class="juego">Left. Small Game 2023 - Inventado</p>
 
 
     <div id="divRedes">
