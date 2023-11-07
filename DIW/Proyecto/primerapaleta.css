@@ -14,3 +14,28 @@
     --lightlavender: #CCCFE4;
     --beige: beige;
 }
+
+.darkMode{
+    --darkheader: #579A9A;
+    --darkest: #EBFFFF;
+    --dark: #ADFFFF;
+    --medium: #00CCCC;
+    --light: #6D3B47;
+    --lighter: #005555;
+    --lightest: #003535;
+    --accent: #F47656;
+
+}
+
+.lightMode{
+    --darkheader:#003535;
+    --darkest: #003535;
+    --dark: #005555;
+    --medium: #409CA9;
+    --light: #D1CCBB;
+    --lighter: #ADFFFF;
+    --lightest: #EBFFFF;
+    --accent: #F47656;
+
+}
+

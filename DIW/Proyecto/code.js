@@ -15,7 +15,7 @@ const setDarkMode = () => {
   document.documentElement.style.setProperty("--light", "#6D3B47");
   document.documentElement.style.setProperty("--lighter", "#005555");
   document.documentElement.style.setProperty("--lightest", "#003535");
-  document.documentElement.style.setProperty("--accent", "#F9DBBD");
+  document.documentElement.style.setProperty("--accent", "#F47656");
 
   divModos.innerHTML = `  <button type="button" id="btnMode" onclick="setLightMode()"><svg xmlns="http://www.w3.org/2000/svg"
   class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"

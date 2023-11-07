@@ -1,37 +1,37 @@
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,900);
-@import url(https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700);
-@import url(https://fonts.googleapis.com/css?family=Gabarito:regular,500,600,700,800,900);
 @import url(https://fonts.googleapis.com/css?family=Montserrat+Alternates:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
-@import url(https://fonts.googleapis.com/css?family=Antonio:100,200,300,regular,500,600,700);
 @import url(https://fonts.googleapis.com/css?family=Metrophobic:regular);
+
 *::before::after {
 
     box-sizing: border-box;
 
 }
 
-:root {
-    --darkest: #003535;
-    --dark: #005555;
-    --medium: #2C6D75;
-    --light: #93A499;
-    --lighter: #F69875;
-    --lightest: #F9DBBD;
-    --accent: #f2542d;
+.darkMode {
+    --darkheader: #579A9A;
+    --darkest: #EBFFFF;
+    --dark: #ADFFFF;
+    --medium: #00CCCC;
+    --light: #6D3B47;
+    --lighter: #005555;
+    --lightest: #003535;
+    --accent: #F47656;
+
 }
 
-/* youtube - midulive*/
-/*Poner formulario en algun sitio.*/
-/*USAR EL GAP PARA HACER HUECOS ENTRE COSAS CON EL DISPLAY FLEX*/
-/*USar el grid para hacer el modo phone y el modo pc para ordenar en vertical o horizonal, con un 1fr column y varias row para movil y varias column para pc y un rows*/
-/*existe un background-image en css tiene propiedades como bckground size(cover), position o repeat y blend-mode(luminosity se ve afectado por el bckrgroundcolor)*/
-/*pexels y tabler-icons
- /*Implementar esto en el proyecto*/
-/*background-clip: text;
- color: transparent;
- background-image: radial-gradient(red, tomato);*/
-/*mirar htmx-retos css y posible erradicacion de js SIUU*/
+.lightMode {
+    --darkheader: #003535;
+    --darkest: #003535;
+    --dark: #005555;
+    --medium: #409CA9;
+    --light: #D1CCBB;
+    --lighter: #ADFFFF;
+    --lightest: #EBFFFF;
+    --accent: #F47656;
+
+}
+
 body {
     height: 100%;
     min-height: 100vh;
@@ -46,7 +46,7 @@ body {
 
 }
 
-#divUser{
+#divUser {
     margin-left: 0;
     letter-spacing: 1rem;
     background-color: var(--lightest);
@@ -55,6 +55,7 @@ body {
     border-radius: 10px;
     color: var(--darkheader);
 }
+
 
 #divIntro {
 
@@ -67,6 +68,8 @@ body {
     position: relative;
     gap: 10px;
     animation: text-focus-in 2s;
+    padding-inline: 1rem;
+    padding-bottom: 1rem;
 }
 
 #divIntro>img {
@@ -89,7 +92,7 @@ body {
 
     font-family: 'Montserrat Alternates';
     font-weight: 300;
-    background-image: linear-gradient(transparent, rgb(0, 0, 0, 0.5));
+    background-image: linear-gradient(transparent, rgb(0, 0, 0, 0.4));
     font-size: 20px;
     border: 1px solid var(--darkest);
     border-radius: 5px;
@@ -198,14 +201,14 @@ footer {
 
 }
 
-#divRedes>button{
+#divRedes>button {
 
-    background-image: linear-gradient(90deg,var(--medium), transparent);
+    background-image: linear-gradient(210deg, transparent 5%, var(--medium));
 }
 
 button {
 
-   
+
     color: var(--lightest);
     border: none;
     border-radius: 5px;
@@ -271,7 +274,7 @@ li:hover {
     justify-content: center;
     width: 2rem;
     height: 2rem;
-    background-image: linear-gradient(90deg,var(--dark), transparent);
+    background-image: linear-gradient(45deg, var(--dark), transparent);
     color: var(--lightest);
     border-radius: 50%;
     border: none;
@@ -289,17 +292,8 @@ li:hover {
 }
 
 
-
-#divIntro {
-
-    padding-inline: 1rem;
-    padding-bottom: 1rem;
-}
-
 #divBody {
 
-
-    /* si quitas el display flex se ve ahora mismo es columna*/
     margin-top: 2rem;
     display: flex;
     align-items: center;
@@ -413,23 +407,22 @@ input {
     width: 20ch;
     height: 1.2rem;
     color: var(--lightest);
-    font-family: "Gabarito", Arial, Helvetica, sans-serif;
+    font-family: "Montserrat Alternates", Arial, Helvetica, sans-serif;
     border: 0;
     outline: 0;
     border-radius: 5px;
 }
 
 input:focus {
-    outline: none !important;
+    outline: none;
 }
-
 
 
 
 fieldset {
 
     color: var(--darkest);
-
+    background-image: linear-gradient(transparent, rgb(0, 0, 0, 0.4));
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
@@ -446,7 +439,7 @@ fieldset>button {
     width: 150px;
     height: 2rem;
     color: var(--lightest);
-    font-family: "Gabarito", Arial, Helvetica, sans-serif;
+    font-family: "Montserrat Alternates", Arial, Helvetica, sans-serif;
     border: 0;
     outline: 0;
     border-radius: 5px;
@@ -467,10 +460,11 @@ fieldset>button:hover {
 
 @media screen and (max-width: 903px) {
 
-    li{
+    li {
         white-space: nowrap;
     }
-    #divUser{
+
+    #divUser {
         display: none;
     }
 
@@ -478,23 +472,23 @@ fieldset>button:hover {
 
 @media screen and (max-width: 1059px) {
 
-   #divUser{
-    font-size: 10px;
-    text-wrap: nowrap;
-    margin-left:1ch
-   }
+    #divUser {
+        font-size: 10px;
+        text-wrap: nowrap;
+        margin-left: 1ch
+    }
 
-   li{
+    li {
 
-    font-size: 14px;
-   }
+        font-size: 14px;
+    }
 
 }
 
 
 @media screen and (max-width: 490px) {
 
-    li{
+    li {
         font-size: 13px;
     }
 
@@ -503,7 +497,7 @@ fieldset>button:hover {
 
 @media screen and (max-width: 750px) {
 
-    header{
+    header {
         justify-content: space-around;
     }
 
@@ -570,7 +564,7 @@ fieldset>button:hover {
     }
 
 
-    
+
     #divUser {
         display: none;
     }
@@ -625,76 +619,82 @@ fieldset>button:hover {
     }
 
 }
+
 @import url(https://fonts.googleapis.com/css?family=Antonio:100,200,300,regular,500,600,700);
 
-@media (width<=50rem){
-    
-    ul{
-      background-color: transparent;
-      display: flex;
-      align-items: end;
-    }
-    li{
-      color: var(--darkest);
-      border-radius: 5px;
+@media (width<=50rem) {
+
+    ul {
+        background-color: transparent;
+        display: flex;
+        align-items: end;
     }
 
-    
-    nav{
-      background-image: linear-gradient( var(--dark), transparent);
-      backdrop-filter: blur(5px);
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 50vw;
-      justify-content: start;
+    li {
+        color: var(--darkest);
+        border-radius: 5px;
     }
-    nav ul{
-      flex-direction: column;  
-      margin-top: 5rem;
-    }
-  }
 
-  #btnToggleMenu{
+
+    nav {
+        background-image: linear-gradient(var(--dark), transparent);
+        backdrop-filter: blur(5px);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 50vw;
+        justify-content: start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 5rem;
+    }
+}
+
+#btnToggleMenu {
     display: none;
-  }
-  
-  @media (width<=50rem){
-  
-    li{
-      white-space: nowrap;
-      padding-right: 10px;
-    }
-    #btnToggleMenu{
-      display: initial;
-      position: fixed;
-         background-color: transparent;
-         color: var(--lightest);
-         border: 0;
-    }
-    #btnToggleMenu:hover{
-      color: var(--lightest);
-      cursor: pointer;
-    }
-  
-    nav{
-        transform: translateX(-400%);
-        transition: transform 0.5s ease-in;
-      }
-    
-      nav.expandido{
-        transform: translateX(-150%);
-      }
-    }
+}
 
+@media (width<=50rem) {
 
-    @media (width<400px) {
-      li{
+    li {
         white-space: nowrap;
         padding-right: 10px;
-      }
-      nav.expandido{
-        transform: translateX(-120%);
-      }
     }
+
+    #btnToggleMenu {
+        display: initial;
+        position: sticky;
+        background-color: transparent;
+        color: var(--lightest);
+        border: 0;
+    }
+
+    #btnToggleMenu:hover {
+        color: var(--lightest);
+        cursor: pointer;
+    }
+
+    nav {
+        transform: translateX(-400%);
+        transition: transform 0.5s ease-in;
+    }
+
+    nav.expandido {
+        transform: translateX(-150%);
+    }
+}
+
+
+@media (width<400px) {
+    li {
+        white-space: nowrap;
+        padding-right: 10px;
+    }
+
+    nav.expandido {
+        transform: translateX(-120%);
+    }
+}
