@@ -47,6 +47,9 @@ body {
 }
 
 #divUser {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     margin-left: 0;
     letter-spacing: 1rem;
     background-color: var(--lightest);
@@ -55,6 +58,7 @@ body {
     border-radius: 10px;
     color: var(--darkheader);
 }
+
 
 
 #divIntro {
