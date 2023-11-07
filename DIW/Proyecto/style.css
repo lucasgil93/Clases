@@ -2,9 +2,9 @@
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,900);
 @import url(https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700);
 @import url(https://fonts.googleapis.com/css?family=Gabarito:regular,500,600,700,800,900);
-@import url(https://fonts.googleapis.com/css?family=Gabarito:regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Montserrat+Alternates:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=Antonio:100,200,300,regular,500,600,700);
-
+@import url(https://fonts.googleapis.com/css?family=Metrophobic:regular);
 *::before::after {
 
     box-sizing: border-box;
@@ -37,7 +37,7 @@ body {
     min-height: 100vh;
     max-width: 100%;
     margin: 0;
-    font-family: "Titillium Web", "Quicksand", Arial, Helvetica, sans-serif;
+    font-family: "Titillium Web", Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     background-color: var(--lightest);
@@ -87,13 +87,14 @@ body {
 
 #divIntro>p {
 
+    font-family: 'Montserrat Alternates';
+    font-weight: 300;
     background-image: linear-gradient(transparent, rgb(0, 0, 0, 0.5));
     font-size: 20px;
     border: 1px solid var(--darkest);
     border-radius: 5px;
-    font-weight: 500;
     padding: 2rem;
-    text-align: center;
+    text-align: left;
     color: var(--darkest);
     grid-column: 2/3;
     grid-row: 2/4;
@@ -241,6 +242,7 @@ ul {
 }
 
 li {
+    font: "Montserrat Alternates";
     gap: 1rem;
     padding-inline: 1rem;
     margin-inline: 1rem;
@@ -465,6 +467,30 @@ fieldset>button:hover {
     }
     #divUser{
         display: none;
+    }
+
+}
+
+@media screen and (max-width: 1059px) {
+
+   #divUser{
+    font-size: 10px;
+    text-wrap: nowrap;
+    margin-left:1ch
+   }
+
+   li{
+
+    font-size: 14px;
+   }
+
+}
+
+
+@media screen and (max-width: 490px) {
+
+    li{
+        font-size: 13px;
     }
 
 }
