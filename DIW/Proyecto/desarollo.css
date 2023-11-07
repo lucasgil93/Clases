@@ -124,7 +124,7 @@ p {
     backface-visibility: hidden;
     border-radius: 10px;
     overflow: hidden;
-    transition: .5s;
+    transition: .9s;
 }
 
 .carta .front {
