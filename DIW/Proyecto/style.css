@@ -198,9 +198,14 @@ footer {
 
 }
 
+#divRedes>button{
+
+    background-image: linear-gradient(90deg,var(--medium), transparent);
+}
+
 button {
 
-    background-color: var(--medium);
+   
     color: var(--lightest);
     border: none;
     border-radius: 5px;
@@ -266,9 +271,9 @@ li:hover {
     justify-content: center;
     width: 2rem;
     height: 2rem;
-    background-color: var(--darkheader);
+    background-image: linear-gradient(90deg,var(--dark), transparent);
     color: var(--lightest);
-    border-radius: 5px;
+    border-radius: 50%;
     border: none;
 
 
