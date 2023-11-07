@@ -8,14 +8,15 @@ const creaTabla = contenido =>{
 
 let splitContent = contenido.split(",");
 
-
-for (let i = 0; i < splitContent.length; i++) {
+let arrNum = [];
+for (let i = 2; i < splitContent.length; i++) {
     
     if( i%2==0){
-        s+=`<tr><td>${splitContent[i]}</td>`;
     } else{
-        s+=`<td>${splitContent[i]}</td></tr>`
+        s+=`<div style="width:${splitContent[i]}px">${splitContent[i]}</div>`;
     }
+
+
     
     
 }
