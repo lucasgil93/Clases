@@ -13,17 +13,18 @@ body{
 }
 header{
     margin-top: 0;
-    background: url(pexels-los-muertos-crew-7260642.jpg);
+    background-color: #666666;
     background-size: cover;
     background-position: center;
     min-height: 100vh;
-    background-image: linear-gradient(45deg ,rgba(1, 19, 13, 0.5), rgba(197, 88, 24, 0.5)), url(pexels-los-muertos-crew-7260642.jpg);
+    background-image: linear-gradient(45deg ,rgba(1, 19, 13, 0.5), rgba(197, 88, 24, 0.5)), url(pexels-alfo-medeiros-18926860.jpg);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding-left: 4rem;
+    padding-left: 10rem;
     padding-right: 0rem;
+    background-blend-mode: soft-light;
 }
 
 img{
@@ -31,41 +32,326 @@ img{
     z-index: -1;
 }
 
-header>h2{
+h2{
     font-family: 'Inter';
-    color: aqua;
-    font-weight: 100;
-    font-size: 18px;
+    color: aquamarine;
+    font-weight: 300;
+    font-size: 22px;
+    letter-spacing: 0.7ch;
+    text-transform: uppercase;
 
 }
 h1{
     font-family: 'Antonio';
     color: whitesmoke;
-    font-weight: 300;
-    font-size: 72px;
+    font-weight: 500;
+    font-size: 130px;
+    text-transform: uppercase;
 
 }
 span{
-    color: aqua;
+    color: aquamarine;
 }
 
 p{
     font-family: 'Inter';
-font-weight: 100;
-color: whitesmoke;
-padding-right:50%;
-font-size: 18px;
+    font-weight: 300;
+    color: #DDD;
+    padding-right:60%;
+    font-size: 18px;
+    line-height: 3ch;
 
 }
 
 button{
+    margin-top: 1rem;
     font-family: 'Inter';
     letter-spacing: 7px;
     background-color: transparent;
-    border: 1px solid aqua;
+    border: 2px solid aquamarine;
     border-radius: 50px;
     color: whitesmoke;
-    font-size: 15px;
-    padding-block: 1rem;
-    padding-inline: 2rem;
+    font-size: 20px;
+    padding-block: 2rem;
+    padding-inline: 4rem;
 }
+
+#divBody{
+    min-height: max-content;
+    display: flex;
+    flex-direction: row;
+    padding-inline: 10rem;
+    background-image: linear-gradient(45deg ,rgba(128, 128, 128, 0.3), rgba(128,128,128,0.1)), url(sl_0210121_40570_02.jpg);
+}
+
+.section{
+
+display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+flex-direction: column;
+padding-block: 10rem;
+max-width: 40rem;
+
+
+& h2{
+
+margin:0;
+padding:0;
+
+}
+
+& h1{
+
+    font-size: 72px;
+
+}
+
+& p{
+
+    padding: 0;
+    margin:0;
+    margin-right: 6rem;
+    font-size: 20px;
+ 
+
+}
+
+}
+
+hr{
+    height: 600px;
+    margin-block: 5rem;
+}
+
+.div2{
+
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-image: linear-gradient(45deg ,rgba(1, 19, 13, 0.5), rgba(197, 88, 24, 0.5)), url(pexels-maël-balland-2076968.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 10rem;
+    padding-right: 0rem;
+
+    & h2,h1,p{
+
+
+        padding-left: 30rem;
+
+    }
+
+    & p{
+
+        margin:0;
+        padding-right: 0;
+        margin-right: 4rem;
+    }
+}
+
+
+.div3{
+
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-image: linear-gradient(45deg ,rgba(1, 19, 13, 0.5), rgba(197, 88, 24, 0.5)), url(pexels-vincent-ma-janssen-3258243.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 10rem;
+    padding-right: 0rem;
+
+    & h2,h1,p{
+
+
+        padding-left: 3rem;
+
+    }
+
+    & p{
+
+        margin:0;
+        padding-right: 0;
+        max-width: 40%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    header{
+        margin-top: 0;
+        background-color: #666666;
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 1rem;
+        background-blend-mode: soft-light;
+    }
+    
+    img{
+        width: 100vh;
+        z-index: -1;
+    }
+    
+    h2{
+        font-family: 'Inter';
+        color: aquamarine;
+        font-weight: 300;
+        font-size: 15px;
+        letter-spacing: 0.7ch;
+        text-transform: uppercase;
+    
+    }
+    h1{
+        font-family: 'Antonio';
+        color: whitesmoke;
+        font-weight: 500;
+        font-size: 72px;
+        text-transform: uppercase;
+    
+    }
+    span{
+        color: aquamarine;
+    }
+    
+    p{
+        font-family: 'Inter';
+        font-weight: 300;
+        color: #DDD;
+        padding-right:10%;
+        font-size: 18px;
+        line-height: 3ch;
+    
+    }
+    
+    button{
+        margin-top: 1rem;
+        font-family: 'Inter';
+        letter-spacing: 7px;
+        background-color: transparent;
+        border: 2px solid aquamarine;
+        border-radius: 50px;
+        color: whitesmoke;
+        font-size: 20px;
+        padding-block: 2rem;
+        padding-inline: 4rem;
+    }
+    
+    #divBody{
+        min-height: max-content;
+        display: flex;
+        flex-direction: column;
+        }
+    
+    .section{
+    
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0 auto;
+    margin: 0 auto;
+    max-width: none;
+    min-width: 20vh;
+    
+    
+    & h2{
+    
+    margin:0;
+    padding:0;
+    text-wrap: nowrap;
+    
+    }
+    
+    & h1{
+    
+        
+        font-size: 50px;
+        text-wrap: nowrap;
+    
+    }
+    
+    & p{
+    
+        padding: 0;
+        margin:0;
+        font-size: 15px;
+     
+    
+    }
+    
+    }
+    
+    hr{
+       display: none;
+    }
+    
+    .div2{
+    
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        background-image: linear-gradient(45deg ,rgba(1, 19, 13, 0.5), rgba(197, 88, 24, 0.5)), url(pexels-maël-balland-2076968.jpg);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 10rem;
+        padding-right: 0rem;
+    
+        & h2,h1,p{
+    
+    
+            padding-left: 30rem;
+    
+        }
+    
+        & p{
+    
+            margin:0;
+            padding-right: 0;
+            margin-right: 4rem;
+        }
+    }
+    
+    
+    .div3{
+    
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        background-image: linear-gradient(45deg ,rgba(1, 19, 13, 0.5), rgba(197, 88, 24, 0.5)), url(pexels-vincent-ma-janssen-3258243.jpg);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 10rem;
+        padding-right: 0rem;
+    
+        & h2,h1,p{
+    
+    
+            padding-left: 3rem;
+    
+        }
+    
+        & p{
+    
+            margin:0;
+            padding-right: 0;
+            max-width: 40%;
+        }
+    }
+
+    
+  }
