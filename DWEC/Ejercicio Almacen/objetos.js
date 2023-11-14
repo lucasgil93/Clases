@@ -123,9 +123,13 @@ class Almacen {
     }
     importeTotalStock() {
 
+        let acc = 0;
         for (const prodStock of this.stock) {
 
             const producto = this.catalogo.find(pCatalogo => pCatalogo.id === prodStock.idProducto);
+            const precio = producto.precio;
+
+            acc+= prodStock.unidades*precio;
            
 
         }
