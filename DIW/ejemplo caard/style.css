@@ -208,7 +208,7 @@ hr{
         color: aquamarine;
         font-weight: 300;
         font-size: 15px;
-         : 0.7ch;
+         letter-spacing : 0.7ch;
         text-transform: uppercase;
     
     }
