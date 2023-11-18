@@ -1,0 +1,152 @@
+*::before::after{
+    box-sizing: border-box;
+}
+
+/*Responsividad
+- Móvil: 375px
+- Escritorio: 1440px
+
+Colores:
+Fondo: hsl(233, 47%, 7%)
+Fondo del card: hsl(244, 38%, 16%)
+Violeta: hsl(277, 64%, 61%)
+
+El texto es Blanco (el párrafo es blanco con una opacidad del 75% y la estadísticas con una opacidad del 60%)
+
+
+
+Tipos de letra: 
+Inter (peso 400 700)
+Lexend Deca (peso 400)*/
+
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Lexend+Deca:100,200,300,regular,500,600,700,800,900);
+
+:root{
+
+    --background: hsl(233, 47%, 7%);
+    --cardbkg: hsl(244,38%,16%);
+    --violet: hsl(277,64%,61%);
+    --white: rgb(255, 255, 255);
+    --violettrans: rgba(170, 92, 219, 0.6);
+}
+
+.image{
+    background-color: var(--violet);
+    background-image: url("imagen.jpg");
+    background-position: center;
+    background-repeat: none;
+    background-blend-mode: multiply;
+    background-size: cover;
+    height: 100%;
+    width: 130%;
+    border-radius: 0% 5% 5% 0%;
+}
+
+.card{
+    margin-top: 5rem;
+    height: 65vh;
+    background-color: var(--cardbkg);
+    border-radius: 25px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+body{
+    background-color:var(--background);
+    color: white;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.text{
+padding-inline: 4rem;
+}
+span{
+    color: var(--violet);
+}
+p{
+    opacity: 75%;
+    font-size: 16px;
+    font-weight: 300;
+    
+}
+.data{
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    opacity: 100%;
+    margin-bottom: 0;
+}
+.estadisticas{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+h1{
+    padding-top: 2.5rem;
+    padding-bottom: 12px;
+}
+
+div>p{
+    margin-top: 3px;
+    text-transform: uppercase;
+    font-family: "Lexend Deca", Arial, Helvetica, sans-serif;
+    opacity: 60%;
+}
+
+.text>p{
+    
+    text-align: left;
+    font-size: 14px;
+    padding-bottom: 2rem;
+    text-transform: none;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 375px) {
+
+    body{
+        margin:0;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+    }
+    .card{
+        flex-direction: column-reverse;
+        height: 100vh;
+        width: 100vh;
+        margin:0
+    }
+    .text{
+        text-align: center;
+        padding-inline: 1.5rem;
+    }
+    .estadisticas{
+        flex-direction: column;
+    }
+    .text>p{
+        text-align: center;
+        font-size: 16px;
+        padding-inline: 1rem;
+    }
+
+    .image{
+        width: 375px;
+        background-size: cover;
+        border-radius: 0;
+    }
+    div>p{
+        font-size: 15px;
+    }
+
+}
