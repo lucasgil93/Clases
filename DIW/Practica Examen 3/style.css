@@ -9,6 +9,7 @@ body{
     display: flex;
     flex-direction: row;
     margin: 0;
+    height: 100vh;
 }
 
 img{
@@ -18,7 +19,7 @@ img{
 
 header{
     width: 30%;
-    background-color: #3A3B3C;
+    background-color: #040b14;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,18 +36,20 @@ header{
 h1{
     background-color: goldenrod;
     color: antiquewhite;
-    padding-inline: 0.8rem;
+    padding-inline: 4rem;
     font-weight: 200;
 }
 
 li{
-    color: goldenrod;
-    padding-right: 10rem;
+    color: antiquewhite;
+    padding-right: 14rem;
 }
 
 ul{
+    padding-block: 0.2rem;
     border: 3px antiquewhite dotted;
     color: antiquewhite;
+    margin-bottom: 10rem;
 }
 h2{
     color: goldenrod;
@@ -54,12 +57,17 @@ h2{
 }
 h3{
     color: goldenrod;
+    border-bottom: 3px goldenrod dotted;
+    margin-right: 3rem;
 }
 p{
     color: antiquewhite;
 }
-hr{
-    border-top: 3px goldenrod dotted;
-    display: block;
-    background-color: transparent;
+#content>h1{
+    text-align: center;
+    margin-inline: 2rem;
+}
+span{
+    color: goldenrod;
+    font-weight: 300;
 }
