@@ -1,3 +1,5 @@
+"use strict";
+
 class Tienda {
     constructor(tBicis, numVentas) {
         this.tBicis = tBicis;
