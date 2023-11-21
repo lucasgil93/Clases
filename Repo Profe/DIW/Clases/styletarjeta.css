@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+*,::before::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto',Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: lavender;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.ejemplo img{
+    width: 400px;
+}
+
+.overview{
+    background-color: rgb(107, 107, 207);
+    border-radius: 20px;
+    width: 30ch;
+    color:whitesmoke;
+}
+
+.overview .presentacion{
+    padding: 2rem;
+}
+
+.overview .presentacion > img{
+    border-radius: 50%;
+    width: 100px;
+    border: 2px solid palevioletred;
+    margin: 0 auto;
+    display: block;
+}
+
+.overview p.display {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.overview p{
+    font-size: 0.55rem;
+    text-align: center;
+    color: yellow;
+    line-height: 1.7rem;
+    overflow: hidden;
+}
+
+.overview button{
+    width: 100%;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1rem;
+    padding-block: 0.25rem;
+    border-radius: 5px;
+    border: 0px solid transparent;
+    color:whitesmoke; 
+}
+
+.overview button.email{
+    background-color: #536af9;
+}
+
+.overview button.merch{
+    background-color: #373053;
+}
+
+.overview button >svg{
+    height: 1.1rem;
+}
+
+.overview .redes-sociales{
+    background-color: #241f40;
+    display: flex;
+    justify-content: space-evenly;
+    padding-block: 1rem;
+}
+
+.overview .redes-sociales >div{
+    text-align: center;
+}
+
+.overview .redes-sociales >div p.followers-numbers{
+    color:whitesmoke; 
+    font-size: 1rem;
+    font-weight: 600; 
+    margin: 0;
+}
+
+.overview .redes-sociales >div p.followes-text{
+    margin: 0;
+    color: rgb(211,211,255); 
+}
+
+.overview .redes-sociales >div:nth-child(1) >svg{
+    border-radius: 50%;
+    background-color: red;
+    padding: 0.25rem;
+    height: 2rem;
+    width: 2rem;
+}
+
+.overview .redes-sociales >div:nth-child(2) >svg{
+    border-radius: 50%;
+    background-color: cornflowerblue;
+    padding: 0.25rem;
+    height: 2rem;
+    width: 2rem;
+}
+
+.overview .redes-sociales >div:nth-child(3) >svg{
+    border-radius: 50%;
+    background-color: purple;
+    padding: 0.25rem;
+    height: 2rem;
+    width: 2rem;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!--link:css y tabulador nos crea la etiqueta para enlazar una hoja de estilo
+	se pueden enlazar varias hojas y se utilizaría la última enlazada-->
+	<link rel="stylesheet" href="styleFormulario.css">
+</head>
+<body>
+	<h1>DIW 2023</h1>
+
+	<p>El resultado es: X<sub>2</sub></p>
+
+	<h2>Primera web</h2>
+
+	<p>Lorem ipsum dolor, sit amet consectetur <strong>adipisicing</strong> elit. Possimus est nam provident impedit <em>maxime</em> facere minus repellendus delectus ipsum hic quibusdam quas. <br>
+	Sequi <code>Hola caracola</code> facilis suscipit quisquam similique neque numquam temporibus.</p>
+		
+		<form action="saludo.php" method="get">
+			<label for="txtNombre">Nombre:</label><br>
+			<!--Como mínimo 3 caracteres y dato requerido-->
+			<input type="text" name="txtNombre" id="txtNombre" minlength="3" required><br>
+
+			<label for="txtEdad">Edad:</label><br>
+			<!--request el dato es obligatorio para mandar el formulario-->
+			<input type="number" name="txtEdad" id="txtEdad" min="14" max="90" required><br>
+			
+			<label for="txtInteres">Interés:</label><br>
+			<input type="text" name="txtInteres" id="txtInteres" placeholder="Ej:Fotografia" list="listaInteres"><br>
+
+			<label for="txtCumple">Fecha de nacimiento:</label><br>
+			<input type="date" id="txtCumple"><br>
+
+			<input type="submit" value="Enviar"><br>
+			<input type="button" value="Calcular"><br>
+			<!--La diferencia es que submit si manda el formulario
+			y el tipo button por defecto no lo manda a ningún lado-->
+			<button>Botón</button> <br>
+			<!--La etiqueta button se comporta como un tipo submit, es decir si manda el formulario-->
+			<button type="button">Botón 2</button>
+			<!--Con la etiqueta button type button se puede añadir cualquier cosa dentro, como enlaces, imagenes entre otros-->
+
+			<fieldset>
+				<legend>Elige tu comida:</legend>
+				<div>
+					<!--Atributo checked: que la opción este marcado de antemano-->
+				  <input type="checkbox" id="montadito" name="montadito" checked />
+				  <label for="montadito">Montadito de pringá</label>
+				</div>
+				<div>
+				  <input type="checkbox" id="serranito" name="serranito" />
+				  <label for="serranito">Serranito</label>
+				</div>
+			  </fieldset>
+
+			  <!--Diferencia entre uno y otro: 
+				El de arriba puede seleccionar una o más opciones
+				y con el de abajo solo puedes marcar una opción-->
+			
+			  <fieldset>
+				<legend>Elige una bebida:</legend>
+			   
+				<div>
+				   <input type="radio" id="agua" name="bebida" value="agua" checked />
+				   <label for="agua">Agua</label>
+				</div>
+			   
+				<div>
+				   <input type="radio" id="cerveza" name="bebida" value="cerveza" />
+				   <label for="cerveza">Cerveza</label>
+				</div>
+			   
+				<div>
+				   <input type="radio" id="refresco" name="bebida" value="refresco" />
+				   <label for="refresco">Refresco</label>
+				</div>
+			   </fieldset>
+			
+			   <label for="editores">Elige un editor:</label><br>
+			   <select name="editores" id="editores">
+				 <option value="">-- Elige una opción --</option>
+				 <option value="emacs">Emacs</option>
+				 <option value="vim">Vim</option>
+				 <option value="nano">Nano</option>
+				 <option value="micro">Micro editor</option>
+				 <option value="vscode">Visual Studio code</option>
+				 <option value="notepadqq">Notepadqq</option>
+			   </select>
+		</form>	
+
+	<datalist id="listaInteres">
+		<option value="Escultura"></option>
+		<option value="Fotografia"></option>
+		<option value="Natación"></option>
+	</datalist>
+
+	<pre>function sumar(a,b){
+	return a+b;
+}</pre>
+
+<img src="descarga.png" alt="Mano apuntando" title="hola">
+<!--El alt sirve por si la imagen falla (se borra, se cambia de ubicación)
+El title sirve para cuando ponemos el cursor sobre la imagen nos aprezca el nombre -->
+</body>
+</html>

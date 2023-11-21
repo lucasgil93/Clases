@@ -1,0 +1,76 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+*,::after::before{
+    box-sizing: border-box;
+}
+
+body{
+    min-width: 100vh;
+    font-family: 'Roboto',Arial, Helvetica, sans-serif;
+    background-color: beige;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+.card{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.tarifas{
+    padding: 1rem;
+    background-color: rgb(255,242,244);
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px black;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem; /*Espacio como mínimo entre uno y otro*/
+}
+
+.tarifas > div{
+    padding: 1rem;
+    background-color: whitesmoke;
+    min-width: 20ch;
+    border-radius: 5px;
+}
+
+.tarifas > div:nth-child(2){
+    background-color: deeppink;
+    color:whitesmoke;
+}
+
+.tarifas .nombre{
+    font-weight: 700;
+}
+
+.tarifa .plan{
+    font-size: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.tarifas .precio {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+@media screen and (width<=750px) {
+    .tarifas{
+        flex-direction: column;
+    }
+    .tarifas>div{
+        text-align: center;
+    }
+    .tarifa .nombre{
+        font-size: 2rem;
+    }
+    .tarifas .plan{
+        letter-spacing: 0.15rem;
+    }
+}
+
+.tarifas>div{
+    position: relative;
+}

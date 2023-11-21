@@ -1,0 +1,116 @@
+/*Control+Shift+P se abre el buscador de visual estudio
+buscamos google font (descargado anteriormente) e importamos
+la que queramos */
+@import url(https://fonts.googleapis.com/css?family=Phudu:300,regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+/* este paso es obligatorio en todos los css */
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+body{
+    /*Ancho de la página independientemente de la pantalla que utilicemos*/
+        /*Máximo*/
+        max-width: 60ch;
+    /*Centrar todo el texto*/
+    margin: 0 auto; 
+    font-family:'Roboto',Arial, Helvetica, sans-serif;
+}
+
+img{
+    /*Cogera como máximo lo que le demos al body */
+    max-width: 100%;
+}
+
+/*Si queremos dar las mismas reglas a dos etiquetas, simplemente las separamos con una coma*/
+h1{
+    /*color de fondo*/
+    background-color: tomato;
+    /*color de letra*/
+    color:whitesmoke; 
+    /*Alineación del texo*/
+    text-align: center;
+    /*Cambiar el ancho/grueso del tipo de letra*/
+    font-weight: 100;
+    /*Cambiar el tamaño de la letra, utilizaremos rem este dependera del tamaño elegido por el usuario en su navegador*/
+    font-size: 2.5rem ;
+    /*Espacio o caracteres entre letras*/
+    letter-spacing: 0.5ch;
+    /*Fuente de la letra*/
+    /*Se añaden tantas fuentes por defecto en el caso de que alguna falle, siempre tendrá una alternativa*/
+    font-family: "Phudu",'Courier New', Courier, monospace;
+    padding: 0.75rem;
+}
+
+h2{
+    color:tomato; 
+    font-weight: 100;
+    /*decoración de un texto, como subrayado (wavy es curvado)*/
+    text-decoration: 2px wavy underline tomato;
+    font-family: "Phudu",'Courier New', Courier, monospace; 
+    /*Añadir margen*/
+        /*Por arriba*/
+    margin-top: 2rem;
+}
+
+strong{
+    /*Si queremos añadir la opacidad a un fondo escribimos el color con rgba y añadimos un número más al final)*/
+    background-color: rgba(255, 99, 71,0.2);
+    color: red;
+}
+
+em,a{
+    color:tomato; 
+}
+
+a{
+    background-color: rgba(255, 99, 71,0.2);
+}
+
+/*Del borde para dentro es padding 
+y del borde para fuera es margin*/
+pre{
+    background-color: rgba(255, 99, 71,0.2);
+    /*Margen izquierda*/
+    margin-left: 0.5px;
+    /*Margen derecha*/
+    margin-right: 0.5px;
+    /*Margen del texto*/
+    padding: 2rem;
+}
+
+form{
+    background-color: #d4d0d0; 
+    padding: 1rem;
+}
+
+input,button,select{
+    /*Grosor estilo color*/
+    border: 1px solid tomato;
+    padding: 0.25rem;
+    width: 20ch;
+    margin-bottom: 1rem;
+}
+
+/*Queremos que afecte solo a un tipo especificado de la etiqueta*/
+input[type="submit"]{
+    background-color: tomato;
+    color: #eee;
+    /*Queremos que cuando pasemos el cursor cambie su icono (manita)*/
+    /*No recomendado porque no sirve para moviles*/
+    cursor: pointer; 
+}
+
+/*Lo que queremos que pase cuando pasemos el cursor por encima*/
+input[type="submit"]:hover{
+    background-color: red;
+}
+
+input[type="checkbox"]{
+    width: auto;
+}
+
+fieldset{
+    margin-bottom: 1rem;
+    border: 1px solid tomato;
+}
