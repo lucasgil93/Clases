@@ -1,0 +1,12 @@
+dialog::backdrop{ 
+    background-color: #3366; 
+    backdrop-filter: blur(10px);
+}
+
+dialog{
+    background-color: goldenrod;
+    color: black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    border: none;
+}

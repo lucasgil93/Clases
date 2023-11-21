@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="code.js"></script>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Diálogos y formularios</h1>
+    <h2>Diálogos</h2>
+
+    <button id="btnMostrar">Mostrar diálogo</button>
+
+    <dialog id="dialogo">
+  <form method="dialog">
+    <p>Una pregunta comprometida. La tortilla es mejor...</p>
+    <button value="concebollista">Con cebolla</button>
+    <button value="sincebollista">Sin cebolla</button>
+  </form>
+</dialog>
+
+
+<h2>Formulario</h2>
+
+<form action="saludo.php" method="get">
+    <label for="txtNombre">Nombre:</label>
+    <input type="text" name="txtNombre" id="txtNombre"><br>
+    <label for="txtEdad">Edad:</label>
+    <input type="number" name="txtEdad" id="txtEdad"><br>
+    <input type="submit" value="Enviar">
+  </form>
+
+  <form name="formulario" action="registro.php" method="post">
+    <label for="nombre">Nombre: </label>
+    <input type="text" name="nombre"  required>
+    <br>
+    <label for="lastname">Apellido: </label>
+    <input type="text" name="apellido"  required>
+    <br>
+    <label for="email">Email: </label>
+    <input type="email" name="email"  required>
+    <br>
+    <label for="password">Password: </label>
+    <input type="password" name="password"  required>
+    <br>
+    <input type="submit" value="Registrarse">
+  </form>
+
+</body>
+</html>
