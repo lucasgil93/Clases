@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="LucasGil" default="compilar">
+
+   
+    <property name="src.dir1" location="src1LucasGil1" />
+    <property name="src.dir2" location="src2LucasGil1" />
+    <property name="build.dir" location="build" />
+    <property name="classes.dir1" location="${build.dir}/clase1LGD" />
+    <property name="classes.dir2" location="${build.dir}/clase2LGD" />
+    <property name="jar.dir1" location="${build.dir}/ejecuta1LGD" />
+    <property name="jar.dir2" location="${build.dir}/ejecuta2LGD" />
+    <property name="fichero.dir1" location="${build.dir}/fichero1" />
+    <property name="fichero.dir2" location="${build.dir}/fichero2" />
+
+   
+    <target name="carpetas">
+        <mkdir dir="${classes.dir1}" />
+        <mkdir dir="${classes.dir2}" />
+        <mkdir dir="${jar.dir1}" />
+        <mkdir dir="${jar.dir2}" />
+        <mkdir dir="${fichero.dir1}" />
+        <mkdir dir="${fichero.dir2}" />
+    </target>
+
+   
+    <target name="compilar" depends="carpetas">
+        <javac srcdir="${src.dir1}" destdir="${classes.dir1}" />
+        <javac srcdir="${src.dir2}" destdir="${classes.dir2}" />
+    </target>
+
+   
+    <target name="crear" depends="compilar">
+        <jar destfile="${jar.dir1}/archivo1.jar" basedir="${classes.dir1}" />
+        <jar destfile="${jar.dir2}/archivo2.jar" basedir="${classes.dir2}" />
+    </target>
+
+   
+    <target name="copiar" depends="crear">
+               <copy todir="${fichero.dir1}">
+           <fileset dir="${src.dir1}" includes="**/*.java" />
+        </copy>
+        <copy todir="${fichero.dir2}">
+            <fileset dir="${src.dir2}" includes="**/*.java" />
+        </copy>
+
+       
+        <copy todir="${fichero.dir1}">
+            <fileset dir="${classes.dir1}" includes="**/*.class" />
+        </copy>
+        <copy todir="${fichero.dir2}">
+            <fileset dir="${classes.dir2}" includes="**/*.class" />
+        </copy>
+
+       
+        <copy todir="${fichero.dir1}">
+            <fileset dir="${jar.dir1}" includes="**/*.jar" />
+        </copy>
+        <copy todir="${fichero.dir2}">
+            <fileset dir="${jar.dir2}" includes="**/*.jar" />
+        </copy>
+    </target>
+
+   
+    <target name="limpiar">
+        <delete dir="${classes.dir1}" />
+        <delete dir="${classes.dir2}" />
+        <delete dir="${jar.dir1}" />
+        <delete dir="${jar.dir2}" />
+    </target>
+
+</project>
