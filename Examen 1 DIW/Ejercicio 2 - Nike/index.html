@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Ejercicio</h1>
+  <p>Trata de recrear la tarjeta de producto tal y como aparece en las imágenes de abajo.</p>
+  <h2>Reglas:</h2>
+  <ul>
+    <li>No es obligatorio usar el HTML y CSS que se proporcionan. Si el alumno lo desea puede empezar el ejercicio desde cero.</li>
+    <li>Tanto el HTML como el CSS que se proporcionan pueden ser modificados.</li>
+    <li>El tipo de letra utilizado es JosefinSans (Ver la nota de abajo).</li>
+    <li>El ancho máximo de la tarjeta de producto es 60ch.</li>
+    <li>El cambio de <em>layout</em> se produce a los 60ch.</li>
+    <li>Los colores usados son <code>#c9021b, black, blue, white</code>. Es obligatorio usar variables CSS para los colores.</li>
+    <li>La imagen es responsiva y se adapta al ancho de la tarjeta.</li>
+    <li>No se necesita (y no se debe usar) Javascript.</li>
+  </ul>
+
+  <p><strong>Nota:</strong> Sólo se ha usado <code>px</code> indicar el radio y ancho de los bordes.</p>
+
+  <p><strong>Nota:</strong> Para incluir en el CSS una tipografía descargada se puede usar el siguiente código.</p>
+  <pre>
+    @font-face {
+      font-family: JosefinSans;
+      src: url(JosefinSans-VariableFont_wght.ttf);
+    }
+  </pre>
+  <h2>Resultado esperado</h2>
+
+  <p><img src="sol-escritorio.png" width="100%" alt=""></p>
+  <p><img src="sol-movil.png" width="60%" alt=""></p>
+
+  <h2>Ejercicio</h2>
+  <div class="producto">
+    <nav>
+      <div class="marcas">
+        <a href="#1"><img src="brand-instagram.svg">
+        </a>
+        <a href="#2"><img src="brand-facebook.svg">
+        </a>
+        <a href="#3"><img src="world-www.svg">
+        </a>
+      </div>
+
+      <div class="botones">
+        <a href="#search"><img src="search.svg">
+        </a>
+        <a href="#carrito"><img src="shopping-cart.svg">
+        </a> 
+      </div>
+    </nav>
+
+    <div class="producto-contenido">
+
+      <div class="producto-texto">
+        <h3>Nike</h3>
+        <p>Nike delivers innovative products, experiences and services to inspire athletes.</p>
+        <div class="boton">
+          <button class="btnBuy">Buy now <span>($699)</span>
+          </button>
+        </div>
+        <div class="colores">
+          <div class="color-negro"></div>
+          <div class="color-azul"></div>
+          <div class="color-rojo"></div>
+          <div class="color-blanco"></div>
+        </div>
+      </div>
+
+      <div class="producto-imagen">
+        <img src="zapato.png" alt="">
+      </div>
+
+    </div>
+  </div>
+
+
+  
+
+</body>
+</html>

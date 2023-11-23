@@ -1,0 +1,41 @@
+body {
+    font-family: sans-serif;
+    padding: 1rem;
+    color:#334;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+img{
+    width:100%;
+    max-width: fit-content;
+}
+
+.cell:nth-child(16n),
+.cell:nth-child(16n+1),
+.cell:nth-child(16n+3),
+.cell:nth-child(16n+5),
+.cell:nth-child(16n+7),
+.cell:nth-child(16n+10),
+.cell:nth-child(16n+12),
+.cell:nth-child(16n+14)
+{
+    background-color: #334;
+    color: whitesmoke;
+}
+
+.layout {
+    max-width: 40rem; 
+    display: flex;
+    flex-wrap:wrap;
+
+
+}
+
+.cell {
+    border-radius: 5px;
+    font-size: 2rem;
+    height: 5rem;
+    display:flex;
+    align-items: center;
+    padding-inline: 1.6rem;
+}

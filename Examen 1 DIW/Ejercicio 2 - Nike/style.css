@@ -1,0 +1,218 @@
+
+
+@font-face {
+  font-family: JosefinSans;
+  src: url(JosefinSans-VariableFont_wght.ttf);
+}
+
+:root{
+  --white: white;
+  --blue: blue;
+  --black: black;
+  --red: #c9021b;
+
+}
+
+pre{
+  backdrop-filter: brightness(0.6);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+code{
+  font-size: 0.95rem;
+  color: #224;
+}
+
+
+
+body{
+  background-color: #c9021b;
+  max-width: 80ch;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "JosefinSans";
+}
+
+
+.producto{
+
+  border: 10px whitesmoke solid;
+  border-radius: 35px;
+  width: 50rem;
+}
+a{
+  color: var(--red);
+}
+.producto h3{
+
+  color: var(--white);
+  text-transform: uppercase;
+  padding-left: 4rem;
+  font-size: 4rem;
+
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  padding-inline: 3rem;
+}
+
+nav img{
+  height: 75%;
+}
+
+.marcas{
+display: flex;
+
+}
+
+.botones{
+display: flex;
+}
+
+.producto-contenido{
+
+  display: flex;
+}
+.producto-texto{
+}
+
+.producto-texto p{
+
+  color: var(--white);
+  padding-left: 4rem;
+}
+
+.producto-texto .boton{
+
+
+
+
+}
+
+.btnBuy{
+
+  border: none;
+  padding-block: 1.3rem;
+  padding-inline: 4rem;
+  margin-bottom: 1rem;
+  font-family: "JosefinSans";
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: -0.1rem;
+}
+
+.btnBuy span{
+  font-size: 0.7rem;
+  letter-spacing: 0;
+  font-family:'Times New Roman', Times, serif;
+}
+
+
+.producto-imagen{
+}
+.producto-imagen img{
+
+  width: 25rem;
+}
+
+.colores{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 3rem;
+  margin-bottom: 4rem;
+  
+}
+.colores > div{
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.color-negro{
+
+  background-color:var(--black);
+ 
+}
+.color-azul{
+  background-color: var(--blue);
+
+}
+.color-rojo{
+  background-color: var(--red);
+  border: 3px solid var(--white);
+}
+.color-blanco{
+  background-color: var(--white);
+
+}
+
+@media screen and (max-width: 60ch) {
+
+  .producto{
+    margin-left: 0;
+  max-width: 40ch;
+  border-radius: 25px;
+  }
+  .producto-contenido{
+      display: flex;
+      flex-direction: column;
+      max-width: 40ch;
+    }
+
+    .producto-texto p{
+    padding-left: 1rem;
+    padding-right: 2rem;
+    margin-left: 1.4rem ;
+    margin-right: 0.8rem;
+    font-size: 0.85rem;
+    }
+
+    .producto-imagen img{
+      padding-bottom: 2rem;
+    }
+
+    .producto h3{
+
+      padding-left: 2rem;
+      font-size: 4rem;
+    
+    }
+
+    .btnBuy{
+
+   
+      font-size: 1.3rem;
+   
+    }
+    nav{
+      padding-inline: 2rem;
+      padding-right: 1.5rem;
+      padding-top: 0.7rem;
+      
+    }
+    nav img{
+      width: 27%;
+    }
+    .botones img{
+      width: 35%;
+
+    }
+    .marcas{
+      display: block;
+    }
+    .botones{
+      display: block;
+    }
+
+}
+
+
+
