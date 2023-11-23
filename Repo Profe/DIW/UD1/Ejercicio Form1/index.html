@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 1 - formulario</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Ejercicio 1</h1>
+
+<p>Crea una página web que contenga un formulario para introducir datos con los siguientes controles:</p>
+
+<ul>
+	<li>Nombre: de tipo texto</li>
+	<li>Apellidos: control de tipo texto</li>
+	<li>Mayor de edad: dos opciones excluyentes Sí o No</li>
+	<li>Correo electrónico: de tipo email</li>
+	<li>Una casilla de verificación con el texto "Deseo recibir información sobre novedades y ofertas"</li>
+	<li>Una casilla de verificación con el texto "He leído y acepto las condiciones y la política de protección de datos"</li>
+	<li>Un botón de envío</li>
+</ul>
+
+<p>Además:</p>
+<ul>
+	<li>El título de la página será Ejercicio 1 - formulario.</li>
+	<li>El método de envío del formulario será GET.</li>
+	<li>El campo nombre, apellidos, mayor de edad y la casilla de privacidad será obligatorio que estén rellenas</li>
+	<li>El nombre y el apellido no pueden tener más de 20 caracteres ni menos de 2.</li>
+	<li>La casilla para recibir información debe estar activada por defecto.</li>
+</ul>
+
+	<form action="" method="get">
+		<label for="txtNombre">Nombre:</label><br>
+		<input minlength="2" maxlength="20" required type="text" name="txtNombre" id="txtNombre"><br>
+		
+		<label for="txtApellidos">Apellidos:</label><br>
+		<input minlength="2" maxlength="20" type="text" name="txtApellidos" id="txtApellidos"><br>
+
+		<fieldset>
+			<legend>Mayor de edad:</legend>
+		
+			<div>
+				<input required type="radio" id="oSi" name="mayorEdad" value="si" checked />
+				<label for="oSi">Sí</label>
+			</div>
+		
+			<div>
+				<input required type="radio" id="oNo" name="mayorEdad" value="no" />
+				<label for="oNo">No</label>
+			</div>
+		</fieldset>
+
+		<label for="txtEmail">Email:</label><br>
+		<input type="email" name="txtEmail" id="txtEmail"><br>
+
+		<fieldset>
+			<legend>Opciones:</legend>
+			<div>
+				<input type="checkbox" id="cOfertas" name="cOfertas" checked />
+				<label for="cOfertas">"Deseo recibir información sobre novedades y ofertas</label>
+			</div>
+
+			<div>
+				<input required type="checkbox" id="cDatos" name="cDatos" />
+				<label for="cDatos">He leído y acepto las condiciones y la política de protección de datos</label>
+			</div>
+		</fieldset>
+
+		<input type="submit" value="Enviar">
+	</form>	
+
+</body>
+</html>
