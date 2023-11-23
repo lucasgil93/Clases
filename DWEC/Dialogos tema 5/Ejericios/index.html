@@ -1,37 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicios dialogos y formularios</title>
     <script defer src="code.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/simpledotcss/simple.css">
 </head>
+
 <body>
-    
+
     <h1>Ejercicio 1</h1>
 
     <form action="get" id="frmEj1">
         <label for="txtname"></label>
         <input type="text" id="txtname">
-        
-        <div id="divResultado"></div>
-        
+
+        <div id="divResultado" class="notice"></div>
+
     </form>
 
-<h1> Ejercicio 2</h1>
+    <h1> Ejercicio 2</h1>
 
-<form action="get">
+    <form action="get">
 
-<div id="divCosas"></div>
-<label for="cbox1">Mañana</label>
-<input type="checkbox" name="cbox1" id="mañana" value="mañana">
-<label for="cbox2">Tarde</label>
-<input type="checkbox" name="cbox2" id="tarde" value="tarde">
-<label for="cbox3">Noche</label>
-<input type="checkbox" name="cbox3" id="noche" value="noche">
-<input type="button" value="Procede" id="btnProcede">
+        <div id="divCosas" class="notice"></div>
+        <label for="cbox1">Mañana</label>
+        <input type="checkbox" name="cbox1" id="mañana" value="mañana">
+        <br>
+        <label for="cbox2">Tarde</label>
+        <input type="checkbox" name="cbox2" id="tarde" value="tarde">
+        <br>
+        <label for="cbox3">Noche</label>
+        <input type="checkbox" name="cbox3" id="noche" value="noche">
+        <br>
+        <input type="button" value="Procede" id="btnProcede">
 
-</form>
+    </form>
 
+    <h1>Ejercicio 3</h1>
+
+    <form action="get" id="formNumeritos">
+        <input type="number" name="txt1" id="txt1" class="numerin">
+        <input type="number" name="txt2" id="txt2" class="numerin">
+        <input type="number" name="txt3" id="txt3" class="numerin">
+        <input type="number" name="txt4" id="txt4" class="numerin">
+        <input type="number" name="txt5" id="txt5" class="numerin">
+        <input type="number" name="txt6" id="txt6" class="numerin">
+        <input type="number" name="txt7" id="txt7" class="numerin">
+        <input type="number" name="txt8" id="txt8" class="numerin">
+        <input type="number" name="txt9" id="txt9" class="numerin">
+        <input type="number" name="txt10" id="txt10" class="numerin">
+
+        <br>
+        <button type="button" id="btnAleatorio">Aleatorio</button>
+        <br>
+        <button type="button" id="btnPositivos">Positivos</button>
+        <br>
+        <button type="button" id="btncuenta">Cuenta Positivos</button>
+    </form>
+
+
+    <h1> Ejercicio 4</h1>
+    <select name="slHelados" id="slHelados">
+        <option value="optVanilla">Helado de Vainilla</option>
+        <option value="optChocolate">Helado de Chocolate</option>
+    </select>
 </body>
+
 </html>
