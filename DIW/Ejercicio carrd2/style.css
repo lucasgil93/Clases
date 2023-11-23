@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+*::after::before{
+
+    box-sizing: border-box;
+}
+
+
+
+
+body{
+    background-image: linear-gradient(#3278a0, #95a373);
+    display: flex;
+    align-items: center;
+    font-family: 'Inter';
+    height: 100vh;
+}
+
+#contenedor{
+
+    margin-left: 30rem;
+    display: flex;
+    flex-direction: row;
+
+}
+
+div{
+
+    height: 30rem;
+    width: 25rem;
+    background-color: #1f2a2e;
+    border-radius: 10px 0px 0px 10px;
+}
+
+h1{
+    background-image: linear-gradient(270deg, #3278a0, rgb(177, 241, 14));
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    padding-top: 5rem;
+    padding-right: 2rem;
+    font-size: 3rem;
+    text-align: end;
+    font-weight: 800;
+    letter-spacing: -1;
+    margin-bottom: 1rem;
+}
+
+p{
+    background-image: linear-gradient(270deg, #3278a0, rgb(177, 241, 14));
+    background-clip: text;
+    text-align: end;
+    color: transparent;
+    text-transform: uppercase;
+    padding-right: 2rem;
+    font-weight: 600;
+    margin-top: 0;
+
+}
+
+#iconos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: top;
+    gap: 1rem;
+    height: 2rem;
+    padding-top: 1rem;
+
+}
+
+button{
+    color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    border: none;
+    background-color: #87d649;
+}
+svg{
+    padding-inline: 0.2rem;
+}
+
+button:nth-child(2){
+    background-color: #5ad69b;
+}
+button:nth-child(3){
+    background-color: #bcdb40;
+}
+button:nth-child(4){
+    background-color: #d1c238;
+}
+
+button:nth-child(4){
+    background-color: #37a9cc;
+}
+
+
+
+
+
+
+
+img{
+    height: 30rem;
+}
+
+
+#foto2{
+    border-radius: 0px 10px 10px 0px;
+}
+#foto3{
+    border-radius: 0px 10px 10px 0px;
+}
+
+
+
