@@ -10,7 +10,6 @@ function confirmRight() {
     if (/[0-9]{2}[\-][aeiou]/.test(txt1)) {
         divRes1.innerHTML = "";
         divRes1.innerHTML = "Valido."
-
     } else {
         divRes1.innerHTML = "";
         divRes1.innerHTML = "No valido."
