@@ -1,13 +1,13 @@
 "use strict"
 
 let btn1 = document.getElementById("btn1");
-let txt1 = document.querySelector("#txt1").value;
+let texto1 = txt1.value;
 btn1.addEventListener("click", confirmRight);
 let divRes1 = document.querySelector("#divRes1");
 
 function confirmRight() {
 
-    if (/[0-9]{2}[\-][aeiou]/.test(txt1)) {
+    if (/[0-9]{2}[\-][aeiou]/.test(texto1)) {
         divRes1.innerHTML = "";
         divRes1.innerHTML = "Valido."
     } else {
@@ -52,3 +52,7 @@ function confirmRight3(txt3) {
     
 
 }
+
+// Apuntes
+
+// form.rbNacimiento.value = (si o no) esto captura los radiobutton dentro de un form (de nombre o id "form");
