@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5b Parte 2</title>
+    <script defer src="code.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/simpledotcss/simple.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Ejercicio 6</h1>
+    <p>Crea un formulario cuyo atributo target sea _blank y que contenga: </p>
+    <ul>
+        <li>Un cuadro de texto para el nickname. No podrá tener menos de 3 letras ni más de 8. El campo es obligatorio y
+            además, no podrá comenzar por un número ni contener los siguientes caracteres: .,:;</li>
+        <li>Dos cuadros de texto de tipo password para establecer un código PIN. Su tamaño será de 4 caracteres y todos
+            tendrán que ser dígitos. El contenido de los dos cuadros de texto tendrán que ser el mismo. Estos campos son
+            obligatorios también.</li>
+        <li>Un radio button que permita seleccionar si se quiere indicar el día de nacimiento o no. Por defecto la
+            opción seleccionada será No, pero si se selecciona Sí el usuario tendrá que rellenar los cuadros de texto de
+            la sección de abajo.</li>
+        <li>Una sección para establecer el día de nacimiento que conste de un cuadro de texto numérico para el día, otro
+            para el mes y otro para el año. El día tendrá que estar entre el 1 y el 31, el mes entre el 1 y el 12 y el
+            año tendrá estar entre 1900 y el año actual. Todos estos campos son obligatorios rellenarlos si se
+            seleccionó la opción del Sí en el radio button de arriba. </li>
+        <li>Añade tres checkboxes para elegir dos colores de los tres disponibles: Rojo, Verde y Azul. El usuario tendrá
+            que marcar dos opciones obligatoriamente.</li>
+        <li>Añade un botón de Reset y otro de Enviar.</li>
+        <p>Establece las opciones de validación de los controles en el HTML cuando sea posible.
+            Haz que cuando se pulse el botón de Enviar se realice la validación del formulario antes de mandar los datos
+            al servidor y si hay problemas se muestren en un cuadro de diálogo creado con la etiqueta
+            "<!dialog>".
+                Finalmente haz que el color de fondo del body de la página del formulario refleje los colores elegidos
+                por el usuario (azul + rojo = morado, rojo + verde = amarillo, azul + verde = turquesa). </p>
+    </ul>
+    <form action="" target="_blank" id="frmEj1">
+        <label for="txtNick">Nickname</label>
+        <input type="text" name="txtNick" id="txtNick" required minlength="3" maxlength="8">
+
+        <label for="txtpass1">Introduzca su pin:</label>
+        <input type="password" name="txtpass1" id="txtpass1" required minlength="4" maxlength="4">
+
+        <label for="txtpass2">Confirme su pin:</label>
+        <input type="password" name="txtpass2" id="txtpass2" required minlength="4" maxlength="4">
+
+        <fieldset>
+            <legend>Desea indicar el dia de nacimiento: </legend>
+            <br>
+            <label for="rbNacimiento1">No</label>
+            <input type="radio" name="rbNacimiento" id="rbNacimiento1" value="No" checked>
+            <br>
+            <label for="rbNacimiento2">Si</label>
+            <input type="radio" name="rbNacimiento" id="rbNacimiento2" value="Si">
+            <br>
+            <div id="fechaNac">
+                <label for="txtDia">Dia: </label>
+                <input type="number" name="txtDia" id="txtDia" min="1" max="31" minlength="1" maxlength="2" required>
+                <label for="txtMes">Mes: </label>
+                <input type="number" name="txtMes" id="txtMes" min="1" max="12" minlength="1" maxlength="2" required>
+                <label for="txtano">Año: </label>
+                <input type="number" name="txtano" id="txtano" min="1900" max="2023" minlength="4" maxlength="4" required>
+            </div>
+                   
+        </fieldset>
+
+        <fieldset>
+            <legend>Colores: </legend>
+
+            <label for="txtColor1">Rojo: </label>
+            <input type="checkbox" name="txtColor" id="txtColor1" value="Rojo">
+            <br>
+            <label for="txtColor2">Verde: </label>
+            <input type="checkbox" name="txtColor" id="txtColor2" value="Verde">
+            <br>
+            <label for="txtColor3">Azul: </label>
+            <input type="checkbox" name="txtColor" id="txtColor3" value="Azul">
+            <br>
+
+        </fieldset>
+
+        <button type="submit" id="btnEnviar"> Enviar </button>
+        <button type="reset" id="btnReset"> Reset </button>
+
+
+    </form>
+</body>
+
+</html>

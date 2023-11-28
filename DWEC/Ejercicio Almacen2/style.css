@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
 	--accent: rgb(140, 42, 165);
 	--accent-bg: rgb(249, 244, 244);
@@ -77,3 +78,10 @@ body > footer{
 
 /* Añadimos la clase oculto */
 .oculto{ display: none;}
+=======
+
+
+.oculto{
+    display: none;
+  }
+>>>>>>> 913d33c185477f494a4e6914986a296c1dc59d53

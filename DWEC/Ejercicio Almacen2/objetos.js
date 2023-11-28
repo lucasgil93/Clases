@@ -1,138 +1,122 @@
 "use strict";
 
-class Tienda {
-    constructor(tBicis, numVentas) {
-        this.tBicis = tBicis;
-        this.numVentas = numVentas;
+class Tienda{
+  constructor(tBicis=[], numVentas=0){
+    this.tBicis = tBicis;
+    this.numVentas = numVentas;
+    this.numCarretera=0;
+    this.numMontaña = 0;
+    this.numTotal = 0;
+    this.numVenta = 0;
+  }
+
+  altaBicicleta(oBici){ 
+    const existeEseLocalizador = (
+      this.tBicis.some(b=>b.localizador === oBici.localizador) 
+    );
+    
+    if(existeEseLocalizador)
+      return false;
+
+    this.tBicis.push(oBici);
+    return true;
+  }
+
+
+
+  ventaBici(sLocalizador){
+    let bici = this.tBicis.find( b=>b.localizador=== sLocalizador);
+    
+    if(bici){
+      if(bici.vendida){
+        return "Bicicleta ya vendida";
+      }
+      else{
+        bici.vendida = true;
+        return "Bicicleta vendida";
+      } 
     }
-
-    altaBicicleta(OBici) {
-
-        this.tBicis.push(OBici);
-
+    else{
+      return "La bicicleta no existe";
     }
-    ventaBici(sLocalizador) {
-
-        for (let i = 0; i < this.tBicis.length; i++) {
-            let biciActual = this.tBicis[i];
-
-            if (biciActual.localizador === sLocalizador) {
-               this.numVentas++;
-            }
-        }
-
-    }
-    listadoCarretera() {
+  }
 
 
-        let sol;
 
-        sol = `<table><thead><td>Bicis de Carretera></td></thead>`
-
-        for (let i = 0; i < this.tBicis.length; i++) {
-            let biciActual = this.tBicis[i];
-
-            if (biciActual instanceof Carretera) {
-                sol += biciActual.toHTMLrow();
-            }
-        }
-
-        sol += `</table>`;
-    }
-    listadoMontania() {
-
-        let sol;
-
-        sol = `<table><thead><td>Bicis de Carretera></td></thead>`
-
-        for (let i = 0; i < this.tBicis.length; i++) {
-            let biciActual = this.tBicis[i];
-
-            if (biciActual instanceof Carretera) {
-                sol += biciActual.toHTMLrow();
-            }
-        }
-
-        sol += `</table>`;
-
-    }
-    numCarretera() {
-
-        let contCarretera = 0;
-
-        for (let i = 0; i < this.tBicis.length; i++) {
-            let biciActual = this.tBicis[i];
-
-            if (biciActual instanceof Carretera) {
-                contCarretera ++;
-            }
-        }
-        return contCarretera;
-
-    }
-    numMontania() {
-
-        let contMontaña = 0;
-
-        for (let i = 0; i < this.tBicis.length; i++) {
-            let biciActual = this.tBicis[i];
-
-            if (biciActual instanceof Carretera) {
-                contMontaña ++;
-            }
-        }
-
-        return contMontaña;
-
-    }
-    numTotal() {
-
-        return this.tBicis.length; 
-
-    }
-    numVenta() {
-        return this.numVentas;
-
-    }
-
-
+  listadoCarretera(){
+    return tabla;
+  }
+  listadoMontania(){
+    return tabla;
+  }
+  listadoGeneral(){
+    return tabla;
+  }
 }
 
-class Bicicleta {
-    constructor(localizador, año, vendida) {
-        this.localizador = localizador;
-        this.año = año;
-        this.vendida = vendida;
-    }
 
-    toHTMLrow() {
-        return `<tr><td>${this.localizador}</td><td>${this.año}</td><td>${this.vendida}</td></tr>`
-    }
 
+
+
+
+
+
+
+
+//////////////
+// Bicicletas
+//////////////
+
+function Bicicleta(localizador, año, vendida){
+  this.localizador=localizador;
+  this.año=año;
+  this.vendida=vendida;
 }
 
-class Carretera extends Bicicleta {
-    constructor(numPlatos) {
-        super(this.localizador, this.año, this.vendida);
-        this.numPlatos = numPlatos;
+Bicicleta.prototype.toHTMLrow = function(){ 
+  return `${this.x}, ${this.y}, ${this.z}`
+};
 
-    }
 
-    toHTMLrow() {
-        return `<tr><td>${this.localizador}</td><td>${this.año}</td><td>${this.vendida}</td><td>${this.numPlatos}</td></tr>`
-    }
 
+
+
+
+
+
+
+
+/////////////////////
+// Carretera
+/////////////////////
+
+function Carretera(localizador, año, vendida, numPlatos){
+  Bicicleta.call(this,localizador,año, vendida);
+  this.numPlatos=numPlatos;
 }
 
-class Montaña extends Bicicleta {
-    constructor(numSuspensiones) {
-        super(this.localizador, this.año, this.vendida);
-        this.numSuspensiones = numSuspensiones;
+Carretera.prototype.toHTMLrow = function(){ 
+  return `<tr><td>${this.localizador}</td><td>${this.año}</td><td>${this.vendida? '✅':'❎'}</td><td>${this.numPlatos}</td></tr>`
+};
 
-    }
+// Establecemos la herencia
+Object.setPrototypeOf( Carretera.prototype, Bicicleta.prototype );
 
-    toHTMLrow() {
-        return `<tr><td>${this.localizador}</td><td>${this.año}</td><td>${this.vendida}</td><td>${this.numSuspensiones}</td></tr>`
-    }
 
+
+/////////////////////
+// Montaña
+/////////////////////
+
+function Montaña(localizador, año, vendida, numSuspensiones){
+  Bicicleta.call(this,localizador,año, vendida);
+  this.numSuspensiones=numSuspensiones;
 }
+
+
+Montaña.prototype.toHTMLrow = function(){ 
+  return `<tr><td>${this.localizador}</td><td>${this.año}</td><td>${this.vendida? '✅':'❎'}</td><td>${this.numSuspensiones}</td></tr>`
+};
+
+// Establecemos la herencia
+Object.setPrototypeOf( Montaña.prototype, Bicicleta.prototype );
