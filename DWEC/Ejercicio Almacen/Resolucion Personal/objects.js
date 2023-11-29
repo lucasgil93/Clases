@@ -56,7 +56,17 @@ class Almacen {
     };
 
     altaProducto(oProducto) {
-        return false;
+
+        for (let i = 0; i < this.catalogo.length; i++) {
+            const element = this.catalogo[i];
+
+            if (element.id == oProducto.id){
+                return false;
+            } else{
+                return true;
+            };
+            
+        }
     };
     entradaStock(idProducto, unidades) {
 
