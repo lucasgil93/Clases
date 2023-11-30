@@ -16,7 +16,7 @@ btnAltaForm.addEventListener("click", mostrarAltaForm);
 
 let altaForm = document.getElementById("frmAltaProducto")
 
-function mostrarAltaForm (){
+function mostrarAltaForm() {
 
     ocultarTodosFormularios();
     altaForm.classList.remove("oculto");
@@ -31,7 +31,7 @@ btnModStock.addEventListener("click", mostrarModStock);
 
 let salidaStock = document.getElementById("frmEntradaSalidaStock")
 
-function mostrarModStock (){
+function mostrarModStock() {
 
     ocultarTodosFormularios();
     salidaStock.classList.remove("oculto");
@@ -44,20 +44,43 @@ let btnList1 = document.getElementById("btnListadoCatalogo");
 
 btnList1.addEventListener("click", mostrarList1);
 
-function mostrarList1(){
+function mostrarList1() {
 
     alert("mostramos lista 1");
 }
 
 //Creamos lo necesario para mostrar el segundo listado.
 
+
+
 let btnList2 = document.getElementById("btnListadoStock");
 
 btnList2.addEventListener("click", mostrarList2);
 
-function mostrarList2(){
+function mostrarList2() {
 
-    alert("mostramos lista 2");
+    alert("Mostramos lista 2");
 }
 
+//Capturamos los valores de Producto:
+
+
+let btnAltaProducto = document.querySelector("#btnAltaProducto");
+btnAltaProducto.addEventListener("click", creaProducto);
+
+function creaProducto() {
+
+    alert("funca");
+}
+
+let idProducto = document.querySelector("#txtIdProducto").value;
+let nombreProducto = document.querySelector("#txtNombre").value;
+let precioProducto = document.querySelector("#txtPrecio").value;
+let tipoProducto = document.querySelector("[name=txtTipo]:checked").value;
+
+let modeloMovil = document.querySelector("#txtModelo").value;
+
+let esAndroid = document.querySelector("#txtAndroid").checked;
+
+let materialCarcasa = document.querySelector("#txtMaterial").value;
 
