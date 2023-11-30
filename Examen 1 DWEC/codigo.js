@@ -37,7 +37,7 @@ function pruebaAltaMedico() {
 
 
     if (hayCamposVacios) {
-        alert("Hay campos vacios;")
+        alert("Hay campos vacios")
     } else {
         let oMedico = new Medico(idMedico, nombre, telefono, email, colegiado);
 
