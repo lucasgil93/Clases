@@ -95,7 +95,7 @@ function altaProducto() {
         };
     } else{
         let producto1 = new Carcasa (idProducto, nombreProducto, precioProducto, materialCarcasa);
-        if (almacen1.altaProducto(producto1)==true){
+        if (almacen1.altaProducto(producto1)){
             almacen1.catalogo.push(producto1);
         } else{
             alert("Este id de esta carcasa ya existe.");
