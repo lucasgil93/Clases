@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hospital</title>
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script defer src="objetos.js"></script>
+	<script defer src="codigo.js"></script>
+</head>
+<body>
+	<header>
+		<h1>Hospital central</h1>
+	</header>
+	<main>
+		<section class="formularios">
+			<div class="formulario" id="divFrmAltaMedico">
+				<h2>Alta de médico</h2>
+				<form id="frmAltaMedico">
+					<label for="txtIdMedico">IdMedico</label>
+					
+					<input type="text" size="40" maxlength="40" name="txtIdMedico" />
+					
+					<label for="txtNombre">Nombre</label>
+					
+					<input type="text" size="40" maxlength="40" name="txtNombre"></input>
+					
+					<label for="txtTelefono">Telefono</label>
+					
+					<input type="text" size="12" maxlength="9" name="txtTelefono" />
+					
+					<label for="txtEmail">Email (opcional)</label>
+					
+					<input type="text" size="40" maxlength="40" name="txtEmail" />
+					
+					<label for="txtColegiado">Colegiado</label>
+					
+					<input type="text" size="12" maxlength="9" name="txtColegiado" />
+					
+					<br>
+					<input type="button" id="btnAltaMedico" value="Aceptar" />
+				</form>
+			</div>
+
+			<div class="formulario" id="divFrmAltaCita">
+				<h2>Alta de cita</h2>
+				<form id="frmAltaCita" name="frmAltaCita">
+					<label for="txtIdMedico">IdMedico</label>
+					
+					<input type="text" size="40" maxlength="40" name="txtIdMedico" />
+					
+
+					<label for="txtPaciente">Paciente</label>
+					
+					<input type="text" size="40" maxlength="40" name="txtPaciente" />
+					
+					<label for="txtFecha">Fecha</label>
+					
+					<input type="date" size="12" maxlength="12" name="txtFecha" />
+					
+					<label for="txtHora">Hora</label>
+					
+					<input type="text" size="12" maxlength="12" name="txtHora" />
+					
+					<br>
+					<input type="button" id="btnAltaCita" value="Aceptar" />
+
+				</form>
+			</div>
+		</section>
+		<section class="listados">
+			<h2>Listados</h2>
+			<div id="listado"></div>
+		</section>
+	</main>
+	<footer>
+		<form>
+			<fieldset>
+				<legend>Acciones</legend>
+				<button type="button" id="btnFormAltaMedico">Alta de médico</button>
+				<button type="button" id="btnFormAltaCita">Alta de cita</button>
+				<button type="button" id="btnListadoMedicos">Listado de médicos</button>
+				<button type="button" id="btnListadoCitas">Listado de citas</button>
+			</fieldset>
+		</form>
+	</footer>
+</body>
+</html>
