@@ -1,0 +1,56 @@
+:root {
+	--accent: hsl(90, 74%, 35%);
+	--accent-bg: hsl(90, 74%, 97%);
+}
+
+@media (prefers-color-scheme: dark){
+	:root{
+		--accent:hsl(90, 74%, 35%);
+		--accent-bg: #212721;
+	}
+}
+
+
+header h1{
+	color: var(--accent);
+}
+body{
+	display:flex;
+	flex-direction: column;
+	min-height: 100dvh;
+}
+
+main{
+	flex:1;
+	display:flex;
+	flex-direction: row;
+	padding-top: 0;
+}
+main > section{
+	flex:1;
+}
+
+body > header{
+	display:flex;
+	align-items: center;
+	padding: 1rem .5rem 1rem .5rem;
+}
+
+section{
+	border-top:0;
+	border-bottom:0;
+	margin-inline: 0;
+	margin-block: 0;
+}
+
+section.listados{
+	background-color: var(--accent-bg);
+}
+
+body > footer{
+	margin-top:0;
+}
+
+.oculto{
+	display: none;
+}

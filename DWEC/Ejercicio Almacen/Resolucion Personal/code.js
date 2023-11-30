@@ -2,6 +2,11 @@
 
 //Ocultamos todos los formularios.
 
+let catalogo = [];
+let stock =  [];
+
+let almacen1 =  new Almacen (catalogo, stock);
+
 function ocultarTodosFormularios() {
     document.querySelectorAll(".formulario").forEach(form => form.classList.add("oculto"));
 }
@@ -62,25 +67,50 @@ function mostrarList2() {
     alert("Mostramos lista 2");
 }
 
-//Capturamos los valores de Producto:
-
-
 let btnAltaProducto = document.querySelector("#btnAltaProducto");
-btnAltaProducto.addEventListener("click", creaProducto);
 
-function creaProducto() {
+btnAltaProducto.addEventListener("click", altaProducto);
 
-    alert("funca");
+function altaProducto() {
+
+    let idProducto = document.querySelector("input[name=txtIdProducto]").value;
+    let nombreProducto = document.querySelector("input[name=txtNombre]").value;
+    let precioProducto = document.querySelector("input[name=txtPrecio]").value;
+    let tipoProducto = document.querySelector("input[name=txtTipo]:checked").value;
+    let modeloMovil = document.querySelector("input[name=txtModelo]").value;
+    let androidBool = document.querySelector("input[name=txtAndroid]:checked");
+    
+    if (androidBool==null){
+        androidBool = false;
+    } else {
+        androidBool = true;
+    };
+
+    let materialCarcasa = document.querySelector("#txtMaterial").value;
+
+    if (tipoProducto=="movil"){
+        let producto1 = new Movil (idProducto, nombreProducto, precioProducto, modeloMovil, androidBool);
+        if (almacen1.altaProducto(producto1)==true){
+            almacen1.catalogo.push(producto1);
+        } else {
+            alert("Este id de este movil ya existe.");
+        };
+    } else{
+        let producto1 = new Carcasa (idProducto, nombreProducto, precioProducto, materialCarcasa);
+        if (almacen1.altaProducto(producto1)==true){
+            almacen1.catalogo.push(producto1);
+        } else{
+            alert("Este id de esta carcasa ya existe.");
+        };
+    }
+
+   
+
+
+
+
+    alert("Alta producto.");
+
 }
 
-let idProducto = document.querySelector("#txtIdProducto").value;
-let nombreProducto = document.querySelector("#txtNombre").value;
-let precioProducto = document.querySelector("#txtPrecio").value;
-let tipoProducto = document.querySelector("[name=txtTipo]:checked").value;
-
-let modeloMovil = document.querySelector("#txtModelo").value;
-
-let esAndroid = document.querySelector("#txtAndroid").checked;
-
-let materialCarcasa = document.querySelector("#txtMaterial").value;
 
