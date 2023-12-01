@@ -56,13 +56,15 @@ function mostrarList1() {
 
 //Creamos lo necesario para mostrar el segundo listado.
 
+
+
 let btnList2 = document.getElementById("btnListadoStock");
 
 btnList2.addEventListener("click", mostrarList2);
 
 function mostrarList2() {
 
-    alert("mostramos lista 2");
+    alert("Mostramos lista 2");
 }
 
 let btnAltaProducto = document.querySelector("#btnAltaProducto");
@@ -95,7 +97,7 @@ function altaProducto() {
         };
     } else{
         let producto1 = new Carcasa (idProducto, nombreProducto, precioProducto, materialCarcasa);
-        if (almacen1.altaProducto(producto1)==true){
+        if (almacen1.altaProducto(producto1)){
             almacen1.catalogo.push(producto1);
         } else{
             alert("Este id de esta carcasa ya existe.");
