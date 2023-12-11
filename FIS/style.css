@@ -14,15 +14,24 @@ body{
     font-family: "Calibri";
     margin: 0;
     background-color: var(--blanco);
+    width: 100%;
 }
 header{
+    height: 100vh;
     display: flex;
     padding-inline: 4rem;
     padding-top: 2rem;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--violeta);
-}
+    background-color: #8937c3;
+    background-image: url(pexels-karolina-grabowska-5993292.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}   
 
 header img{
     border-radius: 5px;
@@ -31,11 +40,11 @@ header img{
 
 li{
     list-style: none;
-    color: var(--blanco);
-    background-color: #8937c3;
+    color: var(--violeta);
+    background-color: var(--marron);
     padding-inline: 1rem;
-    border-radius: 5px;
-    font-size: 1.3rem;
+
+    font-size: clamp(0.5rem, 1rem, 2rem);
     text-transform: uppercase;
     font-weight: 600;
 
