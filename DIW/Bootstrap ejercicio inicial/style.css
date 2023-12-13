@@ -9,7 +9,7 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 75vh;
+    height: 95vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,4 +37,5 @@ header div{
     align-items: center;
     background-color: rgba(0, 0, 0, 0.678);
 }
+
 
