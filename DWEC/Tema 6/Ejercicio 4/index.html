@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script defer src="code.js"></script>
 
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
 
 </head>
+
 <body>
     <h1>Ejercicio 4:</h1>
     <p>Crea una web con tres listas sin ordenar y un par de radio buttons.
-    La primera lista tendrá una serie de nombres de alumnos. La segunda tendrá una serie de alumnos aprobados y la tercera alumnos suspensos.
-    Las opciones del radio button serán dos: aprobado y suspenso.
-    Si se pulsa sobre un alumno de la primera lista y está seleccionada la opción aprobado, se moverá a la lista de aprobados como último elemento.
-    Si se pulsa sobre un alumno de la primera lista y está seleccionada la opción suspenso, se moverá a la lista de suspensos como primer elemento.
-    Finalmente si se pulsa sobre un alumno de la lista de suspenso, volverá a la primera lista de alumnos.
-</p>
-   <p>Parte de esta lista de alumnos:</p> 
-    
+        La primera lista tendrá una serie de nombres de alumnos. La segunda tendrá una serie de alumnos aprobados y la
+        tercera alumnos suspensos.
+        Las opciones del radio button serán dos: aprobado y suspenso.
+        Si se pulsa sobre un alumno de la primera lista y está seleccionada la opción aprobado, se moverá a la lista de
+        aprobados como último elemento.
+        Si se pulsa sobre un alumno de la primera lista y está seleccionada la opción suspenso, se moverá a la lista de
+        suspensos como primer elemento.
+        Finalmente si se pulsa sobre un alumno de la lista de suspenso, volverá a la primera lista de alumnos.
+    </p>
+    <p>Parte de esta lista de alumnos:</p>
+
     <pre>&lt;ul class="listaAlumnos">
         &lt;li>Tomás Tuerzo&lt;/li>
         &lt;li>Aitor Tilla&lt;/li>
@@ -31,30 +36,39 @@
         &lt;/ul>
 </pre>
 
-<ul class="listaAlumnos">
-    <li>Tomás Tuerzo</li>
-    <li>Aitor Tilla</li>
-    <li>Sara Mago</li>
-    <li>Pancho Colate</li>
-    <li>Ana Tema</li>
-    <li>Armando Bronca</li>
-    <li>Aitor Menta</li>
+    <ul class="listaAlumnos">
+        <li>Tomás Tuerzo</li>
+        <li>Aitor Tilla</li>
+        <li>Sara Mago</li>
+        <li>Pancho Colate</li>
+        <li>Ana Tema</li>
+        <li>Armando Bronca</li>
+        <li>Aitor Menta</li>
     </ul>
 
     <fieldset>
-<label>Aprobados:
-<input type="radio" name="rboton" id="btnaprobado" value="aprobado" checked> </label>
-<label>Suspensos: 
-<input type="radio" name="rboton" id="btnsuspenso" value="suspenso"></label>
-</fieldset>
+        <label>Aprobados:
+            <input type="radio" name="rboton" id="btnaprobado" value="aprobado" checked> </label>
+        <label>Suspensos:
+            <input type="radio" name="rboton" id="btnsuspenso" value="suspenso"></label>
+    </fieldset>
 
-    <div id="divaprobados">
-        <h2>Alumnos Aprobados</h2>
-        <ul id="alAprobados"></ul>
-    </div>
-    <div id="divsuspensos">
-        <h2>Alumnos Suspensos</h2>
-        <ul id="alSuspensos"></ul>
+    <div id="ordenados">
+        <div class="notice">
+            <div id="divaprobados">
+                <h2>Alumnos Aprobados</h2>
+                <ul id="alAprobados"></ul>
+            </div>
+        </div>
+        
+        <div class="notice">
+            <div id="divsuspensos">
+                <h2>Alumnos Suspensos</h2>
+                <ul id="alSuspensos"></ul>
+            </div>
+        </div>
+
     </div>
 </body>
+
 </html>
