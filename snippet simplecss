@@ -1,0 +1,8 @@
+{
+"Simplecss": {
+	"prefix": "_simplecss",
+	"body": [ "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.css\">"],
+	"description": "Simplecss link"
+}
+
+}

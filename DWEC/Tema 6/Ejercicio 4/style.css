@@ -1,0 +1,8 @@
+.oculto{
+    display: none;
+}
+
+#ordenados{
+    display: flex;
+    flex-direction: column;
+}

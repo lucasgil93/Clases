@@ -1,0 +1,17 @@
+body{
+    height: 100vh;
+    width: 100vh;
+    margin: 0;
+}
+#botonera1{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+#botonera2{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
