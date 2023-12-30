@@ -1,86 +1,175 @@
-*::before::after{
+@import url(https://fonts.googleapis.com/css?family=Kanit:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+;
+
+
+*::before::after {
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --violeta: #8937c3;
     --verde: #9bc009;
     --marron: #32170F;
-    --crudito: #BE974C;
+    --crudito: #dcad57;
     --blanco: #F1F4EF;
 }
 
-body{
-    font-family: "Calibri";
-    margin: 0;
-    background-color: var(--blanco);
-    width: 100%;
+html{
+    scroll-behavior: smooth;
 }
-header{
-    height: 8vh;
-    display: flex;
-    padding-inline: 4rem;
-    padding-top: 2rem;
-    align-items: center;
-    justify-content: space-between;
+body {
+    margin: 0 auto;
+    font-family: "Kanit", Arial, Helvetica, sans-serif
+}
+
+header {
+    height: 100vh;
     background-color: #8937c3;
-    background-image: url(pexels-karolina-grabowska-5993292.jpg);
-    background-blend-mode: multiply;
-    background-size: cover;
+    background-image: url(pexels-daniel-spase-700694.jpg);
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-}   
-
-header img{
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 5px;
-    background-color: white;
-
-}
-
-li{
-    list-style: none;
-    color: var(--blanco);
-    background-color: transparent;
-    padding-inline: 2rem;
-    padding-block: 1rem;
-    border-radius: (5px, 5px, 5px, 5px);
-
-    font-size: clamp(0.5rem, 1rem, 2rem);
-    text-transform: uppercase;
-    font-weight: 600;
-
-}
-
-li:hover{
-    background-color: #F1F4EF;
-    color: var(--violeta);
-    border-radius: 5px;
-}
-
-.titulo{
-    display: none;
-}
-
-ul{
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid 1rem var(--verde);
+
+    margin: 0;
+
+    h1 {
+        color: var(--blanco);
+        text-transform: uppercase;
+
+    }
+
+    svg{
+        border-radius: 50%;
+        border: solid 2px white;
+        color: white;
+        width: 3rem;
+        height: 3rem;
+    }
 }
 
-#callTo{
+.divHead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 10%;
+    width: 100%;
+    backdrop-filter: blur(20px);
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
 
-background-color: #BE974C;
-color: black;
-border-radius: 5px;
+.divPar {
+    height: 50vh;
+    background-color: var(--violeta);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    p{
+        color: var(--crudito)
+    }
+    h2:hover{
+        color: var(--crudito)
+    }
+}
+
+.divImpar {
+    height: 50vh;
+    background-color: var(--verde);
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    p{
+        color: var(--marron);
+    }
+    h2:hover{
+        color: var(--marron)
+    }
 
 }
 
-#callTo:hover{
-
-background-color: #BE974C;
-color: #F1F4EF;
+.divPar:nth-child(1){
+    background-image: url(pexels-chelsi-peter-1564149.jpg);
+    background-blend-mode: multiply;
 }
 
+.divImpar:nth-child(2){
+    background-image: url(pexels-amir-esrafili-8808680.jpg);
+    background-blend-mode: multiply;
+    background-position: center;
+}
+
+.divPar:nth-child(3){
+    background-image: url(pexels-aleksandr-slobodianyk-989941.jpg);
+    background-blend-mode: multiply;
+    background-position:right;
+}
+
+.divImpar:nth-child(4){
+    background-image: url(pexels-sohail-nachiti-807598.jpg);
+    background-blend-mode: multiply;
+    background-position:right;
+}
+
+
+.divPar:nth-child(5){
+    background-image: url(pexels-pixabay-276514.jpg);
+    background-blend-mode: multiply;
+    background-position:right;
+}
+
+.divImpar:nth-child(6){
+    background-image: url(pexels-steve-johnson-1000366.jpg);
+    background-blend-mode: multiply;
+    background-position:right;
+}
+
+
+
+
+footer{
+    height: 25vh;
+    background-color: var(--marron);
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    p{
+        margin: 0;
+        padding: 1rem;
+    }
+}
+
+h2 {
+    margin: 0;
+    color: var(--blanco);
+    text-transform: uppercase;
+    padding-inline: 3rem;
+    font-size: 3rem;
+}
+
+p{
+    padding-inline: 3rem;
+    font-size: 1.5rem;
+}
+
+.redes svg{
+    padding-inline: 0.5rem;
+}
+
+svg:nth-child(odd):hover{
+
+    color: var(--crudito);
+
+}
+
+svg:nth-child(even):hover{
+    color:  var(--verde);
+}
