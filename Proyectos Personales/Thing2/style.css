@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Salsa:regular);
+
+*::after::before{
+
+box-sizing: border-box;
+
+}
+
+:root{
+
+    --primary-color: #FF00FF;
+
+
+}
+body{
+    margin: 0;
+    font-family:"Salsa", Arial, Helvetica, sans-serif;
+}
+
+header{
+ 
+    height: 75vh;
+    padding-top: 25vh;
+    background-image: url(pexels-thiago-japyassu-1069798.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img{
+    padding-block: 2rem;
+    width: 20rem;
+
+    clip: auto;
+    border-radius: 50%;
+
+}
+h1{
+    color: var(--primary-color);
+    margin: 0;
+
+}
+h2{
+    margin: 0;
+
+}
+
+.content{
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.textos{
+}
