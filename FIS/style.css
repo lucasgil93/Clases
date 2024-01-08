@@ -25,7 +25,7 @@ body {
 header {
     height: 100vh;
     background-color: #8937c3;
-    background-image: url(pexels-daniel-spase-700694.jpg);
+    background-image: url(img/pexels-daniel-spase-700694.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
@@ -50,6 +50,9 @@ header {
         height: 3rem;
     }
 }
+span{
+    color: var(--verde);
+}
 
 .divHead {
     display: flex;
@@ -63,6 +66,7 @@ header {
     margin-bottom: 10rem;
 }
 
+
 .divPar {
     height: 50vh;
     background-color: var(--violeta);
@@ -74,7 +78,8 @@ header {
         color: var(--crudito)
     }
     h2:hover{
-        color: var(--crudito)
+        color: var(--crudito);
+        background-color: var(--marron);
     }
 }
 
@@ -89,43 +94,44 @@ header {
         color: var(--marron);
     }
     h2:hover{
-        color: var(--marron)
+        color: var(--marron);
+        background-color: var(--crudito);
     }
 
 }
 
 .divPar:nth-child(1){
-    background-image: url(pexels-chelsi-peter-1564149.jpg);
+    background-image: url(img/pexels-chelsi-peter-1564149.jpg);
     background-blend-mode: multiply;
 }
 
 .divImpar:nth-child(2){
-    background-image: url(pexels-amir-esrafili-8808680.jpg);
-    background-blend-mode: multiply;
+    background-image: url(img/pexels-amir-esrafili-8808680.jpg);
+    background-blend-mode:luminosity;
     background-position: center;
 }
 
 .divPar:nth-child(3){
-    background-image: url(pexels-aleksandr-slobodianyk-989941.jpg);
+    background-image: url(img/pexels-aleksandr-slobodianyk-989941.jpg);
     background-blend-mode: multiply;
     background-position:right;
 }
 
 .divImpar:nth-child(4){
-    background-image: url(pexels-sohail-nachiti-807598.jpg);
+    background-image: url(img/pexels-sohail-nachiti-807598.jpg);
     background-blend-mode: multiply;
     background-position:right;
 }
 
 
 .divPar:nth-child(5){
-    background-image: url(pexels-pixabay-276514.jpg);
+    background-image: url(img/pexels-pixabay-276514.jpg);
     background-blend-mode: multiply;
     background-position:right;
 }
 
 .divImpar:nth-child(6){
-    background-image: url(pexels-steve-johnson-1000366.jpg);
+    background-image: url(img/pexels-steve-johnson-1000366.jpg);
     background-blend-mode: multiply;
     background-position:right;
 }

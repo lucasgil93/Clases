@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Salsa:regular);
+
+*::before::after{
+    box-sizing: border-box;
+}
+
+
+:root{
+
+    --color5: #fb8500;
+    --color4: #ffb703;
+    --color3: #023047;
+    --color2: #219ebc;
+    --color1: #8ecae6;
+    --whitish: #f2e9e4;
+    --blackish: #000044;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Salsa", Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-family:"Salsa", Arial, Helvetica, sans-serif;
+  
+}
+.muestra{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-inline: 1rem;
+    border-bottom: 3px solid var(--color5);
+}
+
+.muestra:nth-child(even){
+    flex-direction: row-reverse;
+
+}
+
+.textos{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+nav{
+    background-color: var(--color5);
+    color: var(--color3);
+}
+
+ul{
+    padding-block: 1rem;
+    margin:0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+h2{
+    margin:0;
+    text-transform: uppercase;
+}
+p{
+    margin:0;
+}
+li{
+    text-transform: uppercase;
+    color: var(--color3);
+    list-style: none;
+}
+li:hover{
+    text-decoration: underline;
+    color: var(--whitish);
+}
+button{
+    background-color: var(--color5);
+    color: var(--color3);
+    border: none;
+}
+button:hover{
+    color: var(--whitish);
+    text-decoration: underline;
+}
+
+img{
+    width: 27rem;
+}
+
+p{
+
+    padding-inline: 2rem;
+    padding-top: 1rem;
+}
