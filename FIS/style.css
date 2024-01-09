@@ -49,14 +49,18 @@ background-color: var(--violeta);
 a{
     text-decoration: none;
     color: var(--blanco);
-    margin-inline: 2rem;
-    margin-block: 1rem;
+  
 }
 a:visited{
     color: var(--crudito);
 }
+h2{
+    color: var(--blanco);
+    padding-inline: 2rem;
+    padding-block: 1rem;
+}
 
-a:hover{
+h2:hover{
     color: var(--crudito);
     background-color: var(--marron);
 }
@@ -66,7 +70,12 @@ button{
     color: var(--blanco);
 }
 button:hover{
+    border-radius: 50%;
     color: var(--crudito);
     background-color: var(--marron);
+
+}
+svg{
+    padding:0.5rem
 }
 
