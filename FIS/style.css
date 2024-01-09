@@ -1,8 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Kanit:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 ;
 
-
-*::before::after {
+*::after::before {
     box-sizing: border-box;
 }
 
@@ -14,168 +13,69 @@
     --blanco: #F1F4EF;
 }
 
-html{
-    scroll-behavior: smooth;
-}
-body {
-    margin: 0 auto;
-    font-family: "Kanit", Arial, Helvetica, sans-serif
+
+body{
+    font-family: "Kanit", Arial, Helvetica, sans-serif;
+    margin:0;
+    width: 100%;
 }
 
-header {
-    height: 100vh;
-    background-color: #8937c3;
-    background-image: url(img/pexels-daniel-spase-700694.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-bottom: solid 1rem var(--verde);
+h1{
+    margin:0
+}
 
+
+li{
     margin: 0;
-
-    h1 {
-        color: var(--blanco);
-        text-transform: uppercase;
-
-    }
-
-    svg{
-        border-radius: 50%;
-        border: solid 2px white;
-        color: white;
-        width: 3rem;
-        height: 3rem;
-    }
-}
-span{
-    color: var(--verde);
+    text-transform: uppercase;
+    list-style: none;
+ 
 }
 
-.divHead {
+img{
+    margin: 0;
+}
+ul{
+    margin: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    height: 10%;
-    width: 100%;
-    backdrop-filter: blur(20px);
-    margin-top: 10rem;
-    margin-bottom: 10rem;
 }
 
-
-.divPar {
-    height: 50vh;
-    background-color: var(--violeta);
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    p{
-        color: var(--crudito)
-    }
-    h2:hover{
-        color: var(--crudito);
-        background-color: var(--marron);
-    }
+nav{
+background-color: var(--violeta);
 }
-
-.divImpar {
-    height: 50vh;
-    background-color: var(--verde);
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: center;
-    p{
-        color: var(--marron);
-    }
-    h2:hover{
-        color: var(--marron);
-        background-color: var(--crudito);
-    }
-
-}
-
-.divPar:nth-child(1){
-    background-image: url(img/pexels-chelsi-peter-1564149.jpg);
-    background-blend-mode: multiply;
-}
-
-.divImpar:nth-child(2){
-    background-image: url(img/pexels-amir-esrafili-8808680.jpg);
-    background-blend-mode:luminosity;
-    background-position: center;
-}
-
-.divPar:nth-child(3){
-    background-image: url(img/pexels-aleksandr-slobodianyk-989941.jpg);
-    background-blend-mode: multiply;
-    background-position:right;
-}
-
-.divImpar:nth-child(4){
-    background-image: url(img/pexels-sohail-nachiti-807598.jpg);
-    background-blend-mode: multiply;
-    background-position:right;
-}
-
-
-.divPar:nth-child(5){
-    background-image: url(img/pexels-pixabay-276514.jpg);
-    background-blend-mode: multiply;
-    background-position:right;
-}
-
-.divImpar:nth-child(6){
-    background-image: url(img/pexels-steve-johnson-1000366.jpg);
-    background-blend-mode: multiply;
-    background-position:right;
-}
-
-
-
-
-footer{
-    height: 25vh;
-    background-color: var(--marron);
+a{
+    text-decoration: none;
     color: var(--blanco);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    p{
-        margin: 0;
-        padding: 1rem;
-    }
+  
 }
-
-h2 {
-    margin: 0;
-    color: var(--blanco);
-    text-transform: uppercase;
-    padding-inline: 3rem;
-    font-size: 3rem;
-}
-
-p{
-    padding-inline: 3rem;
-    font-size: 1.5rem;
-}
-
-.redes svg{
-    padding-inline: 0.5rem;
-}
-
-svg:nth-child(odd):hover{
-
+a:visited{
     color: var(--crudito);
-
+}
+h2{
+    color: var(--blanco);
+    padding-inline: 2rem;
+    padding-block: 1rem;
 }
 
-svg:nth-child(even):hover{
-    color:  var(--verde);
+h2:hover{
+    color: var(--crudito);
+    background-color: var(--marron);
 }
+button{
+    background-color: var(--violeta);
+    border: none;
+    color: var(--blanco);
+}
+button:hover{
+    border-radius: 50%;
+    color: var(--crudito);
+    background-color: var(--marron);
+
+}
+svg{
+    padding:0.5rem
+}
+
