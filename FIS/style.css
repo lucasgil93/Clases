@@ -18,6 +18,7 @@ body{
     font-family: "Kanit", Arial, Helvetica, sans-serif;
     margin:0;
     width: 100%;
+
 }
 
 h1{
@@ -34,6 +35,7 @@ li{
 
 img{
     margin: 0;
+    width: 90%;
 }
 ul{
     margin: 0;
@@ -55,9 +57,10 @@ a:visited{
     color: var(--crudito);
 }
 h2{
+    font-size: 0.9rem;
     color: var(--blanco);
-    padding-inline: 2rem;
-    padding-block: 1rem;
+    padding-inline: 1.2rem;
+    padding-block: 0.5rem;
 }
 
 h2:hover{
@@ -77,5 +80,72 @@ button:hover{
 }
 svg{
     padding:0.5rem
+}
+header{
+    background-image: url(img/pexels-daniel-spase-700694.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.contenedorHeader{
+    display: flex;
+    flex-direction: row;
+}
+h1{
+    backdrop-filter: blur(10px);
+    color: var(--blanco);
+    text-align: center;
+    padding-block: 1rem;
+
+
+}
+span{
+    color: var(--verde)
+}
+.card{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   justify-content: center;
+    width: 30vh;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px var(--violeta);
+    padding: 1rem;
+    margin: 1rem;
+    background-color: var(--blanco);
+    img{
+        border-radius: 50%;
+        background-color: #8937c3;
+        background-blend-mode: multiply;
+    }
+    h3{
+        margin: 0;
+        color: var(--violeta);
+        text-align: center;
+
+    }
+    h4{
+        margin: 0;
+        color: var(--verde);
+        text-align: center;
+    }
+   
+}
+.fotocard{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background-color: var(--violeta);
+    background-blend-mode:luminosity;
+    background-position: center;
+    background-size: contain;
+}
+
+#Hilario{
+    background-image: url(img/gente/Hilario-Saez-Mendez.jpg);
+}
+#MariMar{
+    background-image: url(img/gente/mar_gonzalez-768x684.jpg);
 }
 
