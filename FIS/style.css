@@ -63,9 +63,13 @@ h2{
     padding-block: 0.5rem;
 }
 
-h2:hover{
+h2:nth-child(even):hover{
     color: var(--crudito);
     background-color: var(--marron);
+}
+h2:nth-child(odd):hover{
+    color: var(--marron);
+    background-color: var(--crudito);
 }
 button{
     background-color: var(--violeta);
