@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twitter</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icons8-twitter-50.png" type="image/x-icon">
 </head>
 
 <body>
@@ -80,7 +81,7 @@
                         <path d="M16 12l0 .01" />
                     </svg> Más opciones</a></li>
         </ul>
-        <button type="button">Twittear</button>
+        <button type="button" id="btntwit">Twittear</button>
         <div class="user">
             <div class="userimg">
                 <img src="profile.jpg" alt="">
@@ -99,7 +100,97 @@
             </svg>
         </div>
     </header>
-    <div class="content"></div>
+    <div class="content">
+        <div class="buttonsmode">
+            <button type="button">Para ti</button>
+            <button type="button">Siguiendo</button>
+            <button type="button"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-settings"
+                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                        d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" />
+                    <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                </svg></button>
+        </div>
+        <div class="inputtwit">
+            <div class="userimg">
+                <img src="profile.jpg" alt="">
+                <input type="text" value="!¿Qué está pasando?!">
+            </div>
+            <div class="botonerainput">
+                <ul>
+                    <li><button type="button" id="btnimg"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-photo-scan" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M15 8h.01" />
+                                <path d="M6 13l2.644 -2.644a1.21 1.21 0 0 1 1.712 0l3.644 3.644" />
+                                <path d="M13 13l1.644 -1.644a1.21 1.21 0 0 1 1.712 0l1.644 1.644" />
+                                <path d="M4 8v-2a2 2 0 0 1 2 -2h2" />
+                                <path d="M4 16v2a2 2 0 0 0 2 2h2" />
+                                <path d="M16 4h2a2 2 0 0 1 2 2v2" />
+                                <path d="M16 20h2a2 2 0 0 0 2 -2v-2" />
+                            </svg></button></li>
+                    <li><button type="button" id="btngif"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-gif" width="24" height="24" viewBox="0 0 24 24"
+                                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M8 8h-2a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2v-4h-1" />
+                                <path d="M12 8v8" />
+                                <path d="M16 12h3" />
+                                <path d="M20 8h-4v8" />
+                            </svg></button></li>
+                    <li><button type="button" id="btnsurvey"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-list-letters" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M11 6h9" />
+                                <path d="M11 12h9" />
+                                <path d="M11 18h9" />
+                                <path d="M4 10v-4.5a1.5 1.5 0 0 1 3 0v4.5" />
+                                <path d="M4 8h3" />
+                                <path d="M4 20h1.5a1.5 1.5 0 0 0 0 -3h-1.5h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6z" />
+                            </svg></button></li>
+                    <li><button type="button" id="btnemoji"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-mood-smile-beam" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 21a9 9 0 1 1 0 -18a9 9 0 0 1 0 18z" />
+                                <path d="M10 10c-.5 -1 -2.5 -1 -3 0" />
+                                <path d="M17 10c-.5 -1 -2.5 -1 -3 0" />
+                                <path d="M14.5 15a3.5 3.5 0 0 1 -5 0" />
+                            </svg></button></li>
+                    <li><button type="button" id="btncalendar"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-calendar-clock" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10.5 21h-4.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v3" />
+                                <path d="M16 3v4" />
+                                <path d="M8 3v4" />
+                                <path d="M4 11h10" />
+                                <path d="M18 18m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                                <path d="M18 16.5v1.5l.5 .5" />
+                            </svg></button></li>
+                    <li><button type="button" id="btnlocation"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-map-pin" width="24" height="24" viewBox="0 0 24 24"
+                                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                                <path
+                                    d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                            </svg></button></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
     <footer></footer>
 </body>
 
