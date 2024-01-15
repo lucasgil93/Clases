@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ejercicio CSS</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <h1>Card de una aplicación de fitness</h1>
+  </header>
+
+  <main>
+    <p>Trata de recrear la tarjeta de producto tal y como aparece en la imágen de abajo.</p>
+    <h2>Reglas:</h2>
+    <ul>
+      <li>No es obligatorio usar el HTML y CSS que se proporcionan. Si el alumno lo desea puede empezar el ejercicio
+        desde cero.</li>
+      <li>Tanto el HTML como el CSS que se proporcionan pueden ser modificados.</li>
+      <li>El tipo de letra utilizado es QuickSand (Ver la nota de abajo).</li>
+      <li>El ancho máximo de la tarjeta de producto 80ch y el alto es 70ch en modo móvil y 50ch en modo escritorio.</li>
+      <li>El cambio de <em>layout</em> se produce a los 700px (cambia el alto de la card y la imagen).</li>
+      <li>Los colores usados son <code>#00ff62, white y rgba(0,0,0,0.25)</code> (en la parte translúcida). Es
+        obligatorio usar variables CSS para los colores.</li>
+      <li>Las imágenes son responsivas y se adaptan al ancho de la tarjeta.</li>
+      <li>No se necesita (y no se debe usar) Javascript.</li>
+    </ul>
+
+    <p><strong>Nota:</strong> Sólo se ha usado <code>px</code> al indicar el radio y ancho de los bordes y al usar el
+      efecto <em>blur</em>.</p>
+
+    <p><strong>Nota:</strong> Para incluir en el CSS una tipografía descargada se puede usar el siguiente código.</p>
+    <pre>
+        @font-face {
+          font-family: Quicksand;
+          src: url(Quicksand-VariableFont_wght.ttf);
+        }
+      </pre>
+
+
+    <h2>Ejercicio</h2>
+
+    <article class="card">
+      <div class="botones--arriba">
+        <img src="star.svg">
+        <a href="#">SKIP</a>
+      </div>
+      <div class="contenido">
+        <h2>Workout anywhere</h2>
+        <p>You can do your workout at home without equipment, outside or at the gym.</p>
+        <nav>
+          <ul>
+            <li><a href="#">1</a></li>
+            <li><span class="card-actual">2</span></li>
+            <li><a href="#">3</a></li>
+            <li class="next"><a href="#">Next <img src="arrow-big-right-lines.svg"></a></li>
+          </ul>
+      </div>
+    </article>
+
+    <h2>Resultado esperado</h2>
+    <img src="movil.png"><br>
+    <img src="escritorio.png">
+
+    <br>
+    <br>
+    <br>
+    <br>
+  </main>
+</body>
+
+</html>

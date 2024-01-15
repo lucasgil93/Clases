@@ -1,0 +1,122 @@
+/* @font-face {
+  font-family: Quicksand;
+  src: url(Quicksand-VariableFont_wght.ttf);
+} */
+
+
+pre{
+  backdrop-filter: brightness(0.6);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+code{
+  font-size: 0.95rem;
+  color: rgb(115, 115, 223);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+header{
+  padding: 2rem;
+  font-size: 2rem;
+  color: rgb(115, 115, 223);
+}
+
+
+
+body{
+  max-width: 80ch;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: system-ui;
+  background-color: hsl(210, 11%, 7%);
+  color: hsl(210, 30%, 85%);
+  display: grid;
+  padding: 1.25rem;
+  min-height: 100vh;
+  place-content: center;
+}
+
+  
+  h2.titulo {
+  font-size: 1.5rem;
+  color: hsl(210, 30%, 95%);
+  margin: 3rem;
+  color: rgb(115, 115, 223);
+  }
+
+
+/*++++++++++++++++++++++++++++++++*/
+/* EJERCICIO 1 */
+/*++++++++++++++++++++++++++++++++*/
+
+.productEj1 {
+/* tu código comienza aquí */
+display: flex;
+justify-content: space-between;
+img{
+  padding-right: 1rem;
+}
+/* tu código termina aquí */
+
+  background-color: hsl(210, 11%, 12%);
+  max-width: 45ch;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.5rem 0.5rem 1rem rgb(0 0 0 / 0.15);
+
+}
+
+
+
+
+
+/*++++++++++++++++++++++++++++++++*/
+/* EJERCICIO 2 */
+/*++++++++++++++++++++++++++++++++*/
+.productEj2 {
+  background-color: hsl(210, 11%, 12%);
+  max-width: 60ch;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.5rem 0.5rem 1rem rgb(0 0 0 / 0.15);
+
+/* tu código comienza aquí */
+display: flex;
+img{
+  margin-right: 1rem;
+}
+/* tu código termina aquí */
+}
+
+
+.productEj2__meta {
+/* tu código comienza aquí */
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+/* tu código termina aquí */
+
+  font-size: 0.825rem;
+  margin-block-start: 1rem;
+}
+
+
+.productEj2__comments >svg {
+  margin-right: 0.25rem;
+  vertical-align: bottom;
+}
+
+.productEj2__tag {
+  background: hsl(210, 11%, 7%);
+  padding: 0.2em 0.5em 0.3em;
+  border-radius: 100vw;
+}
+
+.productEj2 .logoEj2{
+  width: 80px;
+  height: 80px;
+}
