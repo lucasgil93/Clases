@@ -125,10 +125,16 @@ h2 {
     width: 40px;
 }
 
-li:hover {
-
+button > svg:hover {
+    
     background-color: var(--transparentgray);
-    border-radius: 25px;
+    border-radius: 50%;
+    
+}
+
+button > svg{
+    padding:0.2rem;
+    margin-inline: -1rem;
 }
 
 li>button:hover {
@@ -152,6 +158,15 @@ li button {
     color: var(--accent1);
 }
 
+header li:hover{
+    background-color: var(--transparentgray);
+    border-radius: 25px;
+    width: fit-content;
+}
+
+.botonerainput {
+    margin-left: 2rem;
+}
 .botonerainput ul {
     display: flex;
 }
@@ -166,6 +181,15 @@ footer {
 }
 .buttonsmode{
     padding-block: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0;
+    border-bottom: 2px solid var(--shadowdarktext);
+    backdrop-filter: blur(10px);
+    background-color: transparent;
 }
 
 .buttonsmode button {
@@ -177,7 +201,21 @@ footer {
     font-size: 1rem;
     padding-inline: 3rem;
     margin: 0;
+
 }
+
+.buttonsmode button:nth-child(1){
+
+    margin-bottom: 0;
+    border-bottom: 3px solid var(--accent1);
+    border-bottom-style: -30px; 
+}
+
+.buttonsmode button:nth-child(2){
+color: var(--shadowdarktext);
+}
+
+
 
 .userimg input {
     border: none;
@@ -187,22 +225,22 @@ footer {
     padding-block: 2rem;
     text-align: start;
     font-size: 1.3rem;
-    
 
 
-    input:focus {
-        outline: none;
-        color: var(--darktext);
-    }
-
-    input:focus:hover {
+   
+}
+ input:focus:hover {
         outline: none;
         color: var(--darktext);
         border-radius: 0;
     }
-}
+
+    input:focus{
+        outline: none;
+    }
 .userimg{
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
+
