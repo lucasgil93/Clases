@@ -1,0 +1,132 @@
+/* @import url(https://fonts.googleapis.com/css?family=Geologica:100,200,300,regular,500,600,700,800,900); */
+
+*,::before,::after{
+  box-sizing: border-box;
+}
+
+:root{
+  --accent-color: #669;
+  --background-color: #fff;
+  --text-color: #114;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
+body{
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Geologica',Arial, Helvetica, sans-serif;
+  margin:0;
+  overflow-anchor: none;
+  min-height: 100vh;
+}
+
+
+header{
+  background-color: var(--accent-color);
+  color: whitesmoke;
+  height: 20vh;
+  display: flex;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  z-index:0;
+
+  background-image: linear-gradient(15deg, transparent 0%, #0005 100%);
+  background-size: 100% 100%, auto;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 0px 10px -5px black;
+}
+img{
+  display:block;
+  margin: 0 auto;
+}
+
+h1{
+  margin: 0 auto;
+  padding:2rem;
+  font-weight: 200;
+  font-size: 4rem;
+  color: whitesmoke;
+  overflow: hidden;
+  transition: 0.5s text-shadow ease;
+}
+
+main{
+  max-width: 80ch;
+  margin: 0 auto;
+}
+
+article{
+  max-width: 60ch;
+  margin: 2rem auto;
+  background-color: #669;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px -5px black;
+}
+
+input{
+  border: 2px solid #aac;
+  border-radius: 5px;
+  padding: 0.25rem 1rem;
+}
+button{
+  padding: 0.25rem 1rem;
+  border: 2px solid #225;
+  border-radius: 5px;
+  background-color: #336;
+  color: white;
+}
+
+
+.categorías > div:nth-child(1){
+  background-color: #ddf;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.categorías > div:nth-child(2){
+  background-color: #dfd;
+}
+.categorías > div:nth-child(3){
+  background-color: #fdd;
+}
+.categorías > div:nth-child(4){
+  background-color: #ffd;
+}
+.categorías > div:nth-child(5){
+  background-color: #fdf;
+}
+.categorías > div:nth-child(6){
+  background-color: #dff;
+}
+.categorías > div:nth-child(7){
+  background-color: #ddd;
+}
+.categorías > div:nth-child(8){
+  background-color: #fff;
+}
+
+
+.búsqueda{
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.categorías{
+  gap: 0.25rem;
+  display: grid; 
+  grid-template-columns: (1fr, 1fr, 1fr, 1fr);
+  grid-template-rows: (1fr, 1fr);
+}
+.categorías > div{
+  padding: 1rem;
+  color: #666;
+  cursor: pointer;
+}
+
