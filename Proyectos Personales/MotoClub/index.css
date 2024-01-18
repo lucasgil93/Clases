@@ -1,0 +1,181 @@
+@import url(https://fonts.googleapis.com/css?family=Kanit:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+;
+
+
+*::before::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --azulon: #14213d;
+    --naranja: #fca311;
+    --negro: #000000;
+    --crudito: #e5e5e5;
+    --blanco: #F1F4EF;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0 auto;
+    font-family: "Kanit", Arial, Helvetica, sans-serif
+}
+
+header {
+    height: 100vh;
+    background-color: var(--azulon);
+    background-image: url(img/pexels-cottonbro-studio-5195654.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid 1rem var(--naranja);
+
+    margin: 0;
+
+    h1 {
+        color: var(--blanco);
+        text-transform: uppercase;
+
+    }
+
+    svg{
+        border-radius: 50%;
+        border: solid 2px var(--blanco);
+        color: var(--blanco);
+        width: 3rem;
+        height: 3rem;
+    }
+}
+span{
+    color: var(--naranja);
+}
+
+.divHead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 10%;
+    width: 100%;
+    backdrop-filter: blur(20px);
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+
+.divPar {
+    height: 50vh;
+    background-color: var(--azulon);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    p{
+        color: var(--crudito)
+    }
+    h2:hover{
+        color: var(--crudito);
+        background-color: var(--negro);
+    }
+}
+
+.divImpar {
+    height: 50vh;
+    background-color: var(--naranja);
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    p{
+        color: var(--negro);
+    }
+    h2:hover{
+        color: var(--negro);
+        background-color: var(--crudito);
+    }
+
+}
+
+.divPar:nth-child(1){
+    background-image: url(img/pexels-cottonbro-studio-5195654.jpg);
+    background-blend-mode: multiply;
+}
+
+.divImpar:nth-child(2){
+    background-image: url(img/pexels-djordje-petrovic-1416169.jpg);
+    background-blend-mode:multiply;
+    background-position: center;
+}
+
+.divPar:nth-child(3){
+    background-image: url(img/pexels-donatello-trisolino-1371724.jpg);
+    background-blend-mode: multiply;
+    background-position:center;
+}
+
+.divImpar:nth-child(4){
+    background-image: url(img/pexels-giorgio-de-angelis-1413412.jpg);
+    background-blend-mode: multiply;
+    background-position:center;
+}
+
+
+.divPar:nth-child(5){
+    background-image: url(img/pexels-nicholas-dias-2116475.jpg);
+    background-blend-mode: multiply;
+    background-position:center;
+}
+
+.divImpar:nth-child(6){
+    background-image: url(img/pexels-pixabay-104842.jpg);
+    background-blend-mode: multiply;
+    background-position:right;
+}
+
+
+
+
+footer{
+    height: 25vh;
+    background-color: var(--negro);
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    p{
+        margin: 0;
+        padding: 1rem;
+    }
+}
+
+h2 {
+    margin: 0;
+    color: var(--blanco);
+    text-transform: uppercase;
+    padding-inline: 3rem;
+    font-size: 3rem;
+}
+
+p{
+    padding-inline: 3rem;
+    font-size: 1.5rem;
+}
+
+.redes svg{
+    padding-inline: 0.5rem;
+}
+
+
+svg:hover{
+    color:  var(--naranja);
+}
+
+a{
+    text-decoration: none;
+}
+
