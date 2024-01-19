@@ -14,16 +14,26 @@
     --blanco: #F1F4EF;
 }
 
-html{
+html {
     scroll-behavior: smooth;
+    width: 200%;
+
+
 }
+
 body {
-    margin: 0 auto;
-    font-family: "Kanit", Arial, Helvetica, sans-serif
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0;
+    font-family: "Kanit", Arial, Helvetica, sans-serif;
+    background-color: var(--marron);
 }
 
 header {
     height: 100vh;
+    width: 50%;
     background-color: #8937c3;
     background-image: url(img/pexels-daniel-spase-700694.jpg);
     background-position: center;
@@ -32,8 +42,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-bottom: solid 1rem var(--verde);
-
+    border-right: solid 1.3rem var(--verde);
     margin: 0;
 
     h1 {
@@ -42,15 +51,17 @@ header {
 
     }
 
-    svg{
+    svg {
+        transform: rotate(-90deg);
         border-radius: 50%;
-        border: solid 2px white;
-        color: white;
+        border: solid 2px var(--blanco);
+        color: var(--blanco);
         width: 3rem;
         height: 3rem;
     }
 }
-span{
+
+span {
     color: var(--verde);
 }
 
@@ -59,25 +70,32 @@ span{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    height: 10%;
-    width: 100%;
     backdrop-filter: blur(20px);
     margin-top: 10rem;
     margin-bottom: 10rem;
+    width: max-content;
+    padding-inline: 18rem;
+
+    h1 {
+        margin-left: 1rem;
+    }
 }
 
 
 .divPar {
     height: 50vh;
+    width: 60vh;
     background-color: var(--violeta);
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     justify-content: center;
-    p{
+
+    p {
         color: var(--crudito)
     }
-    h2:hover{
+
+    h2:hover {
         color: var(--crudito);
         background-color: var(--marron);
     }
@@ -85,69 +103,75 @@ span{
 
 .divImpar {
     height: 50vh;
+    width: 60vh;
     background-color: var(--verde);
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: center;
     justify-content: center;
-    p{
+
+    p {
         color: var(--marron);
     }
-    h2:hover{
+
+    h2:hover {
         color: var(--marron);
         background-color: var(--crudito);
     }
 
 }
 
-.divPar:nth-child(1){
+#conjunto1 .divPar:nth-child(1) {
     background-image: url(img/pexels-chelsi-peter-1564149.jpg);
     background-blend-mode: multiply;
 }
 
-.divImpar:nth-child(2){
+#conjunto1 .divImpar:nth-child(2) {
     background-image: url(img/pexels-amir-esrafili-8808680.jpg);
-    background-blend-mode:luminosity;
+    background-blend-mode: luminosity;
     background-position: center;
 }
 
-.divPar:nth-child(3){
+#conjunto2 .divImpar:nth-child(1) {
     background-image: url(img/pexels-aleksandr-slobodianyk-989941.jpg);
     background-blend-mode: multiply;
-    background-position:right;
+    background-position: right;
 }
 
-.divImpar:nth-child(4){
+#conjunto2 .divPar:nth-child(2) {
     background-image: url(img/pexels-sohail-nachiti-807598.jpg);
     background-blend-mode: multiply;
-    background-position:right;
+    background-position: right;
 }
 
 
-.divPar:nth-child(5){
+#conjunto3 .divPar:nth-child(1) {
     background-image: url(img/pexels-pixabay-276514.jpg);
     background-blend-mode: multiply;
-    background-position:right;
+    background-position: right;
 }
 
-.divImpar:nth-child(6){
+#conjunto3 .divImpar:nth-child(2) {
     background-image: url(img/pexels-steve-johnson-1000366.jpg);
     background-blend-mode: multiply;
-    background-position:right;
+    background-position: right;
 }
 
 
 
 
-footer{
-    height: 25vh;
+footer {
+    border-left: 1rem solid var(--violeta);
+    height: 100vh;
+    width: 5%;
     background-color: var(--marron);
     color: var(--blanco);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    p{
+
+    p {
         margin: 0;
         padding: 1rem;
     }
@@ -157,30 +181,42 @@ h2 {
     margin: 0;
     color: var(--blanco);
     text-transform: uppercase;
-    padding-inline: 3rem;
-    font-size: 3rem;
+    padding-inline: 1rem;
+    font-size: 2rem;
 }
 
-p{
+p {
     padding-inline: 3rem;
     font-size: 1.5rem;
 }
 
-.redes svg{
-    padding-inline: 0.5rem;
+.redes svg {
+    padding-block: 0.5rem;
 }
 
-svg:nth-child(odd):hover{
+.redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+svg:nth-child(odd):hover {
 
     color: var(--crudito);
 
 }
 
-svg:nth-child(even):hover{
-    color:  var(--verde);
+svg:nth-child(even):hover {
+    color: var(--verde);
 }
 
-a{
+a {
     text-decoration: none;
 }
 
+.conjunto {
+
+    display: flex;
+    flex-direction: column;
+}
