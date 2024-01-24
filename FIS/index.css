@@ -216,7 +216,10 @@ a {
 }
 
 .conjunto {
-
     display: flex;
     flex-direction: column;
+}
+
+section{
+    width: 100%;
 }
