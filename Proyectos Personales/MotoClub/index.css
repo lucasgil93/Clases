@@ -19,7 +19,8 @@ html{
 }
 body {
     margin: 0 auto;
-    font-family: "Kanit", Arial, Helvetica, sans-serif
+    font-family: "Kanit", Arial, Helvetica, sans-serif;
+    max-width: 100%;
 }
 
 header {
